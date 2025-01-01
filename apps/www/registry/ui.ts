@@ -98,6 +98,12 @@ export const ui: Registry = [
     files: ["ui/animated-number.tsx"],
   },
   {
+    name: "card-carousel",
+    type: "components:ui",
+    dependencies: ["framer-motion "],
+    files: ["ui/card-carousel.tsx"],
+  },
+  {
     name: "sortable-list",
     type: "components:ui",
     dependencies: ["framer-motion, react-use-measure"],

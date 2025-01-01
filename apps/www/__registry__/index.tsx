@@ -181,6 +181,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "card-carousel": {
+      name: "card-carousel",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/card-carousel")),
+      source: "",
+      files: ["registry/default/ui/card-carousel.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "sortable-list": {
       name: "sortable-list",
       type: "components:ui",

@@ -98,6 +98,12 @@ export const examples: Registry = [
     files: ["example/animated-number-demo.tsx"],
   },
   {
+    name: "card-carousel-demo",
+    type: "components:example",
+    registryDependencies: ["card-carousel-demo"],
+    files: ["example/card-carousel-demo.tsx"],
+  },
+  {
     name: "sortable-list-demo",
     type: "components:example",
     registryDependencies: ["sortable-list"],

@@ -32,7 +32,7 @@ export function ComponentPreview({
 }: ComponentPreviewProps) {
 
   const [config] = useConfig()
-  
+
   const index = styles.findIndex((style) => style.name === config.style)
 
   const Codes = React.Children.toArray(children) as React.ReactElement[]
@@ -105,10 +105,9 @@ export function ComponentPreview({
             </div>
           </div>
           <ThemeWrapper defaultTheme="zinc">
-
             <div
               className={cn(
-                "preview flex min-h-[350px] w-full justify-center bg-white p-3 dark:bg-neutral-950 md:p-10",
+                "preview mb-10 flex min-h-[350px] w-full items-center justify-center dark:bg-neutral-950 ",
                 {
                   "items-center": align === "center",
                   "items-start": align === "start",

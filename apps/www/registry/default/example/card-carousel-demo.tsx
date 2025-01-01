@@ -11,7 +11,7 @@ const CardCaroursalDemo = () => {
     ];
 
     return (
-        <div className='pt-40' >
+        <div className='w-full' >
 
             <CardCarousel
                 images={images}
