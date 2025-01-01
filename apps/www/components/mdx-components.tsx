@@ -28,8 +28,10 @@ import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
 import { FrameworkDocs } from "@/components/framework-docs"
 import { StyleWrapper } from "@/components/style-wrapper"
 import { Style } from "@/registry/styles"
+import { CardCarousel } from "@/registry/default/ui/card-carousel"
 
 const components = {
+  CardCarousel,
   Accordion,
   AccordionContent,
   AccordionItem,

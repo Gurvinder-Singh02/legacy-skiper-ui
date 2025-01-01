@@ -31,11 +31,13 @@ async function getDocFromParams({ params }: DocPageProps) {
 
   console.log("raw", params)
   const slug = params.slug?.join("/") || ""
-  console.log("slug with /", slug)
+
+  console.log("slug with from the params ------------------- ", slug)
 
   const doc = allDocs.find((doc) => doc.slugAsParams === slug)
 
   if (!doc) {
+    console.log('no doc found')
     return null
 
   }

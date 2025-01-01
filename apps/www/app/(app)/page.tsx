@@ -16,6 +16,7 @@ import { Testimonials } from "@/components/landing/testimonials"
 import StatisticHighlight from "./components/StatisticHighlight"
 import Image from "next/image"
 import Link from "next/link"
+import { CardCarousel } from "@/components/ui/skiper/card-carousal"
 
 export default function IndexPage() {
 
@@ -107,13 +108,17 @@ export default function IndexPage() {
         </div>
 
         <FadeIn>
-          <section className="w-ace-y-4  mt-4 ">
 
-            <div className=" mx-auto my-5  w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-              <LatestComponentHorizonatal />
-            </div>
-
-          </section>
+          <CardCarousel
+            images={
+              [{ src: "/card/1.png", alt: "Image 1" },
+              { src: "/card/2.png", alt: "Image 2" },
+              { src: "/card/3.png", alt: "Image 3" },]
+            }
+            autoplayDelay={2000}
+            showPagination={true}
+            showNavigation={true}
+          />
         </FadeIn>
 
         <FadeIn>

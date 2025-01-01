@@ -11,7 +11,7 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   const pathname = usePathname()
   
-  // WIP theme
+
   const forcedThemeFromPathname = pathname === "/" ? "light" : 'light'
   return (
     <JotaiProvider>

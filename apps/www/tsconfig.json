@@ -40,7 +40,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "app/(app)/test/page.tsx", "components/ui/skiper/card-car.tsxcarousal.tsx"  ],
   "exclude": [
     "node_modules",
     "./scripts/build-registry.mts"

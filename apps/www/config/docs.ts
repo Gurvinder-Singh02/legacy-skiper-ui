@@ -45,6 +45,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
+            {
+              title: "Card Carousel",
+              href: "/docs/components/card-carousel",
+              items: [],
+              label: "new",
+            },
 
             // {
             //   title: "Direction Aware Tabs",
