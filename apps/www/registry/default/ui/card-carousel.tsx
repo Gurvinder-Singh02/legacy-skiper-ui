@@ -9,7 +9,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import './style.css'
 
 import { Autoplay, EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { GradientHeading } from "@/registry/default/ui/gradient-heading";
@@ -30,8 +29,37 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   showPagination = true,
   showNavigation = true,
 }) => {
+
+  const css = `
+  .swiper {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    /* height: 300px; */
+    /* margin: 20px; */
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  
+  
+  .swiper-3d .swiper-slide-shadow-left {
+    background-image: none;
+  }
+  .swiper-3d .swiper-slide-shadow-right{
+    background: none;
+  }
+  `
   return (
     <section className="w-ace-y-4">
+      <style>{css}</style>
       <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
         <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
           <Badge
@@ -75,9 +103,9 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 navigation={
                   showNavigation
                     ? {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                      }
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    }
                     : undefined
                 }
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}

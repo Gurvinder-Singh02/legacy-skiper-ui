@@ -31,7 +31,6 @@ import { Style } from "@/registry/styles"
 import { CardCarousel } from "@/registry/default/ui/card-carousel"
 
 const components = {
-  CardCarousel,
   Accordion,
   AccordionContent,
   AccordionItem,

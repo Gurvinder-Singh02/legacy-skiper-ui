@@ -2,7 +2,7 @@ import React from 'react'
 import { CardCarousel } from '../ui/card-carousel';
 
 
-const page = () => {
+const CardCaroursalDemo = () => {
 
     const images = [
         { src: "/card/1.png", alt: "Image 1" },
@@ -23,4 +23,4 @@ const page = () => {
     )
 }
 
-export default page
+export default CardCaroursalDemo

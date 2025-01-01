@@ -371,7 +371,7 @@ export const Index: Record<string, any> = {
     "texture-card-demo": {
       name: "texture-card-demo",
       type: "components:example",
-      registryDependencies: ["texture-card","texture-button"],
+      registryDependencies: ["texture-card", "texture-button"],
       component: React.lazy(() => import("@/registry/default/example/texture-card-demo")),
       source: "",
       files: ["registry/default/example/texture-card-demo.tsx"],
@@ -382,7 +382,7 @@ export const Index: Record<string, any> = {
     "shift-card-demo": {
       name: "shift-card-demo",
       type: "components:example",
-      registryDependencies: ["shift-card","texture-button"],
+      registryDependencies: ["shift-card", "texture-button"],
       component: React.lazy(() => import("@/registry/default/example/shift-card-demo")),
       source: "",
       files: ["registry/default/example/shift-card-demo.tsx"],
@@ -481,7 +481,7 @@ export const Index: Record<string, any> = {
     "tweet-grid-demo": {
       name: "tweet-grid-demo",
       type: "components:example",
-      registryDependencies: ["tweet-grid","gradient-heading"],
+      registryDependencies: ["tweet-grid", "gradient-heading"],
       component: React.lazy(() => import("@/registry/default/example/tweet-grid-demo")),
       source: "",
       files: ["registry/default/example/tweet-grid-demo.tsx"],
@@ -518,6 +518,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/animated-number-demo")),
       source: "",
       files: ["registry/default/example/animated-number-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "card-carousel-demo": {
+      name: "card-carousel-demo",
+      type: "components:example",
+      registryDependencies: ["animated-number"],
+      component: React.lazy(() => import("@/registry/default/example/card-carousel-demo")),
+      source: "",
+      files: ["registry/default/example/card-carousel-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -624,7 +635,7 @@ export const Index: Record<string, any> = {
     "shader-lens-blur-demo": {
       name: "shader-lens-blur-demo",
       type: "components:example",
-      registryDependencies: ["shader-lens-blur","color-picker"],
+      registryDependencies: ["shader-lens-blur", "color-picker"],
       component: React.lazy(() => import("@/registry/default/example/shader-lens-blur-demo")),
       source: "",
       files: ["registry/default/example/shader-lens-blur-demo.tsx"],
@@ -657,7 +668,7 @@ export const Index: Record<string, any> = {
     "logo-carousel-demo": {
       name: "logo-carousel-demo",
       type: "components:example",
-      registryDependencies: ["logo-carousel","gradient-heading"],
+      registryDependencies: ["logo-carousel", "gradient-heading"],
       component: React.lazy(() => import("@/registry/default/example/logo-carousel-demo")),
       source: "",
       files: ["registry/default/example/logo-carousel-demo.tsx"],
@@ -690,7 +701,7 @@ export const Index: Record<string, any> = {
     "authentication-01": {
       name: "authentication-01",
       type: "components:block",
-      registryDependencies: ["button","card","input","label"],
+      registryDependencies: ["button", "card", "input", "label"],
       component: React.lazy(() => import("@/registry/default/block/authentication-01")),
       source: "__registry__/default/block/authentication-01.tsx",
       files: ["registry/default/block/authentication-01.tsx"],
