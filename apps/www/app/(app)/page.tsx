@@ -194,8 +194,8 @@ export default function IndexPage() {
           <div className=" mx-auto   max-w-4xl rounded-[40px] border border-black/5 p-2 shadow-sm ">
             <div className=" relative mx-auto h-[400px] max-w-4xl overflow-hidden rounded-[38px] border border-black/5 bg-[#ff4017] p-2 shadow-sm ">
               <p className="mt-20 text-center text-white" >Bringing simplicity to the future</p>
-              <h1 className=" stroked-text absolute inset-x-0   mt-[190px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[100px] sm:text-[190px] " >theohhiui</h1>
-              <h1 className="  absolute inset-x-0  mt-[190px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[100px] sm:text-[190px] " >theohhiui</h1>
+              <h1 className=" stroked-text absolute inset-x-0   mt-[190px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[100px] sm:text-[190px] " >skiper/ui</h1>
+              <h1 className="  absolute inset-x-0  mt-[190px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[100px] sm:text-[190px] " >skiper/ui </h1>
             </div>
           </div>
         </FadeIn>

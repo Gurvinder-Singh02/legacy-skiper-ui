@@ -29,8 +29,8 @@ export default async function page() {
                 <h1 className=" max-w-1/2 leading-0 text-center text-[100px] font-bold tracking-tighter  text-white  " >
                   <CountDown />
                 </h1>
-                <h1 className=" stroked-text absolute inset-x-0  -mt-10   text-center text-[100px] font-semibold text-[#ff4017] sm:text-[190px] " >theohhiui</h1>
-                <h1 className="  absolute inset-x-0   -mt-10 text-center text-[100px] font-semibold text-[#ff4017] sm:text-[190px] " >theohhiui</h1>
+                <h1 className=" stroked-text absolute inset-x-0  -mt-10   text-center text-[100px] font-semibold text-[#ff4017] sm:text-[190px] " >skiper/ui</h1>
+                <h1 className="  absolute inset-x-0   -mt-10 text-center text-[100px] font-semibold text-[#ff4017] sm:text-[190px] " >skiper/ui</h1>
               </div>
             </div>
           </FadeIn>
