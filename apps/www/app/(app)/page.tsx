@@ -52,7 +52,7 @@ export default function IndexPage() {
           </FadeIn>
           <FadeIn>
             <PageActions>
-              <Link href=" /docs/components/minimal-card" >
+              <Link href=" /docs/components/card-carousel" >
                 <BorderButton className='group  '   >
                   Get Started
                   <span className="transition-all duration-200 ease-in-out group-hover:rotate-90  " >
@@ -60,10 +60,10 @@ export default function IndexPage() {
                   </span>
                 </BorderButton>
               </Link>
-              <Link href=" /docs/components/minimal-card" >
+              <Link href=" /docs/components/card-carousel" >
                 <BorderButton variant="org" >
                   <Icons.gitHub className="mr-2 size-4" />
-                  Get Started
+                  Open Source
                 </BorderButton>
               </Link>
             </PageActions>

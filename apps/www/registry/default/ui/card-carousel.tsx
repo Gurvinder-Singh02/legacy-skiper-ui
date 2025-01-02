@@ -1,26 +1,30 @@
-"use client";
+"use client"
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
+import { Swiper, SwiperSlide } from "swiper/react"
 
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import Link from "next/link"
+import { SparklesIcon } from "lucide-react"
+import {
+  Autoplay,
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+} from "swiper/modules"
 
-
-import { Autoplay, EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { GradientHeading } from "@/registry/default/ui/gradient-heading";
-import { Badge } from "@/components/ui/badge";
-import { SparklesIcon } from "lucide-react";
-import Link from "next/link";
+import { Badge } from "@/components/ui/badge"
+import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 interface CarouselProps {
-  images: { src: string; alt: string }[];
-  autoplayDelay?: number;
-  showPagination?: boolean;
-  showNavigation?: boolean;
+  images: { src: string; alt: string }[]
+  autoplayDelay?: number
+  showPagination?: boolean
+  showNavigation?: boolean
 }
 
 export const CardCarousel: React.FC<CarouselProps> = ({
@@ -29,7 +33,6 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   showPagination = true,
   showNavigation = true,
 }) => {
-
   const css = `
   .swiper {
     width: 100%;
@@ -66,14 +69,17 @@ export const CardCarousel: React.FC<CarouselProps> = ({
             variant="outline"
             className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"
           >
-            <SparklesIcon className="fill-[#EEBDE0] stroke-1 text-neutral-800" />
-            {" "}Latest component
+            <SparklesIcon className="fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
+            Latest component
           </Badge>
           <div className="flex flex-col justify-center pb-2 pl-4 pt-14 md:items-center">
             <div className="flex gap-2">
               <div>
                 <GradientHeading>Card Carousel</GradientHeading>
-                <Link href="/docs/components/popover-form" className="flex items-center gap-1">
+                <Link
+                  href="/docs/components/popover-form"
+                  className="flex items-center gap-1"
+                >
                   Seamless Images carousel animation.
                 </Link>
               </div>
@@ -103,9 +109,9 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 navigation={
                   showNavigation
                     ? {
-                      nextEl: ".swiper-button-next",
-                      prevEl: ".swiper-button-prev",
-                    }
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                      }
                     : undefined
                 }
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
@@ -142,6 +148,5 @@ export const CardCarousel: React.FC<CarouselProps> = ({
         </div>
       </div>
     </section>
-  );
-};
-
+  )
+}

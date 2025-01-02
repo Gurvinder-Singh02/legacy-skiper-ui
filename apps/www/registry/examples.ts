@@ -1,7 +1,6 @@
 import { Registry } from "@/registry/schema"
 
 export const examples: Registry = [
-
   {
     name: "animated-number-demo",
     type: "components:example",
@@ -13,5 +12,5 @@ export const examples: Registry = [
     type: "components:example",
     registryDependencies: ["card-carousel-demo"],
     files: ["example/card-carousel-demo.tsx"],
-  }
+  },
 ]

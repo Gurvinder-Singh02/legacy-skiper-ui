@@ -1,7 +1,6 @@
 import { Registry } from "@/registry/schema"
 
 export const ui: Registry = [
-  
   {
     name: "animated-number",
     type: "components:ui",
@@ -13,5 +12,5 @@ export const ui: Registry = [
     type: "components:ui",
     dependencies: ["framer-motion "],
     files: ["ui/card-carousel.tsx"],
-  }
+  },
 ]

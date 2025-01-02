@@ -1,28 +1,24 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import NumberFlow from "@number-flow/react"
 import { Plus } from "lucide-react"
 import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
-
 import { GradientHeading } from "@/registry/default/ui/gradient-heading"
-
 import {
   TextureCardContent,
   TextureCardHeader,
   TextureCardStyled,
 } from "@/registry/default/ui/texture-card"
 
-import NumberFlow from "@number-flow/react"
-
-
 function CountDown() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   })
 
   useEffect(() => {
@@ -33,9 +29,11 @@ function CountDown() {
 
       return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
       }
     }
 
@@ -48,18 +46,20 @@ function CountDown() {
   }, [])
 
   return (
-    <div className="w-full text-center text-6xl font-bold text-accent" >
-      <NumberFlow value={timeLeft.days} />d&nbsp;
-      <NumberFlow value={timeLeft.hours} />h&nbsp;
-      <NumberFlow value={timeLeft.minutes} />m&nbsp;
-      <NumberFlow value={timeLeft.seconds} />s&nbsp;
+    <div className="w-full text-center text-6xl font-bold text-accent">
+      <NumberFlow value={timeLeft.days} />
+      d&nbsp;
+      <NumberFlow value={timeLeft.hours} />
+      h&nbsp;
+      <NumberFlow value={timeLeft.minutes} />
+      m&nbsp;
+      <NumberFlow value={timeLeft.seconds} />
+      s&nbsp;
     </div>
-
   )
 }
 
 function PrecisionExample() {
-
   const [value, setValue] = useState(14.5678)
 
   return (
@@ -103,7 +103,8 @@ function FormatExample() {
             className="text-2xl font-bold"
             style={{ minWidth: "120px", textAlign: "left" }}
           >
-            <NumberFlow value={value} />.00
+            <NumberFlow value={value} />
+            .00
           </div>
           <Button
             size="sm"
@@ -141,10 +142,7 @@ function HooksExample() {
             className="text-2xl font-bold"
             style={{ minWidth: "50px", textAlign: "left" }}
           >
-            <NumberFlow
-              value={value}
-
-            />
+            <NumberFlow value={value} />
           </div>
           <Button
             size="sm"
@@ -161,18 +159,18 @@ function HooksExample() {
 }
 
 function CustomSpringExample() {
-
-
   return (
     <TextureCardStyled className="w-full">
       <TextureCardHeader className="px-3  ">
-        <GradientHeading size="sm" className="w-full text-center" > CountDown </GradientHeading>
+        <GradientHeading size="sm" className="w-full text-center">
+          {" "}
+          CountDown{" "}
+        </GradientHeading>
       </TextureCardHeader>
       <CountDown />
     </TextureCardStyled>
   )
 }
-
 
 export default function AnimatedNumberExamples() {
   return (
