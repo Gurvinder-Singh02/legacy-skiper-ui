@@ -18,5 +18,15 @@
       "ui/card-carousel.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "stacked-dialog",
+    "dependencies": [
+      "framer-motion "
+    ],
+    "files": [
+      "ui/stacked-dialog.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

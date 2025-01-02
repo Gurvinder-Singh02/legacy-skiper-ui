@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+// eslint-disable-next-line react/display-name
 const TextureCardStyled = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }
@@ -10,17 +11,17 @@ const TextureCardStyled = React.forwardRef<
     ref={ref}
     className={cn(
       "rounded-[24px] border border-white/60 dark:border-stone-950/60",
-      "bg-gradient-to-b dark:from-neutral-800 dark:to-neutral-900 from-neutral-100 to-white/70",
+      "bg-gradient-to-b from-neutral-100 to-white/70 dark:from-neutral-800 dark:to-neutral-900",
       className
     )}
     {...props}
   >
     {/* Nested structure for aesthetic borders */}
-    <div className="rounded-[23px] border  dark:border-neutral-900/80 border-black/10 ">
-      <div className="rounded-[22px] border  dark:border-neutral-950 border-white/50">
-        <div className="rounded-[21px] border  dark:border-neutral-900/70  border-neutral-950/20">
+    <div className="rounded-[23px] border  border-black/10 dark:border-neutral-900/80 ">
+      <div className="rounded-[22px] border  border-white/50 dark:border-neutral-950">
+        <div className="rounded-[21px] border  border-neutral-950/20  dark:border-neutral-900/70">
           {/* Inner content wrapper */}
-          <div className=" w-full border border-white/50 dark:border-neutral-700/50 rounded-[20px] text-neutral-500 ">
+          <div className=" w-full rounded-[20px] border border-white/50 text-neutral-500 dark:border-neutral-700/50 ">
             {children}
           </div>
         </div>
@@ -37,6 +38,7 @@ const TextureCard = React.forwardRef<
   return (
     <div
       ref={ref}
+      // eslint-disable-next-line tailwindcss/no-contradicting-classname
       className={cn(
         "rounded-lg border border-white/60 dark:border-border/30",
         "rounded-[calc(var(--radius))]", // Base radius with fallback
@@ -44,10 +46,10 @@ const TextureCard = React.forwardRef<
       )}
       {...props}
     >
-      <div className="border dark:border-neutral-900/80 border-black/10 rounded-[calc(var(--radius)-1px)]">
-        <div className="border dark:border-neutral-950 border-white/50 rounded-[calc(var(--radius)-2px)]">
-          <div className="border dark:border-neutral-900/70 border-neutral-950/20 rounded-[calc(var(--radius)-3px)]">
-            <div className=" w-full border border-white/50 dark:border-neutral-700/50 text-neutral-500 bg-gradient-to-b from-card/70 to-secondary/50 rounded-[calc(var(--radius)-4px)] ">
+      <div className="rounded-[calc(var(--radius)-1px)] border border-black/10 dark:border-neutral-900/80">
+        <div className="rounded-[calc(var(--radius)-2px)] border border-white/50 dark:border-neutral-950">
+          <div className="rounded-[calc(var(--radius)-3px)] border border-neutral-950/20 dark:border-neutral-900/70">
+            <div className=" w-full rounded-[calc(var(--radius)-4px)] border border-white/50 bg-gradient-to-b from-card/70 to-secondary/50 text-neutral-500 dark:border-neutral-700/50 ">
               {children}
             </div>
           </div>
@@ -81,7 +83,7 @@ const TextureCardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-lg font-semibold leading-tight text-neutral-900 dark:text-neutral-100 pl-2",
+      "pl-2 text-lg font-semibold leading-tight text-neutral-900 dark:text-neutral-100",
       className
     )}
     {...props}
@@ -96,7 +98,7 @@ const TextureCardDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "text-sm text-neutral-600 dark:text-neutral-400 pl-2",
+      "pl-2 text-sm text-neutral-600 dark:text-neutral-400",
       className
     )}
     {...props}
@@ -119,7 +121,7 @@ const TextureCardFooter = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex items-center justify-between px-6 py-4  gap-2",
+      "flex items-center justify-between gap-2 px-6  py-4",
 
       className
     )}
@@ -130,7 +132,7 @@ TextureCardFooter.displayName = "TextureCardFooter"
 
 const TextureSeparator = () => {
   return (
-    <div className="border border-t-neutral-50 border-b-neutral-300/50 dark:border-t-neutral-950 dark:border-b-neutral-700/50 border-l-transparent border-r-transparent" />
+    <div className="border border-x-transparent border-b-neutral-300/50 border-t-neutral-50 dark:border-b-neutral-700/50 dark:border-t-neutral-950" />
   )
 }
 

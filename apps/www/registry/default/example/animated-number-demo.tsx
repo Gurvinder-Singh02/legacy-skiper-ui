@@ -7,11 +7,12 @@ import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import { GradientHeading } from "@/registry/default/ui/gradient-heading"
+
 import {
   TextureCardContent,
   TextureCardHeader,
   TextureCardStyled,
-} from "@/registry/default/ui/texture-card"
+} from "../ui/texture-card"
 
 function CountDown() {
   const [timeLeft, setTimeLeft] = useState({

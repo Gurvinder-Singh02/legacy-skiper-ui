@@ -51,6 +51,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
+            {
+              title: "Stacked Dialog",
+              href: "/docs/components/stacked-dialog",
+              items: [],
+              label: "new",
+            },
 
           ],
         },

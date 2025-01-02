@@ -27,6 +27,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "stacked-dialog": {
+      name: "stacked-dialog",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/stacked-dialog")),
+      source: "",
+      files: ["registry/default/ui/stacked-dialog.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-demo": {
       name: "animated-number-demo",
       type: "components:example",
@@ -45,6 +56,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/card-carousel-demo")),
       source: "",
       files: ["registry/default/example/card-carousel-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "stacked-dialog-demo": {
+      name: "stacked-dialog-demo",
+      type: "components:example",
+      registryDependencies: ["stacked-dialog-demo"],
+      component: React.lazy(() => import("@/registry/default/example/stacked-dialog-demo")),
+      source: "",
+      files: ["registry/default/example/stacked-dialog-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
