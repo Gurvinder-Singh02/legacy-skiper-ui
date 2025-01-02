@@ -46,12 +46,12 @@ const nextConfig = {
     return [
       {
         source: "/components",
-        destination: "/docs/components/minimal-card",
+        destination: "/docs/components/card-carousel",
         permanent: true,
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/minimal-card",
+        destination: "/docs/components/card-carousel",
         permanent: true,
       },
     ]
