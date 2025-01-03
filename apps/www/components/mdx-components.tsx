@@ -27,8 +27,8 @@ import { ComponentSource } from "@/components/component-source"
 import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
 import { FrameworkDocs } from "@/components/framework-docs"
 import { StyleWrapper } from "@/components/style-wrapper"
-import { Style } from "@/registry/styles"
 import { CardCarousel } from "@/registry/default/ui/card-carousel"
+import { Style } from "@/registry/styles"
 
 const components = {
   Accordion,
@@ -346,7 +346,7 @@ interface MdxProps {
 
 export function Mdx({ code }: MdxProps) {
   const [config] = useConfig()
-  
+
   const Component = useMDXComponent(code, {
     style: config.style,
   })

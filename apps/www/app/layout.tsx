@@ -1,19 +1,16 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
-
-
 import { cn } from "@/lib/utils"
 import { Toaster as NewYorkSonner } from "@/components/ui/sonner"
 import {
   Toaster as DefaultToaster,
   Toaster as NewYorkToaster,
 } from "@/components/ui/toaster"
-
 import { Analytics } from "@/components/analytics"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AnimatedBackgroundGuides } from "@/components/background-guides"
 import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"

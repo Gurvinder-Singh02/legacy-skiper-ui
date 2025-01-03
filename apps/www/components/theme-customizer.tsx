@@ -95,10 +95,11 @@ export function ThemeCustomizer() {
                         )}
                         style={
                           {
-                            "--theme-primary": `hsl(${theme?.activeColor[
-                              mode === "dark" ? "dark" : "light"
+                            "--theme-primary": `hsl(${
+                              theme?.activeColor[
+                                mode === "dark" ? "dark" : "light"
                               ]
-                              })`,
+                            })`,
                           } as React.CSSProperties
                         }
                       >
@@ -217,8 +218,9 @@ function Customizer() {
                   )}
                   style={
                     {
-                      "--theme-primary": `hsl(${theme?.activeColor[mode === "dark" ? "dark" : "light"]
-                        })`,
+                      "--theme-primary": `hsl(${
+                        theme?.activeColor[mode === "dark" ? "dark" : "light"]
+                      })`,
                     } as React.CSSProperties
                   }
                 >
@@ -254,7 +256,7 @@ function Customizer() {
                   }}
                   className={cn(
                     config.radius === parseFloat(value) &&
-                    "border-2 border-primary"
+                      "border-2 border-primary"
                   )}
                 >
                   {value}
@@ -414,7 +416,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}:{" "}
                   {
                     activeTheme?.cssVars.light[
-                    prefix as keyof typeof activeTheme.cssVars.light
+                      prefix as keyof typeof activeTheme.cssVars.light
                     ]
                   }
                   ;
@@ -423,7 +425,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}-foreground:{" "}
                   {
                     activeTheme?.cssVars.light[
-                    `${prefix}-foreground` as keyof typeof activeTheme.cssVars.light
+                      `${prefix}-foreground` as keyof typeof activeTheme.cssVars.light
                     ]
                   }
                   ;
@@ -470,7 +472,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}:{" "}
                   {
                     activeTheme?.cssVars.dark[
-                    prefix as keyof typeof activeTheme.cssVars.dark
+                      prefix as keyof typeof activeTheme.cssVars.dark
                     ]
                   }
                   ;
@@ -479,7 +481,7 @@ function CustomizerCode() {
                   &nbsp;&nbsp;&nbsp;&nbsp;--{prefix}-foreground:{" "}
                   {
                     activeTheme?.cssVars.dark[
-                    `${prefix}-foreground` as keyof typeof activeTheme.cssVars.dark
+                      `${prefix}-foreground` as keyof typeof activeTheme.cssVars.dark
                     ]
                   }
                   ;

@@ -1,8 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, SparklesIcon } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
+
 import LogoCarouselDemo from "@/registry/default/example/logo-carousel-demo"
 import { ContactFormExample } from "@/registry/default/example/popover-form-demo"
 import ShaderLensBlurDemo from "@/registry/default/example/shader-lens-blur-demo"
@@ -12,7 +14,6 @@ import LogoCarousel from "@/registry/default/ui/logo-carousel"
 import ShaderLensBlur from "@/registry/default/ui/shader-lens-blur"
 
 import { Badge } from "../ui/badge"
-import Image from "next/image"
 
 export function FeaturedComponent() {
   return (
@@ -196,20 +197,35 @@ export function LatestComponentHorizonatal() {
         </div>
       </div>
 
-
-
       <div className="flex w-full items-center justify-center gap-4">
         <div className="overflow-hidden ">
-          <Image src="/card/2.png" width={500} height={500} className="size-full rounded-xl" alt="left" />
+          <Image
+            src="/card/2.png"
+            width={500}
+            height={500}
+            className="size-full rounded-xl"
+            alt="left"
+          />
         </div>
         <div className="overflow-hidden ">
-          <Image src="/card/1.png" width={500} height={500} className="size-full rounded-xl" alt="Middle" />
+          <Image
+            src="/card/1.png"
+            width={500}
+            height={500}
+            className="size-full rounded-xl"
+            alt="Middle"
+          />
         </div>
         <div className="overflow-hidden ">
-          <Image src="/card/3.png" width={500} height={500} className="size-full rounded-xl" alt="right" />
+          <Image
+            src="/card/3.png"
+            width={500}
+            height={500}
+            className="size-full rounded-xl"
+            alt="right"
+          />
         </div>
       </div>
-
     </div>
   )
 }

@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { PricingHeader } from "./PricingHeader";
-import { PAYMENT_FREQUENCIES, TIERS } from "@/config/site";
-import { PricingCard } from "./PricingCard";
+import { useState } from "react"
 
+import { PAYMENT_FREQUENCIES, TIERS } from "@/config/site"
 
+import { PricingCard } from "./PricingCard"
+import { PricingHeader } from "./PricingHeader"
 
 export const Pricing = () => {
   const [selectedPaymentFreq, setSelectedPaymentFreq] = useState(
-    PAYMENT_FREQUENCIES[0],
-  );
+    PAYMENT_FREQUENCIES[0]
+  )
 
   return (
     <section className="flex flex-col items-center gap-10 py-10">
@@ -34,5 +34,5 @@ export const Pricing = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

@@ -1,17 +1,18 @@
-"use client";
+"use client"
 
-import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
-import Image from "next/image";
-import React from "react";
+import React from "react"
+import Image from "next/image"
+import { motion } from "motion/react"
+
+import { cn } from "@/lib/utils"
 
 type Props = {
-  label: string;
-  icon: string;
-  href?: string;
-  className?: string;
-  rotate?: number;
-};
+  label: string
+  icon: string
+  href?: string
+  className?: string
+  rotate?: number
+}
 
 const AnimatedTooltip = ({ label, icon, href, className, rotate }: Props) => {
   const iconVariants = {
@@ -28,7 +29,7 @@ const AnimatedTooltip = ({ label, icon, href, className, rotate }: Props) => {
       filter: "blur(0px)",
       rotate: rotate ?? 0,
     },
-  };
+  }
 
   return (
     <motion.a
@@ -53,7 +54,7 @@ const AnimatedTooltip = ({ label, icon, href, className, rotate }: Props) => {
         />
       </motion.span>
     </motion.a>
-  );
-};
+  )
+}
 
-export default AnimatedTooltip;
+export default AnimatedTooltip

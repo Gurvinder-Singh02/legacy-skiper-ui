@@ -22,7 +22,7 @@ export default function BlocksLayout({
 }) {
   return (
     <div className="container relative m-auto w-full ">
-      <div className="mt-32" ></div>
+      <div className="mt-32"></div>
       {children}
     </div>
   )

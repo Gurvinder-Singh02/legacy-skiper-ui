@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 
-
 export const metadata: Metadata = {
   title: "Building Blocks.",
   description:
@@ -12,9 +11,5 @@ export default function BlocksLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <section>
-      {children}
-    </section>
-  )
+  return <section>{children}</section>
 }

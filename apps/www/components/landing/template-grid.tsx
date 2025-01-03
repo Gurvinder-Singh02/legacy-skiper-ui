@@ -1,11 +1,9 @@
 import { IceCream } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-
 import cultSeoOg from "@/components/landing/assets/cult-seo-og.png"
 import manifestBottomLeft from "@/components/landing/assets/manifest-library.png"
 import runeHero from "@/components/landing/assets/rune-hero.png"
-
 import {
   MinimalCard,
   MinimalCardDescription,
@@ -84,9 +82,7 @@ export function TemplateGrid() {
   )
 }
 
-
 export const TEMPLATES_GRID = [
-
   {
     name: "Landing Page",
     new: false,
@@ -112,7 +108,7 @@ export const TEMPLATES_GRID = [
     type: "template",
     stack: ["nextjs", "tailwind"],
     images: [runeHero],
-    
+
     gif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTFjaG1wM3o0ZzBlbXA2Z2Ywc243d2ttdGZpZXVpbXdmYjJreHp5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sZ7wUinnbIQYlucMXv/giphy.gif",
   },
 

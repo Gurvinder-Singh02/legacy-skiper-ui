@@ -15,11 +15,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:cli": "turbo --filter=cult-ui build",
     "build:registry": "pnpm --filter=www build:registry",
     "dev": "turbo run dev --parallel",
-    "cli:dev": "turbo --filter=cult-ui dev",
-    "cli:start": "pnpm --filter=cult-ui start:dev",
     "www:dev": "pnpm --filter=www dev",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",

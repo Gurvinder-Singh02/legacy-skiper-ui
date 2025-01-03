@@ -221,7 +221,7 @@ export function ChallengeCreationCard({
           }}
         />
         <div className="absolute left-48 top-5 z-50 size-full cursor-pointer md:left-0">
-          <Steps current={step} onChange={() => { }} steps={steps} />
+          <Steps current={step} onChange={() => {}} steps={steps} />
         </div>
       </>
 
@@ -281,11 +281,11 @@ export function Steps({ steps, current, onChange }) {
                     className={cn(
                       "flex shrink-0 items-center justify-center rounded-full duration-300",
                       isCompleted &&
-                      "bg-brand-400 dark:bg-brand-400 size-4 text-white",
+                        "bg-brand-400 dark:bg-brand-400 size-4 text-white",
                       isCurrent &&
-                      "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
+                        "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
                       isFuture &&
-                      "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
+                        "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
                     )}
                   >
                     {isCompleted ? (

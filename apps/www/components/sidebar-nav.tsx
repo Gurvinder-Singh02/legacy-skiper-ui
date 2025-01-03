@@ -43,7 +43,6 @@ export function DocsSidebarNavItems({
       {items.map((item, index) => (
         <NavItem key={index} item={item} pathname={pathname} />
       ))}
-
     </div>
   ) : null
 }

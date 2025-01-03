@@ -1,17 +1,14 @@
 import { notFound } from "next/navigation"
 import { allDocs } from "contentlayer/generated"
 
-// will help style the mdx code as per the rehype 
+// will help style the mdx code as per the rehype
 import "@/styles/mdx.css"
-
 import type { Metadata } from "next"
 import Link from "next/link"
-
 import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
 import Balancer from "react-wrap-balancer"
 
 import { siteConfig } from "@/config/site"
-
 import { getTableOfContents } from "@/lib/toc"
 import { absoluteUrl, cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
@@ -20,7 +17,6 @@ import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
 
-
 interface DocPageProps {
   params: {
     slug: string[]
@@ -28,7 +24,6 @@ interface DocPageProps {
 }
 
 async function getDocFromParams({ params }: DocPageProps) {
-
   console.log("raw", params)
   const slug = params.slug?.join("/") || ""
 
@@ -37,9 +32,8 @@ async function getDocFromParams({ params }: DocPageProps) {
   const doc = allDocs.find((doc) => doc.slugAsParams === slug)
 
   if (!doc) {
-    console.log('no doc found')
+    console.log("no doc found")
     return null
-
   }
   // console.log('got the docuemnt bitttttttttttttttttttttttttttttttttttch', doc)
   return doc
@@ -90,7 +84,6 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function DocPage({ params }: DocPageProps) {
-
   const doc = await getDocFromParams({ params })
 
   if (!doc) {
@@ -104,9 +97,7 @@ export default async function DocPage({ params }: DocPageProps) {
     <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_100px]">
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
-          <div className="truncate">
-            Docs
-          </div>
+          <div className="truncate">Docs</div>
           <ChevronRightIcon className="size-4" />
           <div className="font-medium text-foreground">{doc.title}</div>
         </div>

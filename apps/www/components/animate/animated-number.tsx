@@ -174,10 +174,10 @@ export function CustomSpringExample() {
 
   const handleValueChange =
     (setter: (value: number) => void, minValue: number) =>
-      (values: number[]) => {
-        const newValue = Math.max(values[0], minValue)
-        setter(newValue)
-      }
+    (values: number[]) => {
+      const newValue = Math.max(values[0], minValue)
+      setter(newValue)
+    }
 
   return (
     <TextureCardStyled className="w-full">

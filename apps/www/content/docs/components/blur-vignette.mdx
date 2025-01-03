@@ -2,7 +2,7 @@
 title: Blur Vignette
 description: A stacked animation with dialog
 component: true
-links: 
+links:
 ---
 
 <ComponentPreview
@@ -43,7 +43,6 @@ export function cn(...inputs: ClassValue[]) {
 ```
 </Step>
 
-
 <Step>Copy the source code to `components/ui/blur-vignette.tsx` </Step>
 
 <ComponentSource name="blur-vignette" />
@@ -55,31 +54,37 @@ export function cn(...inputs: ClassValue[]) {
 ```tsx
 import BlurVignette from "@/components/skiper/BlurVignette"
 ```
+
 ```tsx
-
 function BasicExample() {
-
-    return (
-        <BlurVignette
-            radius="24px"
-            inset="10px"
-            transitionLength="100px"
-            blur="15px"
-            className=" rounded-[2.5rem]"
-            switchView={true}
-        >
-        <video autoPlay={true} muted loop content="true" className="size-full  object-cover transition-all ">
-          <source src="https://cdn.pixabay.com/video/2023/10/19/185726-876210695_large.mp4" type="video/mp4"/>
-        </video>
-      </BlurVignette>
-    )
+  return (
+    <BlurVignette
+      radius="24px"
+      inset="10px"
+      transitionLength="100px"
+      blur="15px"
+      className=" rounded-[2.5rem]"
+      switchView={true}
+    >
+      <video
+        autoPlay={true}
+        muted
+        loop
+        content="true"
+        className="size-full  object-cover transition-all "
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2023/10/19/185726-876210695_large.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </BlurVignette>
+  )
 }
 ```
-
 
 </Steps>
 
 </TabsContent>
 
 </Tabs>
-

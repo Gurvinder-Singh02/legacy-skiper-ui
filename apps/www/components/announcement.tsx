@@ -1,16 +1,17 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import AnimatedShinyText from "./ui/animated-shiny-text"
-import { ArrowRightIcon } from "lucide-react"
 import NumberFlow from "@number-flow/react"
+import { ArrowRightIcon } from "lucide-react"
+
+import AnimatedShinyText from "./ui/animated-shiny-text"
 
 export function Announcement() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   })
 
   useEffect(() => {
@@ -21,9 +22,11 @@ export function Announcement() {
 
       return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
       }
     }
 
@@ -40,26 +43,28 @@ export function Announcement() {
       href="#"
       className="inline-flex items-center rounded-full border bg-muted px-3 py-1 text-sm font-medium"
     >
-      <AnimatedShinyText
-        className="inline-flex items-center justify-center rounded-full px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+      <AnimatedShinyText className="inline-flex items-center justify-center rounded-full px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
         <span>✨ Coming in </span> &nbsp;
-        <NumberFlow value={timeLeft.days} />d&nbsp;
-        <NumberFlow value={timeLeft.hours} />h&nbsp;
-        <NumberFlow value={timeLeft.minutes} />m&nbsp;
-        <NumberFlow value={timeLeft.seconds} />s&nbsp;
+        <NumberFlow value={timeLeft.days} />
+        d&nbsp;
+        <NumberFlow value={timeLeft.hours} />
+        h&nbsp;
+        <NumberFlow value={timeLeft.minutes} />
+        m&nbsp;
+        <NumberFlow value={timeLeft.seconds} />
+        s&nbsp;
         <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
       </AnimatedShinyText>
     </a>
   )
 }
 
-
 export function CountDown() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   })
 
   useEffect(() => {
@@ -70,9 +75,11 @@ export function CountDown() {
 
       return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
       }
     }
 
@@ -86,12 +93,14 @@ export function CountDown() {
 
   return (
     <>
-
-      <NumberFlow value={timeLeft.days} />d&nbsp;
-      <NumberFlow value={timeLeft.hours} />h&nbsp;
-      <NumberFlow value={timeLeft.minutes} />m&nbsp;
-      <NumberFlow value={timeLeft.seconds} />s&nbsp;
+      <NumberFlow value={timeLeft.days} />
+      d&nbsp;
+      <NumberFlow value={timeLeft.hours} />
+      h&nbsp;
+      <NumberFlow value={timeLeft.minutes} />
+      m&nbsp;
+      <NumberFlow value={timeLeft.seconds} />
+      s&nbsp;
     </>
-
   )
 }

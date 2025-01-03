@@ -1,22 +1,22 @@
+import NumberFlow from "@number-flow/react"
+import { ArrowRight, BadgeCheck } from "lucide-react"
 
-import { TIERS } from "@/config/site";
-import { ArrowRight, BadgeCheck } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Badge } from "./ui/badge";
-import NumberFlow from "@number-flow/react";
-import { Button } from "./ui/button";
+import { TIERS } from "@/config/site"
+import { cn } from "@/lib/utils"
 
+import { Badge } from "./ui/badge"
+import { Button } from "./ui/button"
 
 export const PricingCard = ({
   tier,
   paymentFrequency,
 }: {
-  tier: (typeof TIERS)[0];
-  paymentFrequency: string;
+  tier: (typeof TIERS)[0]
+  paymentFrequency: string
 }) => {
-  const price = tier.price[paymentFrequency];
-  const isHighlighted = tier.highlighted;
-  const isPopular = tier.popular;
+  const price = tier.price[paymentFrequency]
+  const isHighlighted = tier.highlighted
+  const isPopular = tier.popular
 
   return (
     <div
@@ -25,7 +25,9 @@ export const PricingCard = ({
         isHighlighted
           ? "bg-foreground text-background"
           : "bg-background text-foreground",
-        isPopular ? " w-[350px] scale-100 outline outline-[#ff4017] xl:w-[400px] xl:scale-110 " : " w-[350px] ",
+        isPopular
+          ? " w-[350px] scale-100 outline outline-[#ff4017] xl:w-[400px] xl:scale-110 "
+          : " w-[350px] "
       )}
     >
       {/* Background Decoration */}
@@ -71,7 +73,7 @@ export const PricingCard = ({
               key={index}
               className={cn(
                 "flex items-center gap-2 text-sm font-medium",
-                isHighlighted ? "text-background" : "text-foreground/60",
+                isHighlighted ? "text-background" : "text-foreground/60"
               )}
             >
               <BadgeCheck strokeWidth={1} size={16} />
@@ -88,21 +90,19 @@ export const PricingCard = ({
         iconPlacement="right"
         className={cn(
           "h-fit w-full rounded-lg",
-          isHighlighted && "bg-accent text-foreground hover:bg-accent/95",
+          isHighlighted && "bg-accent text-foreground hover:bg-accent/95"
         )}
       >
         {tier.cta}
       </Button>
     </div>
-  );
-};
+  )
+}
 
 // Highlighted Background Component
 const HighlightedBackground = () => (
   <div className="absolute inset-0  dark:opacity-30" />
-);
+)
 
 // Popular Background Component
-const PopularBackground = () => (
-  <div className="absolute inset-0 " />
-);
+const PopularBackground = () => <div className="absolute inset-0 " />

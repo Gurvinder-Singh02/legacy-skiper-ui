@@ -57,11 +57,11 @@ export function CopyButton({
           value,
           event
             ? {
-              name: event,
-              properties: {
-                code: value,
-              },
-            }
+                name: event,
+                properties: {
+                  code: value,
+                },
+              }
             : undefined
         )
         setHasCopied(true)

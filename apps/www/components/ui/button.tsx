@@ -3,6 +3,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+
 import { Icons } from "../icons"
 
 const buttonVariants = cva(
@@ -13,8 +14,7 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-[#ff4017]  ",
+        outline: "border border-input bg-background hover:bg-[#ff4017]  ",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-[#ff4017] hover:text-[#ffffff]",
@@ -36,11 +36,11 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-  VariantProps<typeof buttonVariants> {
+    VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
 
-const Button = React.forwardRef < HTMLButtonElement, ButtonProps> (
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
@@ -53,11 +53,14 @@ const Button = React.forwardRef < HTMLButtonElement, ButtonProps> (
   }
 )
 
-const BorderButton = ({ children , variant , className }: any) => {
+const BorderButton = ({ children, variant, className }: any) => {
   return (
-
-    <div className={`rounded-lg border hover:border-accent ${className}`}   >
-      <p className={`m-2 flex items-center justify-center gap-2 rounded-full ${variant=='org' ? 'bg-[#FF4017] text-white' : 'bg-[#e5e5e5]' }  px-4 py-1 tracking-tight`} >
+    <div className={`rounded-lg border hover:border-accent ${className}`}>
+      <p
+        className={`m-2 flex items-center justify-center gap-2 rounded-full ${
+          variant == "org" ? "bg-[#FF4017] text-white" : "bg-[#e5e5e5]"
+        }  px-4 py-1 tracking-tight`}
+      >
         {children}
       </p>
     </div>
@@ -66,4 +69,4 @@ const BorderButton = ({ children , variant , className }: any) => {
 
 Button.displayName = "Button"
 
-export { Button, buttonVariants , BorderButton}
+export { Button, buttonVariants, BorderButton }

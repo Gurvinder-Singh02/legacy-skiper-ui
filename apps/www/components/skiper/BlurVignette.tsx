@@ -1,28 +1,29 @@
 "use client"
 
-import React, { useState } from 'react';
-import { Switch } from '@/components/ui/switch';
+import React, { useState } from "react"
+
+import { Switch } from "@/components/ui/switch"
 
 interface BlurVignetteProps {
-  children: React.ReactNode;
-  className?: string;
-  radius?: string;
-  inset?: string;
-  transitionLength?: string;
-  blur?: string;
-  switchView?: boolean;
+  children: React.ReactNode
+  className?: string
+  radius?: string
+  inset?: string
+  transitionLength?: string
+  blur?: string
+  switchView?: boolean
 }
 
 const BlurVignette = ({
   children,
   switchView,
-  className = '',
-  radius = '24px',
-  inset = '16px',
-  transitionLength = '32px',
-  blur = '21px',
+  className = "",
+  radius = "24px",
+  inset = "16px",
+  transitionLength = "32px",
+  blur = "21px",
 }: BlurVignetteProps) => {
-  const [isEnabled, setIsEnabled] = useState(true);
+  const [isEnabled, setIsEnabled] = useState(true)
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -77,20 +78,16 @@ const BlurVignette = ({
           }
         `}
       </style>
-      <div className={`blur-vignette ${isEnabled ? 'active' : ''}`} />
+      <div className={`blur-vignette ${isEnabled ? "active" : ""}`} />
       {children}
       <div className="absolute right-4 top-4 flex items-center gap-2">
-        <span className="text-sm text-gray-600">
-        </span>
-        {switchView &&
-        <Switch
-          checked={isEnabled}
-          onCheckedChange={setIsEnabled}
-        />
-      }
+        <span className="text-sm text-gray-600"></span>
+        {switchView && (
+          <Switch checked={isEnabled} onCheckedChange={setIsEnabled} />
+        )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlurVignette;
+export default BlurVignette

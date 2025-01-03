@@ -66,7 +66,7 @@ type User = (typeof users)[number]
 
 export function CardsChat() {
   const [open, setOpen] = React.useState(false)
-  const [selectedUsers, setSelectedUsers] = React.useState < User[] > ([])
+  const [selectedUsers, setSelectedUsers] = React.useState<User[]>([])
 
   const [messages, setMessages] = React.useState([
     {

@@ -180,12 +180,12 @@ export const columns: ColumnDef<Payment>[] = [
 ]
 
 export function CardsDataTable() {
-  const [sorting, setSorting] = React.useState < SortingState > ([])
-  const [columnFilters, setColumnFilters] = React.useState < ColumnFiltersState > (
+  const [sorting, setSorting] = React.useState<SortingState>([])
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   )
   const [columnVisibility, setColumnVisibility] =
-    React.useState < VisibilityState > ({})
+    React.useState<VisibilityState>({})
   const [rowSelection, setRowSelection] = React.useState({})
 
   const table = useReactTable({
@@ -264,9 +264,9 @@ export function CardsDataTable() {
                         {header.isPlaceholder
                           ? null
                           : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
                       </TableHead>
                     )
                   })}

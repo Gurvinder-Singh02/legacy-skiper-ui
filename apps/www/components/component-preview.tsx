@@ -30,7 +30,6 @@ export function ComponentPreview({
   description,
   ...props
 }: ComponentPreviewProps) {
-
   const [config] = useConfig()
 
   const index = styles.findIndex((style) => style.name === config.style)

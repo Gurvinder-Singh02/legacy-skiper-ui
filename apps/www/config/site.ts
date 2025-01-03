@@ -1,6 +1,5 @@
 // #WIP
 export const siteConfig = {
-
   // #WIP image
   name: "skiper/ui",
   url: "https://gxuri.in",
@@ -15,17 +14,17 @@ export const siteConfig = {
 
 export type SiteConfig = typeof siteConfig
 
-export const PAYMENT_FREQUENCIES = ["monthly", "yearly"];
+export const PAYMENT_FREQUENCIES = ["monthly", "yearly"]
 
 export interface PricingTier {
-  name: string;
-  id: string;
-  price: Record<string, number | string>;
-  description: string;
-  features: string[];
-  cta: string;
-  highlighted?: boolean;
-  popular?: boolean;
+  name: string
+  id: string
+  price: Record<string, number | string>
+  description: string
+  features: string[]
+  cta: string
+  highlighted?: boolean
+  popular?: boolean
 }
 
 export const TIERS: PricingTier[] = [
@@ -42,7 +41,7 @@ export const TIERS: PricingTier[] = [
       "Basic documentation",
       "Community support",
       "MIT License",
-      "React only"
+      "React only",
     ],
     cta: "Get started",
   },
@@ -59,7 +58,7 @@ export const TIERS: PricingTier[] = [
       "Detailed documentation",
       "Priority email support",
       "Figma file access",
-      "React & Next.js support"
+      "React & Next.js support",
     ],
     cta: "Subscribe now",
     popular: true,
@@ -77,8 +76,8 @@ export const TIERS: PricingTier[] = [
       "Advanced customization",
       "Priority support",
       "Multiple projects license",
-      "All framework support"
+      "All framework support",
     ],
     cta: "Subscribe now",
-  }
-];
+  },
+]

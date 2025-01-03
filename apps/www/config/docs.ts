@@ -69,10 +69,8 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
-
           ],
         },
-
       ],
     },
   ],

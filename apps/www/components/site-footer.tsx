@@ -16,7 +16,7 @@ export function SiteFooter() {
           </a>
           . The source code is Comming Soon{" "}
           <a
-            href='#'
+            href="#"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
