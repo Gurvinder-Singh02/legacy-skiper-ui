@@ -25,4 +25,10 @@ export const examples: Registry = [
     registryDependencies: ["minimal-card-demo"],
     files: ["example/minimal-card-demo.tsx"],
   },
+  {
+    name: "blur-vignette-demo",
+    type: "components:example",
+    registryDependencies: ["blur-vignette-demo"],
+    files: ["example/blur-vignette-demo.tsx"],
+  },
 ]

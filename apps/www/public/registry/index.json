@@ -38,5 +38,15 @@
       "ui/minimal-card.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "blur-vignette",
+    "dependencies": [
+      "framer-motion "
+    ],
+    "files": [
+      "ui/blur-vignette.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

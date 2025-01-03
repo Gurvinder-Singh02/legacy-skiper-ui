@@ -49,6 +49,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "blur-vignette": {
+      name: "blur-vignette",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/blur-vignette")),
+      source: "",
+      files: ["registry/default/ui/blur-vignette.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-demo": {
       name: "animated-number-demo",
       type: "components:example",
@@ -89,6 +100,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/minimal-card-demo")),
       source: "",
       files: ["registry/default/example/minimal-card-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "blur-vignette-demo": {
+      name: "blur-vignette-demo",
+      type: "components:example",
+      registryDependencies: ["blur-vignette-demo"],
+      component: React.lazy(() => import("@/registry/default/example/blur-vignette-demo")),
+      source: "",
+      files: ["registry/default/example/blur-vignette-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
