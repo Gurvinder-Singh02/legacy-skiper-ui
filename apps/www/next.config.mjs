@@ -32,6 +32,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
         hostname: "openaicomproductionae4b.blob.core.windows.net",
       },
       {

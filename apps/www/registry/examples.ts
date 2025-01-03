@@ -19,4 +19,10 @@ export const examples: Registry = [
     registryDependencies: ["stacked-dialog-demo"],
     files: ["example/stacked-dialog-demo.tsx"],
   },
+  {
+    name: "minimal-card-demo",
+    type: "components:example",
+    registryDependencies: ["minimal-card-demo"],
+    files: ["example/minimal-card-demo.tsx"],
+  },
 ]

@@ -28,5 +28,15 @@
       "ui/stacked-dialog.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "minimal-card",
+    "dependencies": [
+      "framer-motion "
+    ],
+    "files": [
+      "ui/minimal-card.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

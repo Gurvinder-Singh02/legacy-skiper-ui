@@ -11,35 +11,29 @@ export default function MinimalCardDemo() {
       title: "Sick title",
       description:
         "How to design with gestures and motion that feel intuitive and natural.",
+      src: "https://pbs.twimg.com/media/GgMiuRpa4AAoW2y?format=jpg&name=medium"
     },
     {
       title: "Sick title",
       description:
         "How to design with gestures and motion that feel intuitive and natural.",
+      src: "https://pbs.twimg.com/media/GgHZJN0aoAA__92?format=jpg&name=medium"
     },
     {
       title: "Sick title",
       description:
         "How to design with gestures and motion that feel intuitive and natural.",
+      src: "https://pbs.twimg.com/media/GgCPjsQacAAWvm3?format=jpg&name=medium"
     },
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
-    {
-      title: "Sick title",
-      description:
-        "How to design with gestures and motion that feel intuitive and natural.",
-    },
+
   ]
   return (
-    <div className="w-full max-w-4xl">
-      <div className="flex min-h-[500px]  flex-col justify-center space-y-4  rounded-lg p-4">
-        <div className="relative grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
-          {cards.map((card,index) => (
-            <MinimalCard key={index}>
-              <MinimalCardImage src="/basic-img.png" alt={card.title} />
+    <div className="w-full max-w-5xl ">
+      <div className="flex flex-col justify-center rounded-lg p-4">
+        <div className="flex flex-wrap items-center justify-center ">
+          {cards.map((card, index) => (
+            <MinimalCard className="m-2 w-[460px] " key={index}  >
+              <MinimalCardImage className="h-[320px]" src={card.src} alt={card.title} />
               <MinimalCardTitle>{card.title}</MinimalCardTitle>
               <MinimalCardDescription>
                 {card.description}

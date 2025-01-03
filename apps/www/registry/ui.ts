@@ -19,4 +19,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion "],
     files: ["ui/stacked-dialog.tsx"],
   },
+  {
+    name: "minimal-card",
+    type: "components:ui",
+    dependencies: ["framer-motion "],
+    files: ["ui/minimal-card.tsx"],
+  },
 ]

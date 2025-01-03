@@ -38,6 +38,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "minimal-card": {
+      name: "minimal-card",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/minimal-card")),
+      source: "",
+      files: ["registry/default/ui/minimal-card.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-demo": {
       name: "animated-number-demo",
       type: "components:example",
@@ -67,6 +78,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/stacked-dialog-demo")),
       source: "",
       files: ["registry/default/example/stacked-dialog-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "minimal-card-demo": {
+      name: "minimal-card-demo",
+      type: "components:example",
+      registryDependencies: ["minimal-card-demo"],
+      component: React.lazy(() => import("@/registry/default/example/minimal-card-demo")),
+      source: "",
+      files: ["registry/default/example/minimal-card-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
