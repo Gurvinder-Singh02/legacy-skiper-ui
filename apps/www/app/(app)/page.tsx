@@ -9,7 +9,7 @@ import { Announcement } from "@/components/announcement"
 import { FadeIn } from "@/components/fade-in"
 import { Icons } from "@/components/icons"
 import { FeaturesSection } from "@/components/landing/feature-section"
-import { LatestComponentHorizonatal } from "@/components/landing/featured-component"
+
 import { PlugCardGrid } from "@/components/landing/plug-grid"
 import { TemplateGrid } from "@/components/landing/template-grid"
 import { Testimonials } from "@/components/landing/testimonials"

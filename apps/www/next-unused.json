@@ -1,0 +1,14 @@
+{
+    "entrypoints": [
+        "app/"
+    ],
+    "extensions": [
+        ".ts",
+        ".tsx",
+        ".js",
+        ".jsx"
+    ],
+    "ignorePatterns": [
+        "node_modules/"
+    ]
+}
