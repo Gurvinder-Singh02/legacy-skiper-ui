@@ -64,12 +64,6 @@ export const docsConfig: DocsConfig = {
               label: "new",
             },
             {
-              title: "Hover Card",
-              href: "/docs/components/hover-card",
-              items: [],
-              label: "new",
-            },
-            {
               title: "Blur Vignette",
               href: "/docs/components/blur-vignette",
               items: [],

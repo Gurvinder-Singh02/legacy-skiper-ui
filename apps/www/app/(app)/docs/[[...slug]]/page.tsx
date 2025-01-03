@@ -19,7 +19,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
-import console from "console"
+
 
 interface DocPageProps {
   params: {
@@ -41,7 +41,7 @@ async function getDocFromParams({ params }: DocPageProps) {
     return null
 
   }
-  console.log('got the docuemnt bitttttttttttttttttttttttttttttttttttch', doc)
+  // console.log('got the docuemnt bitttttttttttttttttttttttttttttttttttch', doc)
   return doc
 }
 
@@ -97,6 +97,7 @@ export default async function DocPage({ params }: DocPageProps) {
     notFound()
   }
 
+  console.log("docccccccccccc linkkkkkkkkkkkkkkkkkkkkkk", doc.links)
   const toc = await getTableOfContents(doc.body.raw)
 
   return (
