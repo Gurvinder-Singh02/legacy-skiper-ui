@@ -1,10 +1,10 @@
 # Contributing
 
-Thanks for your interest in contributing to cult/ui. Glad you're here ;)
+Thanks for your interest in contributing to skiper/ui. Glad you're here ;)
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
-If you need any help, feel free to reach out to [@Jordan](https://twitter.com/nolansym).
+If you need any help, feel free to reach out to [@gxuri](https://twitter.com/guri_who).
 
 ## About this repository
 
@@ -46,13 +46,13 @@ You can fork this repo by clicking the fork button in the top right corner of th
 ### Clone on your local machine
 
 ```bash
-git clone https://github.com/your-username/ui.git
+git clone https://github.com/your-username/skiperui.git
 ```
 
 ### Navigate to project directory
 
 ```bash
-cd ui
+cd skiperui
 ```
 
 ### Create a new Branch
@@ -79,7 +79,7 @@ You can use the `pnpm --filter=[WORKSPACE]` command to start the development pro
 pnpm --filter=www dev
 ```
 
-2. To run the `cult-ui` package:
+2. To run the `skiper-ui` package:
 
 ```bash
 pnpm --filter=cult-ui dev
