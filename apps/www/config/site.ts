@@ -43,7 +43,7 @@ export const TIERS: PricingTier[] = [
       "MIT License",
       "React only",
     ],
-    cta: "Get started",
+    cta: "Current",
   },
   {
     id: "pro",
@@ -60,7 +60,7 @@ export const TIERS: PricingTier[] = [
       "Figma file access",
       "React & Next.js support",
     ],
-    cta: "Subscribe now",
+    cta: "Comming Soon",
     popular: true,
   },
   {
@@ -78,6 +78,6 @@ export const TIERS: PricingTier[] = [
       "Multiple projects license",
       "All framework support",
     ],
-    cta: "Subscribe now",
+    cta: "Comming Soon",
   },
 ]

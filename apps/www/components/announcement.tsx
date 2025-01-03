@@ -69,7 +69,7 @@ export function CountDown() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const targetDate = new Date("2025-02-01")
+      const targetDate = new Date("2025-01-15")
       const now = new Date()
       const difference = targetDate.getTime() - now.getTime()
 
