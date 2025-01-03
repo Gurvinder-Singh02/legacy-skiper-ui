@@ -88,15 +88,14 @@ export function TemplateGrid() {
 
 export const TEMPLATES_GRID = [
 
-  //WIP update Videos Landing page : gxuri .in , then fix my code , the
   {
     name: "Landing Page",
     new: false,
     meta: "marketing",
-    downloadUrl: "cult-landing-page.zip",
-    liveUrl: "https://dub.sh/rune",
+    downloadUrl: "landing-page.zip",
+    liveUrl: "https://gxuri.in",
     gradient: "bg-gradient-to-b from-white/10 to-[#FF9150] via-[#FFD0B7]/30",
-    slug: "https://www.newcult.co/templates/cult-landing-page",
+    slug: "gxui",
     description:
       "Modern landing page template featuring Framer Motion animations, custom navigation components, and responsive design optimized for conversions.",
     features: [
@@ -107,22 +106,23 @@ export const TEMPLATES_GRID = [
       },
       {
         name: "Unique navigation",
-        description: "The newcult.co nav bar animation.",
+        description: "The newco nav bar animation.",
         icon: "layers",
       },
     ],
     type: "template",
     stack: ["nextjs", "tailwind"],
     images: [runeHero],
-    gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGV2MWMzY2I4eW45NThuMWJ0enpsY2tyenZkNTJtNjk4am5hb2FmMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lmXonZXi4HBJldN0rt/giphy-downsized-large.gif",
+    
+    gif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTFjaG1wM3o0ZzBlbXA2Z2Ywc243d2ttdGZpZXVpbXdmYjJreHp5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sZ7wUinnbIQYlucMXv/giphy.gif",
   },
 
   {
-    name: "Cult SEO",
-    slug: "https://www.newcult.co/templates/cult-seo",
+    name: "Skiper SEO",
+    slug: "#",
     new: false,
-    downloadUrl: "cult-seo.zip",
-    liveUrl: "https://cleanmyseo.com",
+    downloadUrl: "#",
+    liveUrl: "#",
     meta: "fullstack",
     description:
       "Comprehensive SEO analysis tool with web crawling, performance testing, and AI-powered optimization recommendations for website improvement.",
@@ -154,11 +154,10 @@ export const TEMPLATES_GRID = [
 
   {
     name: "Manifest",
-    slug: "https://www.newcult.co/templates/manifest",
+    slug: "#",
     meta: "fullstack",
-    liveUrl: "https://dub.sh/vector",
-    downloadUrl: "cult-manifest-v1.2.zip",
-    // gradient: "bg-gradient-to-b from-green-50 to-green-400 via-black/10",
+    liveUrl: "#",
+    downloadUrl: "#",
     gradient: "bg-gradient-to-b from-white/10 to-green-400 via-green-50",
     new: false,
     description:
