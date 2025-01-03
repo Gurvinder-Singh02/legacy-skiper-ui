@@ -11,7 +11,10 @@ import {
   Toaster as DefaultToaster,
   Toaster as NewYorkToaster,
 } from "@/components/ui/toaster"
+
 import { Analytics } from "@/components/analytics"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import { AnimatedBackgroundGuides } from "@/components/background-guides"
 import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -106,6 +109,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
             <ThemeSwitcher />
             <Analytics />
+            <SpeedInsights/>
             <NewYorkToaster />
             <DefaultToaster />
             <NewYorkSonner />

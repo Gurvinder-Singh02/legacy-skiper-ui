@@ -57,6 +57,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
+            {
+              title: "Minimal Card",
+              href: "/docs/components/minimal-card",
+              items: [],
+              label: "new",
+            },
 
           ],
         },
