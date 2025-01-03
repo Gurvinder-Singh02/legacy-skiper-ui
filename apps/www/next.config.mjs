@@ -32,7 +32,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "pbs.twimg.com",
         port: "",
         pathname: "**",
       },
@@ -43,6 +43,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "**",
         port: "",
         pathname: "**",
       },
