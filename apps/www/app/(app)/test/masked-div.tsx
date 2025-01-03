@@ -1,11 +1,14 @@
 import React, { ReactNode } from 'react';
 
-type Variant = 'type-1' | 'type-2' | 'type-3';
+type Variant = 'type-1' | 'type-2' | 'type-3' | 'type-4';
 
-interface MaskedDivProps {
-    children: ReactNode;
-    className?: string;
+interface MaskedDivProps extends React.HTMLAttributes<HTMLDivElement> {
+    children?: ReactNode;
     variant?: Variant;
+    stroke?: string;
+    strokeWidth?: number;
+    size?: number; // Now represents a scale factor
+    fill?: string;
 }
 
 const svgPaths = {
@@ -24,21 +27,71 @@ const svgPaths = {
         height: 489,
         width: 850,
     },
+    'type-4': {
+        path: "M0.811768 34.5451C0.811768 15.7441 16.053 0.502808 34.8541 0.502808H816.745C835.546 0.502808 850.787 15.7441 850.787 34.5452V242.977C850.787 261.778 835.546 277.019 816.745 277.019H638.293H550.537C527.035 277.019 504.789 266.407 490.001 248.141L486.211 243.46C453.263 202.765 390.688 204.378 359.881 246.717V246.717C346.027 265.756 323.901 277.019 300.355 277.019H213.306H34.8541C16.0531 277.019 0.811768 261.778 0.811768 242.977V34.5451Z",
+        height: 278,
+        width: 851,
+    },
 };
 
-const MaskedDiv = ({ children, className = '', variant = 'type-1' }: MaskedDivProps) => {
-    const { path, height, width } = svgPaths[variant];
+const MaskedDiv = ({
+    children,
+    variant = 'type-1',
+    stroke,
+    strokeWidth = 2,
+    size = 1,
+    fill = '#808080',
+    className,
+    style,
+    ...props
+}: MaskedDivProps) => {
+    const { path, height: originalHeight, width: originalWidth } = svgPaths[variant];
+    const uniqueId = `shape-${variant}-${Math.random().toString(36).substr(2, 9)}`;
+
+    const scaledWidth = originalWidth * size;
+    const scaledHeight = originalHeight * size;
 
     return (
-        <div className={`relative overflow-hidden ${className}`} style={{ height, width }}>
-            <svg className="absolute left-0 top-0 size-full" fill="black" viewBox={`0 0 ${width} ${height}`}>
+        <div
+            className={`relative ${className || ''}`}
+            style={{
+                width: scaledWidth,
+                height: scaledHeight,
+                ...style
+            }}
+            {...props}
+        >
+            <svg
+                className="absolute left-0 top-0 size-full"
+                viewBox={`0 0 ${originalWidth} ${originalHeight}`}
+                style={{ pointerEvents: 'none' }}
+                preserveAspectRatio="none"
+            >
                 <defs>
-                    <clipPath id={`shape-${variant}`}>
+                    <clipPath id={uniqueId}>
                         <path d={path} />
                     </clipPath>
                 </defs>
+                {/* Background fill */}
+                <path
+                    d={path}
+                    fill={fill}
+                />
+                {/* Stroke path */}
+                {stroke && (
+                    <path
+                        d={path}
+                        fill="none"
+                        stroke={stroke}
+                        strokeWidth={strokeWidth}
+                        vectorEffect="non-scaling-stroke"
+                    />
+                )}
             </svg>
-            <div className="size-full" style={{ clipPath: `url(#shape-${variant})` }}>
+            <div
+                className="size-full"
+                style={{ clipPath: `url(#${uniqueId})` }}
+            >
                 {children}
             </div>
         </div>
