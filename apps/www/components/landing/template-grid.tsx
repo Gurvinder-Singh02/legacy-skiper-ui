@@ -1,12 +1,11 @@
 import { IceCream } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import cultDirectoryHomeDark from "@/components/landing/assets/cult-directory-dark-home.png"
-import cultLogoGPTHome from "@/components/landing/assets/cult-logo-gpt.png"
+
 import cultSeoOg from "@/components/landing/assets/cult-seo-og.png"
 import manifestBottomLeft from "@/components/landing/assets/manifest-library.png"
 import runeHero from "@/components/landing/assets/rune-hero.png"
-import travelStash4 from "@/components/landing/assets/travel-stash.png"
+
 import {
   MinimalCard,
   MinimalCardDescription,

@@ -25,4 +25,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion "],
     files: ["ui/minimal-card.tsx"],
   },
+  {
+    name: "blur-vignette",
+    type: "components:ui",
+    dependencies: ["framer-motion "],
+    files: ["ui/blur-vignette.tsx"],
+  },
 ]
