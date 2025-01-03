@@ -68,7 +68,7 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/blur-vignette",
               items: [],
               label: "new",
-            },
+            }
           ],
         },
       ],
