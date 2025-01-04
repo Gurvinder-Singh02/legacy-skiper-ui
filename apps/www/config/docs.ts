@@ -74,7 +74,13 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/masked-div",
               items: [],
               label: "new",
-            }
+            },
+            {
+              title: "Expandable",
+              href: "/docs/components/expandable",
+              items: [],
+              label: "new",
+            },
           ],
         },
       ],

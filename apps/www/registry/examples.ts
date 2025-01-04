@@ -49,4 +49,10 @@ export const examples: Registry = [
     registryDependencies: ["masked-div-demo"],
     files: ["example/masked-div-demo.tsx"],
   },
+  {
+    name: "expandable-demo",
+    type: "components:example",
+    registryDependencies: ["expandable"],
+    files: ["example/expandable-demo.tsx"],
+  },
 ]

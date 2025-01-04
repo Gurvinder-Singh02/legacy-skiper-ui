@@ -49,4 +49,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion "],
     files: ["ui/masked-div.tsx"],
   },
+  {
+    name: "expandable",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/expandable.tsx"],
+  },
 ]

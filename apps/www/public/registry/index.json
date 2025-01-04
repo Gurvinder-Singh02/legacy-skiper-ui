@@ -78,5 +78,15 @@
       "ui/masked-div.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "expandable",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/expandable.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

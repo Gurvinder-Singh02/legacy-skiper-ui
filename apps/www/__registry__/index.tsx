@@ -93,6 +93,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "expandable": {
+      name: "expandable",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/expandable")),
+      source: "",
+      files: ["registry/default/ui/expandable.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -177,6 +188,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/masked-div-demo")),
       source: "",
       files: ["registry/default/example/masked-div-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "expandable-demo": {
+      name: "expandable-demo",
+      type: "components:example",
+      registryDependencies: ["expandable"],
+      component: React.lazy(() => import("@/registry/default/example/expandable-demo")),
+      source: "",
+      files: ["registry/default/example/expandable-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
