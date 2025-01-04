@@ -1,33 +1,28 @@
-import React from "react"
+import Image from 'next/image';
+import MaskedImage from './masked-div';
 
-import MaskedDiv from "./masked-div"
-import Image from "next/image"
 
 
 function page() {
-
   return (
-    <div className="mt-40 flex flex-wrap items-center justify-center gap-10">
-      <MaskedDiv variant="type-1"   >
-        <Image width={200} height={200} className="size-full " src="https://assets.lummi.ai/assets/Qmd3mKcLXtRGoiiXL28yGKjtAkixE56NP4apjMQwLCxbon?auto=format&w=1500" alt="hero" />
-      </MaskedDiv>
+    <div className='m-auto mt-40 max-w-4xl' >
 
-      <MaskedDiv variant="type-1"   >
-        <Image width={200} height={200} className="size-full  " src="https://assets.lummi.ai/assets/QmafN4h8zxioSnTepYKq84oW9s64nJCnFr34Xvbm8KhxG2?auto=format&w=1500" alt="hero" />
-      </MaskedDiv>
-
-      <MaskedDiv variant="type-2" className=" background-url" >
-        <Image width={200} height={200} className="size-full  " src="https://assets.lummi.ai/assets/QmTzeVUaWapKLHh6f6xCCnzajZYMY1aQYd7etxQR9JK9tG?auto=format&w=1500" alt="hero" />
-      </MaskedDiv>
-      <MaskedDiv variant="type-3" >
-        <div className="size-full " />
-      </MaskedDiv>
-      <MaskedDiv variant="type-4" >
-        <div className="size-full " />
-      </MaskedDiv>
-
+      <MaskedImage maskType="type-2" className="my-4">
+        <Image height={1080} width={1080} className='hover:scale-105' src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop" alt="Description" />
+      </MaskedImage>
+      <MaskedImage maskType="type-1" className="my-4">
+        <video autoPlay loop muted className='hover:scale-105'>
+          <source src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+        </video>
+      </MaskedImage>
+      <MaskedImage maskType="type-3" className="my-4">
+        <Image height={1080} width={1080} className='hover:scale-105' src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop" alt="Description" />
+      </MaskedImage>
+      <MaskedImage maskType="type-4" className="my-4">
+        <Image height={1080} width={1080} className='hover:scale-105' src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=2070&auto=format&fit=crop" alt="Description" />
+      </MaskedImage>
     </div>
-  )
+  );
 }
 
-export default page
+export default page;

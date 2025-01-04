@@ -1,17 +1,21 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
-type Variant = 'type-1' | 'type-2' | 'type-3' | 'type-4';
+type MaskType = 'type-1' | 'type-2' | 'type-3' | 'type-4';
 
-interface MaskedDivProps extends React.HTMLAttributes<HTMLDivElement> {
-    children?: ReactNode;
-    variant?: Variant;
-    stroke?: string;
-    strokeWidth?: number;
-    size?: number; // Now represents a scale factor
-    fill?: string;
+interface SvgPath {
+    path: string;
+    height: number;
+    width: number;
 }
 
-const svgPaths = {
+interface MaskedImageProps {
+    children: React.ReactElement<HTMLImageElement>;
+    maskType?: MaskType;
+    className?: string;
+    backgroundColor?: string;
+}
+
+const svgPaths: Record<MaskType, SvgPath> = {
     'type-1': {
         path: "M0.928955 40.9769C0.928955 18.9149 18.7917 1.01844 40.8536 0.976903L289.97 0.507853C308.413 0.473128 323.521 15.1483 324.022 33.5845L324.886 65.4007C325.955 104.745 358.022 136.159 397.38 136.417L432.98 136.65C447.818 136.748 459.797 148.799 459.803 163.637L459.982 550.982C459.992 573.08 442.08 591 419.982 591H40.9289C18.8376 591 0.928955 573.091 0.928955 551V40.9769Z",
         height: 591,
@@ -34,68 +38,37 @@ const svgPaths = {
     },
 };
 
-const MaskedDiv = ({
+const MaskedImage: React.FC<MaskedImageProps> = ({
     children,
-    variant = 'type-1',
-    stroke,
-    strokeWidth = 2,
-    size = 1,
-    fill = '#808080',
-    className,
-    style,
-    ...props
-}: MaskedDivProps) => {
-    const { path, height: originalHeight, width: originalWidth } = svgPaths[variant];
-    const uniqueId = `shape-${variant}-${Math.random().toString(36).substr(2, 9)}`;
+    maskType = 'type-1',
+    className = '',
+    backgroundColor = 'transparent'
+}) => {
+    const selectedMask = svgPaths[maskType];
 
-    const scaledWidth = originalWidth * size;
-    const scaledHeight = originalHeight * size;
+    const svgString = `data:image/svg+xml,%3Csvg width='${selectedMask.width}' height='${selectedMask.height}' viewBox='0 0 ${selectedMask.width} ${selectedMask.height}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='${selectedMask.path}' fill='%23D9D9D9'/%3E%3C/svg%3E%0A`;
+
+    const containerStyle: React.CSSProperties = {
+        aspectRatio: `${selectedMask.width}/${selectedMask.height}`,
+        backgroundColor,
+        maskImage: `url("${svgString}")`,
+        WebkitMaskImage: `url("${svgString}")`,
+        maskRepeat: 'no-repeat',
+        WebkitMaskRepeat: 'no-repeat',
+        maskSize: 'contain',
+        WebkitMaskSize: 'contain',
+    };
 
     return (
-        <div
-            className={`relative ${className || ''}`}
-            style={{
-                width: scaledWidth,
-                height: scaledHeight,
-                ...style
-            }}
-            {...props}
+        <section
+            className={`relative ${className}`}
+            style={containerStyle}
         >
-            <svg
-                className="absolute left-0 top-0 size-full"
-                viewBox={`0 0 ${originalWidth} ${originalHeight}`}
-                style={{ pointerEvents: 'none' }}
-                preserveAspectRatio="none"
-            >
-                <defs>
-                    <clipPath id={uniqueId}>
-                        <path d={path} />
-                    </clipPath>
-                </defs>
-                {/* Background fill */}
-                <path
-                    d={path}
-                    fill={fill}
-                />
-                {/* Stroke path */}
-                {stroke && (
-                    <path
-                        d={path}
-                        fill="none"
-                        stroke={stroke}
-                        strokeWidth={strokeWidth}
-                        vectorEffect="non-scaling-stroke"
-                    />
-                )}
-            </svg>
-            <div
-                className="size-full"
-                style={{ clipPath: `url(#${uniqueId})` }}
-            >
-                {children}
-            </div>
-        </div>
+            {React.cloneElement(children, {
+                className: `w-full h-full object-cover hover:scale-105 transition-all duration-300 ${children.props.className || ''}`,
+            })}
+        </section>
     );
 };
 
-export default MaskedDiv;
+export default MaskedImage;
