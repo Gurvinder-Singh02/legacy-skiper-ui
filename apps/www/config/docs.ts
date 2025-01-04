@@ -92,6 +92,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
+            {
+              title: "hover Expand",
+              href: "/docs/components/hover-expand",
+              items: [],
+              label: "new",
+            },
 
           ]
         }

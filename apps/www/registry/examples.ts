@@ -61,4 +61,10 @@ export const examples: Registry = [
     registryDependencies: ["image-cursortrail"],
     files: ["example/image-cursortrail-demo.tsx"],
   },
+  {
+    name: "hover-expand-demo",
+    type: "components:example",
+    registryDependencies: ["hover-expand"],
+    files: ["example/hover-expand-demo.tsx"],
+  },
 ]
