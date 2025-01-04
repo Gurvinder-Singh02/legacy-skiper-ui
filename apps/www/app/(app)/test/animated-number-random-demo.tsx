@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import AnimatedNumberRandom from "./animated-number-random";
+import { Badge } from "@/components/ui/badge";
+import { Shell, Shuffle, Timer } from "lucide-react";
 
 
 export default function AnimatedNumberRandomDemo() {
@@ -15,7 +17,14 @@ export default function AnimatedNumberRandomDemo() {
   };
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center">
+      <Badge
+        variant="outline"
+        className=" rounded-[14px] border border-black/10 text-base text-neutral-800 md:left-6"
+      >
+        <Shell className="  fill-[#EEBDE0]  stroke-1 text-neutral-800" />{" "}
+        &nbsp;Shuffle Componenet
+      </Badge>
       <AnimatedNumberRandom value={numbers[currentIndex]} diff={diffs[currentIndex]} />
       <button
         onClick={handleCustomClick}
@@ -31,6 +40,6 @@ export default function AnimatedNumberRandomDemo() {
         </svg>
         Shuffle
       </button>
-    </>
+    </div>
   );
 }

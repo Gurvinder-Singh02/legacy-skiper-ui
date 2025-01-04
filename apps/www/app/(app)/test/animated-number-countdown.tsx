@@ -19,7 +19,7 @@ interface TimeLeft {
     seconds: number;
 }
 
-export default function Countdown({ endDate, startDate, className }: CountdownProps) {
+export default function AnimatedNumberCountdown({ endDate, startDate, className }: CountdownProps) {
     const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
@@ -47,11 +47,11 @@ export default function Countdown({ endDate, startDate, className }: CountdownPr
     }, [endDate, startDate]);
 
     return (
-        <div className={`flex items-center gap-4 ${className}`}>
+        <div className={`flex items-center justify-center gap-4 ${className}`}>
             <div className="flex flex-col items-center">
                 <MotionNumberFlow
                     value={timeLeft.days}
-                    className="text-4xl font-bold"
+                    className="text-5xl font-semibold tracking-tighter"
                     format={{ minimumIntegerDigits: 2 }}
                 />
                 <span className="text-sm text-gray-500">Days</span>
@@ -60,7 +60,7 @@ export default function Countdown({ endDate, startDate, className }: CountdownPr
             <div className="flex flex-col items-center">
                 <MotionNumberFlow
                     value={timeLeft.hours}
-                    className="text-4xl font-bold"
+                    className="text-5xl font-semibold tracking-tighter"
                     format={{ minimumIntegerDigits: 2 }}
                 />
                 <span className="text-sm text-gray-500">Hours</span>
@@ -69,7 +69,7 @@ export default function Countdown({ endDate, startDate, className }: CountdownPr
             <div className="flex flex-col items-center">
                 <MotionNumberFlow
                     value={timeLeft.minutes}
-                    className="text-4xl font-bold"
+                    className="text-5xl font-semibold tracking-tighter"
                     format={{ minimumIntegerDigits: 2 }}
                 />
                 <span className="text-sm text-gray-500">Minutes</span>
@@ -78,7 +78,7 @@ export default function Countdown({ endDate, startDate, className }: CountdownPr
             <div className="flex flex-col items-center">
                 <MotionNumberFlow
                     value={timeLeft.seconds}
-                    className="text-4xl font-bold"
+                    className="text-5xl font-semibold tracking-tighter"
                     format={{ minimumIntegerDigits: 2 }}
                 />
                 <span className="text-sm text-gray-500">Seconds</span>
