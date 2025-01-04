@@ -31,4 +31,10 @@ export const examples: Registry = [
     registryDependencies: ["blur-vignette-demo"],
     files: ["example/blur-vignette-demo.tsx"],
   },
+  {
+    name: "masked-div-demo",
+    type: "components:example",
+    registryDependencies: ["masked-div-demo"],
+    files: ["example/masked-div-demo.tsx"],
+  },
 ]

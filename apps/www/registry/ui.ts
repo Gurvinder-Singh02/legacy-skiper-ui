@@ -31,4 +31,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion "],
     files: ["ui/blur-vignette.tsx"],
   },
+  {
+    name: "masked-div",
+    type: "components:ui",
+    dependencies: ["framer-motion "],
+    files: ["ui/masked-div.tsx"],
+  },
 ]
