@@ -4,7 +4,7 @@
 import { cn } from '@/lib/utils';
 
 import { createRef, useRef } from 'react';
-interface ImageMouseTrailProps {
+interface ImageCursorTrailProps {
     items: ImageItem[];
     children?: ReactNode;
     className?: string;

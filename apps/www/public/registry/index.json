@@ -88,5 +88,15 @@
       "ui/expandable.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "image-cursortrail",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/image-cursortrail.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

@@ -104,6 +104,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "image-cursortrail": {
+      name: "image-cursortrail",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/image-cursortrail")),
+      source: "",
+      files: ["registry/default/ui/image-cursortrail.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -199,6 +210,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/expandable-demo")),
       source: "",
       files: ["registry/default/example/expandable-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "image-cursortrail-demo": {
+      name: "image-cursortrail-demo",
+      type: "components:example",
+      registryDependencies: ["image-cursortrail"],
+      component: React.lazy(() => import("@/registry/default/example/image-cursortrail-demo")),
+      source: "",
+      files: ["registry/default/example/image-cursortrail-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

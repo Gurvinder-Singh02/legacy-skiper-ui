@@ -1,11 +1,61 @@
-"use client"
+---
+title: Image CursorTrail
+description: A Cursor That Follow Images
+component: true
+links:
+---
 
-import React from "react"
-import { SparklesIcon } from "lucide-react"
+<ComponentPreview
+  name="image-cursortrail-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="All variations"
+/>
 
-import { Badge } from "@/components/ui/badge"
+## Installation
 
+Install the required dependencies.
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>
+Install the required dependencies.
+```bash
+  npm i framer-motion clsx tailwind-merge
+```
+</Step>
+<Step>
+Add util file
+```bash
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+</Step>
+
+<Step>Copy the source code to `components/ui/image-cursortrail.tsx` </Step>
+
+<ComponentSource name="image-cursortrail" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+## Usage
+
+```tsx
 import ImageCursorTrail from "../ui/image-cursortrail"
+
+```
+```tsx
 
 const images = [
   "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -19,32 +69,30 @@ const images = [
   "https://assets.lummi.ai/assets/Qmb2P6tF2qUaFXnXpnnp2sk9HdVHNYXUv6MtoiSq7jjVhQ?auto=format&w=1500",
   "https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?q=80&w=1200&auto=format",
 ]
+```
 
-export default function CursorTrailDemo() {
+```tsx
+function BasicExample() {
   return (
-    <section className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-      <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5  shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] ">
-        <ImageCursorTrail
-          items={images}
-          maxNumberOfImages={5}
-          distance={25}
-          imgClass="sm:w-40 w-28 sm:h-48 h-36  "
-          className=" max-w-4xl rounded-3xl "
+    <ImageCursorTrail
+        items={images}
+        maxNumberOfImages={5}
+        distance={25}
+        imgClass="sm:w-40 w-28 sm:h-48 h-36  "
+        className=" max-w-4xl rounded-3xl "
         >
           <article className="relative z-50 flex flex-col items-center justify-center ">
-            <Badge
-              variant="outline"
-              className="mb-3 rounded-[14px] border border-black/10 bg-white text-base md:left-6"
-            >
-              <SparklesIcon className="  fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
-              Componenet Preview
-            </Badge>
             <h1 className="max-w-2xl text-center text-5xl font-semibold tracking-tight ">
               Images That Follow the Cursor Cooool Right
             </h1>
           </article>
-        </ImageCursorTrail>
-      </div>
-    </section>
+    </ImageCursorTrail>
   )
 }
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>

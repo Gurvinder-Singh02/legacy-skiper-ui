@@ -88,7 +88,7 @@ export const docsConfig: DocsConfig = {
           items: [
             {
               title: "Image CursorTrail",
-              href: "/docs/components/",
+              href: "/docs/components/image-cursortrail",
               items: [],
               label: "new",
             },
