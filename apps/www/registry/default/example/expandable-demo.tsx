@@ -1,20 +1,46 @@
 "use client"
 
 import React, { useState } from "react"
-
-import { Battery, Bluetooth, Calendar, Clock, Cloud, Droplets, Fingerprint, MapPin, MessageSquare, Mic, ShoppingCart, Star, Sun, Users, Video, Wind } from "lucide-react"
-
+import {
+  Battery,
+  Bluetooth,
+  Calendar,
+  Clock,
+  Cloud,
+  Droplets,
+  Fingerprint,
+  MapPin,
+  MessageSquare,
+  Mic,
+  ShoppingCart,
+  Star,
+  Sun,
+  Users,
+  Video,
+  Wind,
+} from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 import { toast } from "sonner"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-
-import { Expandable, ExpandableCard, ExpandableCardContent, ExpandableCardFooter, ExpandableCardHeader, ExpandableContent, ExpandableTrigger } from "../ui/expandable"
-
+import {
+  Expandable,
+  ExpandableCard,
+  ExpandableCardContent,
+  ExpandableCardFooter,
+  ExpandableCardHeader,
+  ExpandableContent,
+  ExpandableTrigger,
+} from "../ui/expandable"
 
 function DesignSyncExample() {
   return (
@@ -38,7 +64,10 @@ function DesignSyncExample() {
             <ExpandableCardHeader>
               <div className="flex w-full items-start justify-between">
                 <div>
-                  <Badge variant="secondary" className="mb-2 bg-red-100 text-red-600 dark:bg-red-900 dark:text-red-100" >
+                  <Badge
+                    variant="secondary"
+                    className="mb-2 bg-red-100 text-red-600 dark:bg-red-900 dark:text-red-100"
+                  >
                     In 15 mins
                   </Badge>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white">

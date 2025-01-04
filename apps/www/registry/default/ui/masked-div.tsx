@@ -122,26 +122,13 @@ const MaskedDiv: React.FC<MaskedDivProps> = ({
     margin: "0 auto",
   }
 
-  const isVideo = children.type === "video"
-
   return (
     <section className={`relative ${className}`} style={containerStyle}>
-      {isVideo
-        ? React.cloneElement(children as React.ReactElement<HTMLVideoElement>, {
-            ref: videoRef,
-            className: `w-full h-full object-cover ${
-              children.props.className || ""
-            }`,
-            playsInline: true,
-            muted: true,
-            loop: true,
-            autoPlay: true,
-          })
-        : React.cloneElement(children, {
-            className: `w-full h-full object-cover hover:scale-105 transition-all duration-300 ${
-              children.props.className || ""
-            }`,
-          })}
+      {React.cloneElement(children, {
+        className: `w-full h-full object-cover hover:scale-105 transition-all duration-300 ${
+          children.props.className || ""
+        }`,
+      })}
     </section>
   )
 }
