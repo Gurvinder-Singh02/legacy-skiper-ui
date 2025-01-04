@@ -34,7 +34,7 @@ export default function AnimatedNumberRandomDemo() {
         onClick={handleCustomClick}
         className="duration-[.16s] ease-[cubic-bezier(.4,0,.2,1)] active:duration-[25ms] mx-auto mt-4 flex h-11 w-fit items-center gap-2 rounded-full bg-zinc-900 px-5 text-sm font-medium text-zinc-50 transition hover:brightness-125 active:scale-[98%] active:brightness-[98%]"
       >
-       <RefreshCcw className="size-5" />
+        <RefreshCcw className="size-5" />
         Shuffle
       </button>
     </div>
