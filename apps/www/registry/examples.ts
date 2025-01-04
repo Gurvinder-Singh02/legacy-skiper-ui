@@ -55,4 +55,10 @@ export const examples: Registry = [
     registryDependencies: ["expandable"],
     files: ["example/expandable-demo.tsx"],
   },
+  {
+    name: "image-cursortrail-demo",
+    type: "components:example",
+    registryDependencies: ["image-cursortrail"],
+    files: ["example/image-cursortrail-demo.tsx"],
+  },
 ]

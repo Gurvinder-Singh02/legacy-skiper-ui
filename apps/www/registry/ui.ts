@@ -55,4 +55,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/expandable.tsx"],
   },
+  {
+    name: "image-cursortrail",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/image-cursortrail.tsx"],
+  },
 ]
