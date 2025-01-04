@@ -68,6 +68,12 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/blur-vignette",
               items: [],
               label: "new",
+            },
+            {
+              title: "Maksed Div",
+              href: "/docs/components/masked-div",
+              items: [],
+              label: "new",
             }
           ],
         },
