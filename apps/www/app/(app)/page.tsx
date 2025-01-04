@@ -162,7 +162,7 @@ export default function IndexPage() {
               className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"
             >
               <SparklesIcon className="  fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
-              Componenet Preview
+              component Preview
             </Badge>
 
             <div className="mt-4 w-full gap-3 pb-12 pt-8 text-center sm:px-0">

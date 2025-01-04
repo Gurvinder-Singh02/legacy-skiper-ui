@@ -1,6 +1,6 @@
 import React from 'react'
 
-import MouseTrailDemo from './image-cursortrail-demo'
+import MouseTrailDemo from './hover-expand-demo'
 
 const page = () => {
   return (

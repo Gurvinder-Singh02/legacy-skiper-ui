@@ -15,7 +15,7 @@ const AnimatedNumberCountDownDemo = () => {
         className=" rounded-[14px] border border-black/10 text-base text-neutral-800 md:left-6"
       >
         <Puzzle className=" fill-[#D2F583]  stroke-1 text-neutral-800" /> &nbsp;
-        CountDown Componenet
+        CountDown component
       </Badge>
       <AnimatedNumberCountdown
         endDate={new Date("2025-12-31")}

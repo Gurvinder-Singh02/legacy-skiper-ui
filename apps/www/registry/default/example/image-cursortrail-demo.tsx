@@ -37,7 +37,7 @@ export default function CursorTrailDemo() {
               className="mb-3 rounded-[14px] border border-black/10 bg-white text-base md:left-6"
             >
               <SparklesIcon className="  fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
-              Componenet Preview
+              Component Preview
             </Badge>
             <h1 className="max-w-2xl text-center text-5xl font-semibold tracking-tight ">
               Images That Follow the Cursor Cooool Right

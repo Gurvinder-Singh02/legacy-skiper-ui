@@ -24,7 +24,7 @@ export default function AnimatedNumberRandomDemo() {
         className=" rounded-[14px] border border-black/10 text-base text-neutral-800 md:left-6"
       >
         <Shell className="  fill-[#EEBDE0]  stroke-1 text-neutral-800" />{" "}
-        &nbsp;Shuffle Componenet
+        &nbsp;Shuffle component
       </Badge>
       <AnimatedNumberRandom
         value={numbers[currentIndex]}
