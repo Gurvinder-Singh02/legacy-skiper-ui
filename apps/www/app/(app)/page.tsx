@@ -119,7 +119,7 @@ export default function IndexPage() {
         </FadeIn>
 
         <FadeIn>
-          <section className="w-ace-y-4 ">
+          <section className="w-ace-y-4 mt-8  ">
             <div className=" mx-auto   max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm ">
               <TemplateGrid />
             </div>

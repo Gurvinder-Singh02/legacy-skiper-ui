@@ -83,7 +83,21 @@ export const docsConfig: DocsConfig = {
             },
           ],
         },
+        {
+          title: "Creative UI",
+          items: [
+            {
+              title: "Image CursorTrail",
+              href: "/docs/components/",
+              items: [],
+              label: "new",
+            },
+
+          ]
+        }
       ],
+
     },
+
   ],
 }
