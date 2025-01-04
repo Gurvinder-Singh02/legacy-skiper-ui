@@ -99,6 +99,7 @@ const MaskedDiv: React.FC<MaskedDivProps> = ({
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange)
       if (videoRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(videoRef.current)
       }
     }
