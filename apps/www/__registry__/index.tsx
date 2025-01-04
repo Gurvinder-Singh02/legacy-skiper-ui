@@ -60,6 +60,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "masked-div": {
+      name: "masked-div",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/masked-div")),
+      source: "",
+      files: ["registry/default/ui/masked-div.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-demo": {
       name: "animated-number-demo",
       type: "components:example",
@@ -111,6 +122,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/blur-vignette-demo")),
       source: "",
       files: ["registry/default/example/blur-vignette-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "masked-div-demo": {
+      name: "masked-div-demo",
+      type: "components:example",
+      registryDependencies: ["masked-div-demo"],
+      component: React.lazy(() => import("@/registry/default/example/masked-div-demo")),
+      source: "",
+      files: ["registry/default/example/masked-div-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

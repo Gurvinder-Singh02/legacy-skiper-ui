@@ -43,6 +43,7 @@ function BlurVignetteDemo() {
             className="size-full rounded-[2.5rem] object-cover"
             src="https://assets.lummi.ai/assets/QmWk5SDFexL89Cky4JrmnALBKyJ82Ny1cqckSGaFu72nRn?auto=format&w=1500"
             alt=""
+            priority
           />
         </BlurVignette>
         <BlurVignette
@@ -55,6 +56,7 @@ function BlurVignetteDemo() {
         >
           <Image
             width={200}
+            priority
             height={200}
             className="size-full rounded-[2.5rem] object-cover"
             src="https://assets.lummi.ai/assets/QmNfVLFxAkjRQRHunvFEYgQmJKNtLg64qtfZu1WuZ77p2e?auto=format&w=640"

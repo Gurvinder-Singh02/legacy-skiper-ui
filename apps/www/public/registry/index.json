@@ -48,5 +48,15 @@
       "ui/blur-vignette.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "masked-div",
+    "dependencies": [
+      "framer-motion "
+    ],
+    "files": [
+      "ui/masked-div.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

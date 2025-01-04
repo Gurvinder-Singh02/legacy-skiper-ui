@@ -1,0 +1,81 @@
+---
+title: masked Div
+description: Masked Div with img clip 
+component: true
+links:
+---
+
+<ComponentPreview
+  name="masked-div-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="All variations"
+/>
+
+## Installation
+
+Install the required dependencies.
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>
+Install the required dependencies.
+```bash
+  npm i framer-motion clsx tailwind-merge
+```
+</Step>
+<Step>
+Add util file
+```bash
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+</Step>
+
+<Step>Copy the source code to `components/ui/masked-div.tsx` </Step>
+
+<ComponentSource name="masked-div" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+## Usage
+
+```tsx
+import MaskedDiv from "@components/ui/masked-div"
+```
+
+```tsx
+function BasicExample() {
+  return (
+    <MaskedDiv maskType="type-1" size={0.45} className="my-4">
+        <video autoPlay loop muted>
+          <source
+            src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+    </MaskedDiv>
+
+    <MaskedDiv maskType="type-1" size={0.45} className="my-4">
+        <Image width={1920} height={1080} src=""  alt="" />
+    </MaskedDiv>
+  )
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>

@@ -43,6 +43,7 @@ export default function MinimalCardDemo() {
               </MinimalCardDescription>
             </MinimalCard>
           ))}
+          
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ interface SvgPath {
   width: number;
 }
 
-interface MaskedDivProps {
+interface MaskedImageProps {
   children: React.ReactElement<HTMLImageElement | HTMLVideoElement>;
   maskType?: MaskType;
   className?: string;
@@ -42,8 +42,8 @@ const svgPaths: Record<MaskType, SvgPath> = {
   },
 };
 
-const MaskedDiv: React.FC<MaskedDivProps> = ({
-  children,
+const MaskedImage: React.FC<MaskedImageProps> = ({ 
+  children, 
   maskType = 'type-1',
   className = '',
   backgroundColor = 'transparent',
@@ -70,7 +70,7 @@ const MaskedDiv: React.FC<MaskedDivProps> = ({
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
-
+    
     // Intersection Observer for viewport visibility
     const observer = new IntersectionObserver(
       (entries) => {
@@ -106,7 +106,7 @@ const MaskedDiv: React.FC<MaskedDivProps> = ({
   }, []);
 
   const selectedMask = svgPaths[maskType];
-
+  
   const svgString = `data:image/svg+xml,%3Csvg width='${selectedMask.width}' height='${selectedMask.height}' viewBox='0 0 ${selectedMask.width} ${selectedMask.height}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='${selectedMask.path}' fill='%23D9D9D9'/%3E%3C/svg%3E%0A`;
 
   const containerStyle: React.CSSProperties = {
@@ -132,18 +132,18 @@ const MaskedDiv: React.FC<MaskedDivProps> = ({
     >
       {isVideo
         ? React.cloneElement(children as React.ReactElement<HTMLVideoElement>, {
-          ref: videoRef,
-          className: `w-full h-full object-cover ${children.props.className || ''}`,
-          playsInline: true,
-          muted: true,
-          loop: true,
-          autoPlay: true,
-        })
+            ref: videoRef,
+            className: `w-full h-full transition-all duration-300 cursor-pointer ease-in-out  object-cover t ${children.props.className || ''}`,
+            playsInline: true,
+            muted: true,
+            loop: true,
+            autoPlay: true,
+          })
         : React.cloneElement(children, {
-          className: `w-full h-full object-cover hover:scale-105 transition-all duration-300 ${children.props.className || ''}`,
-        })}
+            className: `w-full h-full object-cover   ${children.props.className || ''}`,
+          })}
     </section>
   );
 };
 
-export default MaskedDiv;
+export default MaskedImage;

@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import MaskedImage from './masked-div';
 
-
 function page() {
   return (
     <div className='items-between m-auto mt-40 flex max-w-5xl flex-wrap justify-between gap-5' >
-
-
       <MaskedImage maskType="type-1" size={0.45} className="my-4">
         <video autoPlay loop muted >
           <source src="https://videos.pexels.com/video-files/7710243/7710243-uhd_2560_1440_30fps.mp4" type="video/mp4" />
