@@ -17,7 +17,7 @@ export default function AnimatedNumberRandomDemo() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-4">
       <Badge
         variant="outline"
         className=" rounded-[14px] border border-black/10 text-base text-neutral-800 md:left-6"
@@ -38,7 +38,7 @@ export default function AnimatedNumberRandomDemo() {
             fill='currentColor'
           ></path>
         </svg>
-        Shuffle
+        Random Shuffle
       </button>
     </div>
   );
