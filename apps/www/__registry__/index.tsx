@@ -5,13 +5,35 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
-    "animated-number": {
-      name: "animated-number",
+    "animated-number-countdown": {
+      name: "animated-number-countdown",
       type: "components:ui",
       registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/animated-number")),
+      component: React.lazy(() => import("@/registry/default/ui/animated-number-countdown")),
       source: "",
-      files: ["registry/default/ui/animated-number.tsx"],
+      files: ["registry/default/ui/animated-number-countdown.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "animated-number-counter": {
+      name: "animated-number-counter",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/animated-number-counter")),
+      source: "",
+      files: ["registry/default/ui/animated-number-counter.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "animated-number-random": {
+      name: "animated-number-random",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/animated-number-random")),
+      source: "",
+      files: ["registry/default/ui/animated-number-random.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -71,13 +93,35 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "animated-number-demo": {
-      name: "animated-number-demo",
+    "animated-number-countdown-demo": {
+      name: "animated-number-countdown-demo",
       type: "components:example",
-      registryDependencies: ["animated-number"],
-      component: React.lazy(() => import("@/registry/default/example/animated-number-demo")),
+      registryDependencies: ["animated-number-countdown"],
+      component: React.lazy(() => import("@/registry/default/example/animated-number-countdown-demo")),
       source: "",
-      files: ["registry/default/example/animated-number-demo.tsx"],
+      files: ["registry/default/example/animated-number-countdown-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "animated-number-counter-demo": {
+      name: "animated-number-counter-demo",
+      type: "components:example",
+      registryDependencies: ["animated-number-counter"],
+      component: React.lazy(() => import("@/registry/default/example/animated-number-counter-demo")),
+      source: "",
+      files: ["registry/default/example/animated-number-counter-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "animated-number-random-demo": {
+      name: "animated-number-random-demo",
+      type: "components:example",
+      registryDependencies: ["animated-number-random"],
+      component: React.lazy(() => import("@/registry/default/example/animated-number-random-demo")),
+      source: "",
+      files: ["registry/default/example/animated-number-random-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

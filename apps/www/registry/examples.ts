@@ -2,10 +2,22 @@ import { Registry } from "@/registry/schema"
 
 export const examples: Registry = [
   {
-    name: "animated-number-demo",
+    name: "animated-number-countdown-demo",
     type: "components:example",
-    registryDependencies: ["animated-number"],
-    files: ["example/animated-number-demo.tsx"],
+    registryDependencies: ["animated-number-countdown"],
+    files: ["example/animated-number-countdown-demo.tsx"],
+  },
+  {
+    name: "animated-number-counter-demo",
+    type: "components:example",
+    registryDependencies: ["animated-number-counter"],
+    files: ["example/animated-number-counter-demo.tsx"],
+  },
+  {
+    name: "animated-number-random-demo",
+    type: "components:example",
+    registryDependencies: ["animated-number-random"],
+    files: ["example/animated-number-random-demo.tsx"],
   },
   {
     name: "card-carousel-demo",

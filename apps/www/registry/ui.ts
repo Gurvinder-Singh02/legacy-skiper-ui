@@ -2,10 +2,22 @@ import { Registry } from "@/registry/schema"
 
 export const ui: Registry = [
   {
-    name: "animated-number",
+    name: "animated-number-countdown",
     type: "components:ui",
     dependencies: ["framer-motion"],
-    files: ["ui/animated-number.tsx"],
+    files: ["ui/animated-number-countdown.tsx"],
+  },
+  {
+    name: "animated-number-counter",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/animated-number-counter.tsx"],
+  },
+  {
+    name: "animated-number-random",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/animated-number-random.tsx"],
   },
   {
     name: "card-carousel",

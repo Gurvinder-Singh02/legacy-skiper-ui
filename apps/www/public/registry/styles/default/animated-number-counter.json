@@ -1,0 +1,13 @@
+{
+  "name": "animated-number-counter",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "name": "animated-number-counter.tsx",
+      "content": "'use client';\n\nimport React, { useState, useEffect } from 'react';\nimport NumberFlow from '@number-flow/react';\nimport { ChevronUp, ChevronDown } from 'lucide-react';\n\nexport default function AnimatedNumberCounter() {\n    const [count, setCount] = useState(0);\n    const [activeButton, setActiveButton] = useState<'up' | 'down' | null>(null);\n    const [flashColor, setFlashColor] = useState<'up' | 'down' | null>(null);\n\n    const handleIncrement = () => {\n        setCount(prev => prev + 1);\n        setActiveButton('up');\n        setFlashColor('up');\n    };\n\n    const handleDecrement = () => {\n        setCount(prev => prev - 1);\n        setActiveButton('down');\n        setFlashColor('down');\n    };\n\n    useEffect(() => {\n        if (flashColor) {\n            const timer = setTimeout(() => {\n                setFlashColor(null);\n            }, 1000);\n            return () => clearTimeout(timer);\n        }\n    }, [flashColor]);\n\n    return (\n        <div className={`flex items-center gap-4 rounded-2xl  transition-colors duration-300 ${flashColor === 'up' ? ' bg-green-50 ' :\n            flashColor === 'down' ? 'bg-red-50' : ''\n            }`}>\n            <button\n                onClick={handleIncrement}\n                className=\"flex size-12 items-center justify-center rounded-md \"\n            >\n                <ChevronUp className={`size-8 transition-colors duration-300 ${activeButton === 'up' ? 'text-green-500' : 'text-gray-600'\n                    }`} />\n            </button>\n\n            <NumberFlow\n                value={count}\n                className=\"text-5xl font-semibold\"\n            />\n\n            <button\n                onClick={handleDecrement}\n                className=\"flex size-12 items-center justify-center rounded-md\">\n                <ChevronDown className={`size-8 transition-colors duration-300 ${activeButton === 'down' ? 'text-red-500' : 'text-gray-600'\n                    }`} />\n            </button>\n        </div>\n    );\n}"
+    }
+  ],
+  "type": "components:ui"
+}

@@ -1,11 +1,31 @@
 [
   {
-    "name": "animated-number",
+    "name": "animated-number-countdown",
     "dependencies": [
       "framer-motion"
     ],
     "files": [
-      "ui/animated-number.tsx"
+      "ui/animated-number-countdown.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-number-counter",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/animated-number-counter.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-number-random",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/animated-number-random.tsx"
     ],
     "type": "components:ui"
   },
