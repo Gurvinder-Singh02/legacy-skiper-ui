@@ -70,7 +70,7 @@ const MaskedImage: React.FC<MaskedImageProps> = ({
       style={containerStyle}
     >
       {React.cloneElement(children, {
-        className: `w-full h-full object-cover hover:scale-105 transition-all duration-300 ${children.props.className || ''}`,
+        className: `w-full h-full object-cover transition-all duration-300 ${children.props.className || ''}`,
       })}
     </section>
   );
