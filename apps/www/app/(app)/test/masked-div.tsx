@@ -1,4 +1,7 @@
-import React from 'react';
+
+"use client"
+
+import React, { useRef, useEffect } from 'react';
 
 type MaskType = 'type-1' | 'type-2' | 'type-3' | 'type-4';
 
@@ -9,11 +12,11 @@ interface SvgPath {
 }
 
 interface MaskedImageProps {
-  children: React.ReactElement<HTMLImageElement>;
+  children: React.ReactElement<HTMLImageElement | HTMLVideoElement>;
   maskType?: MaskType;
   className?: string;
   backgroundColor?: string;
-  size?: number; // Value between 0 and 1, represents percentage of original size
+  size?: number;
 }
 
 const svgPaths: Record<MaskType, SvgPath> = {
@@ -46,6 +49,62 @@ const MaskedImage: React.FC<MaskedImageProps> = ({
   backgroundColor = 'transparent',
   size = 1
 }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const videoElement = videoRef.current;
+      if (!videoElement) return;
+
+      if (document.hidden) {
+        videoElement.pause();
+      } else {
+        // Only play if the video should be playing
+        const playPromise = videoElement.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Auto-play was prevented, handle this case silently
+          });
+        }
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    // Intersection Observer for viewport visibility
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const videoElement = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            const playPromise = videoElement.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => {
+                // Handle auto-play prevention silently
+              });
+            }
+          } else {
+            videoElement.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.1 // Start playing when 10% of the video is visible
+      }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const selectedMask = svgPaths[maskType];
   
   const svgString = `data:image/svg+xml,%3Csvg width='${selectedMask.width}' height='${selectedMask.height}' viewBox='0 0 ${selectedMask.width} ${selectedMask.height}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='${selectedMask.path}' fill='%23D9D9D9'/%3E%3C/svg%3E%0A`;
@@ -61,17 +120,28 @@ const MaskedImage: React.FC<MaskedImageProps> = ({
     WebkitMaskSize: 'contain',
     width: `${size * 100}%`,
     maxWidth: '100%',
-    margin: '0 auto', // Centers the container when sized down
+    margin: '0 auto',
   };
+
+  const isVideo = children.type === 'video';
 
   return (
     <section
       className={`relative ${className}`}
       style={containerStyle}
     >
-      {React.cloneElement(children, {
-        className: `w-full h-full object-cover transition-all duration-300 ${children.props.className || ''}`,
-      })}
+      {isVideo
+        ? React.cloneElement(children as React.ReactElement<HTMLVideoElement>, {
+            ref: videoRef,
+            className: `w-full h-full object-cover ${children.props.className || ''}`,
+            playsInline: true,
+            muted: true,
+            loop: true,
+            autoPlay: true,
+          })
+        : React.cloneElement(children, {
+            className: `w-full h-full object-cover hover:scale-105 transition-all duration-300 ${children.props.className || ''}`,
+          })}
     </section>
   );
 };
