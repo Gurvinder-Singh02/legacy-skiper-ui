@@ -26,7 +26,8 @@ import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 interface CarouselProps {
     images: { src: string; alt: string }[]
     autoplayDelay?: number
-    slideShadows : boolean
+    slideShadows? : boolean;
+    
 }
 
 export const CardSwipe: React.FC<CarouselProps> = ({

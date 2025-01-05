@@ -1,0 +1,67 @@
+---
+title: Card Swipe
+description: A simple cardAnimation
+component: true
+links:
+---
+
+<ComponentPreview
+  name="card-swipe-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="All variations"
+/>
+
+## Installation
+
+```bash
+  npm install swiper
+```
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="card-swipe" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+## Usage
+
+```tsx
+import { CardCarousel } from "@/components/ui/card-swipe"
+```
+
+```tsx
+function BasicExample() {
+  const images = [
+    { src: "/card/1.png", alt: "Image 1" },
+    { src: "/card/2.png", alt: "Image 2" },
+    { src: "/card/3.png", alt: "Image 3" },
+  ]
+
+  return (
+    <div className="pt-40">
+      <CardCarousel
+        images={images}
+        autoplayDelay={2000}
+        showPagination={true}
+        showNavigation={true}
+      />
+    </div>
+  )
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>

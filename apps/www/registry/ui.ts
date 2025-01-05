@@ -26,6 +26,12 @@ export const ui: Registry = [
     files: ["ui/card-carousel.tsx"],
   },
   {
+    name: "card-swipe",
+    type: "components:ui",
+    dependencies: ["framer-motion "],
+    files: ["ui/card-swipe.tsx"],
+  },
+  {
     name: "stacked-dialog",
     type: "components:ui",
     dependencies: ["framer-motion "],

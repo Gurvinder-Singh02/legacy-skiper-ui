@@ -26,6 +26,12 @@ export const examples: Registry = [
     files: ["example/card-carousel-demo.tsx"],
   },
   {
+    name: "card-swipe-demo",
+    type: "components:example",
+    registryDependencies: ["card-swipe-demo"],
+    files: ["example/card-swipe-demo.tsx"],
+  },
+  {
     name: "stacked-dialog-demo",
     type: "components:example",
     registryDependencies: ["stacked-dialog-demo"],

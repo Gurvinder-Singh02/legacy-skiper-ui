@@ -52,6 +52,12 @@ export const docsConfig: DocsConfig = {
               label: "new",
             },
             {
+              title: "Card Swiper",
+              href: "/docs/components/card-swipe",
+              items: [],
+              label: "new",
+            },
+            {
               title: "Stacked Dialog",
               href: "/docs/components/stacked-dialog",
               items: [],

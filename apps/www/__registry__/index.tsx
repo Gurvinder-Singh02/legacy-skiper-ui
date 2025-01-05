@@ -49,6 +49,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "card-swipe": {
+      name: "card-swipe",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/card-swipe")),
+      source: "",
+      files: ["registry/default/ui/card-swipe.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "stacked-dialog": {
       name: "stacked-dialog",
       type: "components:ui",
@@ -232,6 +243,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/card-carousel-demo")),
       source: "",
       files: ["registry/default/example/card-carousel-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "card-swipe-demo": {
+      name: "card-swipe-demo",
+      type: "components:example",
+      registryDependencies: ["card-swipe-demo"],
+      component: React.lazy(() => import("@/registry/default/example/card-swipe-demo")),
+      source: "",
+      files: ["registry/default/example/card-swipe-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

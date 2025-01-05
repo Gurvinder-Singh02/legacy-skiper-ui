@@ -40,6 +40,16 @@
     "type": "components:ui"
   },
   {
+    "name": "card-swipe",
+    "dependencies": [
+      "framer-motion "
+    ],
+    "files": [
+      "ui/card-swipe.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "stacked-dialog",
     "dependencies": [
       "framer-motion "
