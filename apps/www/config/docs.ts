@@ -81,12 +81,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
-            {
-              title: "Expandable",
-              href: "/docs/components/expandable",
-              items: [],
-              label: "new",
-            },
+            // {
+            //   title: "Expandable",
+            //   href: "/docs/components/expandable",
+            //   items: [],
+            //   label: "new",
+            // },
           ],
         },
         {
