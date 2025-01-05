@@ -91,4 +91,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/badge-button.tsx"],
   },
+  {
+    name: "text-scroll",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/text-scroll.tsx"],
+  },
 ]

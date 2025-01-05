@@ -134,6 +134,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
+            {
+              title: "Text Scroll",
+              href: "/docs/components/text-scroll",
+              items: [],
+              label: "new",
+            },
 
           ]
         },

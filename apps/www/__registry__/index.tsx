@@ -170,6 +170,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "text-scroll": {
+      name: "text-scroll",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/text-scroll")),
+      source: "",
+      files: ["registry/default/ui/text-scroll.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -305,10 +316,21 @@ export const Index: Record<string, any> = {
     "share-button-demo": {
       name: "share-button-demo",
       type: "components:example",
-      registryDependencies: ["slide-button"],
+      registryDependencies: ["share-button"],
       component: React.lazy(() => import("@/registry/default/example/share-button-demo")),
       source: "",
-      files: ["registry/default/example/slide-button-demo.tsx"],
+      files: ["registry/default/example/share-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "text-scroll-demo": {
+      name: "text-scroll-demo",
+      type: "components:example",
+      registryDependencies: ["text-scroll"],
+      component: React.lazy(() => import("@/registry/default/example/text-scroll-demo")),
+      source: "",
+      files: ["registry/default/example/text-scroll-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

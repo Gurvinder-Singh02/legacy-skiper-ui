@@ -76,7 +76,13 @@ export const examples: Registry = [
   {
     name: "share-button-demo",
     type: "components:example",
-    registryDependencies: ["slide-button"],
-    files: ["example/slide-button-demo.tsx"],
+    registryDependencies: ["share-button"],
+    files: ["example/share-button-demo.tsx"],
+  },
+  {
+    name: "text-scroll-demo",
+    type: "components:example",
+    registryDependencies: ["text-scroll"],
+    files: ["example/text-scroll-demo.tsx"],
   },
 ]

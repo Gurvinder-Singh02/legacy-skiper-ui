@@ -148,5 +148,15 @@
       "ui/badge-button.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "text-scroll",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/text-scroll.tsx"
+    ],
+    "type": "components:ui"
   }
 ]
