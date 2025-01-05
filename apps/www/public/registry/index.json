@@ -108,5 +108,15 @@
       "ui/hover-expand.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "text-effect-flipper",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/text-effect-flipper.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

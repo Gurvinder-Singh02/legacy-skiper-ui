@@ -4,8 +4,8 @@ import React from "react"
 import { SparklesIcon } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
-import HoverExpand from "../ui/hover-expand"
 
+import HoverExpand from "../ui/hover-expand"
 
 const images = [
   "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",

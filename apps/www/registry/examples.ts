@@ -67,4 +67,10 @@ export const examples: Registry = [
     registryDependencies: ["hover-expand"],
     files: ["example/hover-expand-demo.tsx"],
   },
+  {
+    name: "text-effect-flipper-demo",
+    type: "components:example",
+    registryDependencies: ["text-effect-flipper"],
+    files: ["example/text-effect-flipper-demo.tsx"],
+  },
 ]

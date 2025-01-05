@@ -100,6 +100,18 @@ export const docsConfig: DocsConfig = {
             },
 
           ]
+        },
+        {
+          title: "Text effect",
+          items: [
+            {
+              title: "Flipper",
+              href: "/docs/components/text-effect-flipper",
+              items: [],
+              label: "new",
+            },
+           
+          ]
         }
       ],
 

@@ -126,6 +126,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "text-effect-flipper": {
+      name: "text-effect-flipper",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/text-effect-flipper")),
+      source: "",
+      files: ["registry/default/ui/text-effect-flipper.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -243,6 +254,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/hover-expand-demo")),
       source: "",
       files: ["registry/default/example/hover-expand-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "text-effect-flipper-demo": {
+      name: "text-effect-flipper-demo",
+      type: "components:example",
+      registryDependencies: ["text-effect-flipper"],
+      component: React.lazy(() => import("@/registry/default/example/text-effect-flipper-demo")),
+      source: "",
+      files: ["registry/default/example/text-effect-flipper-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

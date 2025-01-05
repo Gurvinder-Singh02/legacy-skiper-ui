@@ -67,4 +67,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/hover-expand.tsx"],
   },
+  {
+    name: "text-effect-flipper",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/text-effect-flipper.tsx"],
+  },
 ]
