@@ -97,4 +97,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/text-scroll.tsx"],
   },
+  {
+    name: "image-ripple",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/image-ripple.tsx"],
+  },
 ]

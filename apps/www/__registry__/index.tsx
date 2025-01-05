@@ -181,6 +181,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "image-ripple": {
+      name: "image-ripple",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/image-ripple")),
+      source: "",
+      files: ["registry/default/ui/image-ripple.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -331,6 +342,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/text-scroll-demo")),
       source: "",
       files: ["registry/default/example/text-scroll-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "image-ripple-demo": {
+      name: "image-ripple-demo",
+      type: "components:example",
+      registryDependencies: ["image-ripple"],
+      component: React.lazy(() => import("@/registry/default/example/image-ripple-demo")),
+      source: "",
+      files: ["registry/default/example/image-ripple-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

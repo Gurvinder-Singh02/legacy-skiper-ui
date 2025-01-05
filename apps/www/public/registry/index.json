@@ -158,5 +158,15 @@
       "ui/text-scroll.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "image-ripple",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/image-ripple.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

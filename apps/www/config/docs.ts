@@ -143,6 +143,18 @@ export const docsConfig: DocsConfig = {
 
           ]
         },
+        {
+          title: "3D effect",
+          items: [
+            {
+              title: "image-ripple",
+              href: "/docs/components/image-ripple",
+              items: [],
+              label: "new",
+            },
+
+          ]
+        },
       ],
 
     },

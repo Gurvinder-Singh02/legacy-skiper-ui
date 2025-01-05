@@ -85,4 +85,10 @@ export const examples: Registry = [
     registryDependencies: ["text-scroll"],
     files: ["example/text-scroll-demo.tsx"],
   },
+  {
+    name: "image-ripple-demo",
+    type: "components:example",
+    registryDependencies: ["image-ripple"],
+    files: ["example/image-ripple-demo.tsx"],
+  },
 ]

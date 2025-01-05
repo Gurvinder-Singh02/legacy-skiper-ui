@@ -17,8 +17,9 @@ export default function Scene() {
     const frustumSize = device.height;
     const aspect = device.width / device.height;
 
+    
     return (
-        <div className='relative h-screen w-full'>
+        <div className='relative flex h-screen w-full items-center justify-center '>
             <Canvas>
                 <OrthographicCamera
                     makeDefault
@@ -34,6 +35,7 @@ export default function Scene() {
                 />
                 <Model />
             </Canvas>
+
         </div>
     );
 }
@@ -95,24 +97,19 @@ function Model() {
         }
     }
 
-    function trackMousePos(mouseX: number, mouseY: number) {
-        // Convert mouse coordinates to scene space
-        const x = (mouseX / device.width) * viewport.width - viewport.width / 2;
-        const y = -(mouseY / device.height) * viewport.height + viewport.height / 2;
+    function trackMousePos(x: number, y: number) {
 
         if (Math.abs(x - prevMouse.x) > 0.1 || Math.abs(y - prevMouse.y) > 0.1) {
             setCurrentWave((currentWave + 1) % max);
             setNewWave(x, y, currentWave);
         }
-        setPrevMouse({ x, y });
+        setPrevMouse({ x: x, y: y });
     }
 
-    useFrame(() => {
-        // Convert mouse coordinates directly in the animation frame
-        const x = mouse.x;
-        const y = mouse.y;
+    useFrame(({ gl, scene: finalScene }) => {
+        const x = mouse.x - device.width / 2;
+        const y = -mouse.y + device.height / 2;
         trackMousePos(x, y);
-
         meshRefs.current.forEach((mesh) => {
             if (mesh && mesh.visible) {
                 mesh.rotation.z += 0.025;
@@ -123,6 +120,9 @@ function Model() {
         });
 
         if (device.width > 0 && device.height > 0) {
+            // uniforms.current.uTexture.value = imageTexture;
+
+            // Render to base texture with meshes
             gl.setRenderTarget(fboBase);
             gl.clear();
             meshRefs.current.forEach((mesh) => {
@@ -145,12 +145,19 @@ function Model() {
             gl.setRenderTarget(null);
             gl.render(finalScene, camera);
 
+            // Render the scene with updated displacement
+            // gl.setRenderTarget(fboTexture);
+            // gl.clear();
+            // gl.render(scene, camera);
+            // uniforms.current.uTexture.value = fboTexture.texture;
+            // gl.setRenderTarget(null);
+
             uniforms.current.winResolution.value = new THREE.Vector2(
                 device.width,
                 device.height
             ).multiplyScalar(device.pixelRatio);
         }
-    });
+    }, 1);
 
     function Images(viewport: THREE.Vector2) {
         const scene = new THREE.Scene();
@@ -166,17 +173,18 @@ function Model() {
         scene.add(camera);
         const geometry = new THREE.PlaneGeometry(1, 1);
         const group = new THREE.Group();
-        const texture1 = useTexture('/picture1.jpeg');
-        const material1 = new THREE.MeshBasicMaterial({ map: texture1 });
-        const image1 = new THREE.Mesh(geometry, material1);
-        image1.position.x = -0.25 * viewport.width;
-        image1.position.y = 0;
-        image1.position.z = 1;
-        image1.scale.x = viewport.width / 5;
-        image1.scale.y = viewport.width / 4;
-        group.add(image1);
 
-        const texture2 = useTexture('/picture2.jpeg');
+        // const texture1 = useTexture('/picture1.jpeg');
+        // const material1 = new THREE.MeshBasicMaterial({ map: texture1 });
+        // const image1 = new THREE.Mesh(geometry, material1);
+        // image1.position.x = -0.25 * viewport.width;
+        // image1.position.y = 0;
+        // image1.position.z = 1;
+        // image1.scale.x = viewport.width / 5;
+        // image1.scale.y = viewport.width / 4;
+        // group.add(image1);
+
+        const texture2 = useTexture('/picture1.jpeg');
         const material2 = new THREE.MeshBasicMaterial({ map: texture2 });
         const image2 = new THREE.Mesh(geometry, material2);
         image2.position.x = 0;
@@ -186,15 +194,15 @@ function Model() {
         image2.scale.y = viewport.width / 4;
         group.add(image2);
 
-        const texture3 = useTexture('/picture3.jpeg');
-        const material3 = new THREE.MeshBasicMaterial({ map: texture3 });
-        const image3 = new THREE.Mesh(geometry, material3);
-        image3.position.x = 0.25 * viewport.width;
-        image3.position.y = 0;
-        image3.position.z = 1;
-        image3.scale.x = viewport.width / 5;
-        image3.scale.y = viewport.width / 4;
-        group.add(image3);
+        // const texture3 = useTexture('/picture3.jpeg');
+        // const material3 = new THREE.MeshBasicMaterial({ map: texture3 });
+        // const image3 = new THREE.Mesh(geometry, material3);
+        // image3.position.x = 0.25 * viewport.width;
+        // image3.position.y = 0;
+        // image3.position.z = 1;
+        // image3.scale.x = viewport.width / 5;
+        // image3.scale.y = viewport.width / 4;
+        // group.add(image3);
 
         scene.add(group);
         return { scene, camera };
@@ -203,9 +211,11 @@ function Model() {
     return (
         <group>
             {meshes}
+            {/* <Images /> */}
             <mesh>
                 <planeGeometry args={[device.width, device.height, 1, 1]} />
                 <shaderMaterial
+                    // args={[device.width, device.height, 1]}
                     vertexShader={vertex}
                     fragmentShader={fragment}
                     transparent={true}
@@ -246,6 +256,7 @@ function useDimension() {
     });
 
     React.useEffect(() => {
+        // Check if the code is running on the client side
         if (typeof window !== 'undefined') {
             const resize = () => {
                 setDimension({
@@ -295,3 +306,4 @@ void main() {
   gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 }
 `;
+
