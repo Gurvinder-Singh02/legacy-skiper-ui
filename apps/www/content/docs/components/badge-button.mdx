@@ -1,0 +1,57 @@
+---
+title: Badge Button
+description: A Cursor That Follow Images
+component: true
+links:
+---
+
+<ComponentPreview
+  name="badge-button"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="All variations"
+/>
+
+## Installation
+
+Install the required dependencies.
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>
+Install the required dependencies.
+```bash
+  npm i framer-motion clsx tailwind-merge
+```
+</Step>
+<Step>
+Add util file
+```bash
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+</Step>
+
+<Step>Copy the source code to `components/ui/text-effect-flipper.tsx` </Step>
+
+<ComponentSource name="text-effect-flipper" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>

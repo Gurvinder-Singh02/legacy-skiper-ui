@@ -118,5 +118,35 @@
       "ui/text-effect-flipper.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "slide-button",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/slide-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "share-button",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/share-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "badge-button",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/badge-button.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

@@ -137,6 +137,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "slide-button": {
+      name: "slide-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/slide-button")),
+      source: "",
+      files: ["registry/default/ui/slide-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "share-button": {
+      name: "share-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/share-button")),
+      source: "",
+      files: ["registry/default/ui/share-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "badge-button": {
+      name: "badge-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/badge-button")),
+      source: "",
+      files: ["registry/default/ui/badge-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -265,6 +298,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/text-effect-flipper-demo")),
       source: "",
       files: ["registry/default/example/text-effect-flipper-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "share-button-demo": {
+      name: "share-button-demo",
+      type: "components:example",
+      registryDependencies: ["slide-button"],
+      component: React.lazy(() => import("@/registry/default/example/share-button-demo")),
+      source: "",
+      files: ["registry/default/example/slide-button-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

@@ -73,4 +73,10 @@ export const examples: Registry = [
     registryDependencies: ["text-effect-flipper"],
     files: ["example/text-effect-flipper-demo.tsx"],
   },
+  {
+    name: "share-button-demo",
+    type: "components:example",
+    registryDependencies: ["slide-button"],
+    files: ["example/slide-button-demo.tsx"],
+  },
 ]

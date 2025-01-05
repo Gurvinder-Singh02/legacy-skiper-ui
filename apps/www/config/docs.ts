@@ -102,6 +102,30 @@ export const docsConfig: DocsConfig = {
           ]
         },
         {
+          title: "Buttons",
+          items: [
+            {
+              title: "Slide Button",
+              href: "/docs/components/slide-button",
+              items: [],
+              label: "new",
+            },
+            {
+              title: "Share Button",
+              href: "/docs/components/share-button",
+              items: [],
+              label: "new",
+            },
+            {
+              title: "Badge Button",
+              href: "/docs/components/badge-button",
+              items: [],
+              label: "new",
+            },
+
+          ]
+        },
+        {
           title: "Text effect",
           items: [
             {
@@ -110,9 +134,9 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
-           
+
           ]
-        }
+        },
       ],
 
     },

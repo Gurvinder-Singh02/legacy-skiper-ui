@@ -1,8 +1,8 @@
 import React from 'react'
 import { ShareButtonDemo } from './share-button-demo'
-import SlideButtonDemo from './badle-button'
+import SlideButtonDemo from './badge-button'
 import { SlideButton } from './slide-button'
-import BadgeButton from './badle-button'
+import BadgeButton from './badge-button'
 
 const page = () => {
     return (

@@ -1,0 +1,13 @@
+{
+  "name": "badge-button",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "name": "badge-button.tsx",
+      "content": "import { Badge } from '@/components/ui/badge'\nimport { SparklesIcon } from 'lucide-react'\nimport React from 'react'\n\nconst BadgeButton = () => {\n  return (\n    <Badge\n      variant=\"outline\"\n      className=\"mb-3 cursor-pointer rounded-[14px] border border-black/10 bg-white text-base md:left-6\"\n    >\n      <SparklesIcon className=\" mr-2  fill-[#EEBDE0] stroke-1 text-neutral-800\" />{\" \"}\n      Component Preview\n    </Badge>\n  )\n}\n\nexport default BadgeButton"
+    }
+  ],
+  "type": "components:ui"
+}

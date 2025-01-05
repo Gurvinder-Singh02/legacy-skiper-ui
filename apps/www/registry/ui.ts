@@ -73,4 +73,22 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/text-effect-flipper.tsx"],
   },
+  {
+    name: "slide-button",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/slide-button.tsx"],
+  },
+  {
+    name: "share-button",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/share-button.tsx"],
+  },
+  {
+    name: "badge-button",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/badge-button.tsx"],
+  },
 ]
