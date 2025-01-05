@@ -1,11 +1,11 @@
 import React from 'react'
-import { TextScrollDemo } from './text-scroll-demo'
+import ImageRipple from './image-ripple'
 
 const page = () => {
     return (
         <div className='mt-40' >
 
-            <TextScrollDemo />
+            <ImageRipple />
 
         </div>
     )
