@@ -1,9 +1,10 @@
-'use client';
-import React from 'react';
+"use client"
 
-import { Badge } from '@/components/ui/badge';
-import { SparklesIcon } from 'lucide-react';
-import HoverExpand from './hover-expand';
+import React from "react"
+import { SparklesIcon } from "lucide-react"
+
+import { Badge } from "@/components/ui/badge"
+import HoverExpand from "../ui/hover-expand"
 
 
 const images = [
@@ -17,14 +18,11 @@ const images = [
   "https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?q=80&w=1200&auto=format",
 ]
 
-
 export default function MouseTrailDemo() {
   return (
-
     <section className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
       <div className="relative mx-auto flex w-full flex-col items-center justify-center  rounded-[24px] border border-black/5 bg-neutral-800/5  shadow-sm  md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] ">
-
-        <article className='relative z-50 mt-20 flex flex-col  items-center justify-center '>
+        <article className="relative z-50 mt-20 flex flex-col  items-center justify-center ">
           <Badge
             variant="outline"
             className="mb-3 rounded-[14px] border border-black/10 bg-white text-base md:left-6"
@@ -32,7 +30,7 @@ export default function MouseTrailDemo() {
             <SparklesIcon className="  fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
             Component Preview
           </Badge>
-          <h1 className='max-w-2xl text-center text-5xl font-semibold tracking-tight '>
+          <h1 className="max-w-2xl text-center text-5xl font-semibold tracking-tight ">
             Hover the Images to Expand
           </h1>
         </article>
@@ -45,5 +43,5 @@ export default function MouseTrailDemo() {
         />
       </div>
     </section>
-  );
+  )
 }

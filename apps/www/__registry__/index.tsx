@@ -115,6 +115,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "hover-expand": {
+      name: "hover-expand",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/hover-expand")),
+      source: "",
+      files: ["registry/default/ui/hover-expand.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown-demo": {
       name: "animated-number-countdown-demo",
       type: "components:example",
@@ -221,6 +232,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/image-cursortrail-demo")),
       source: "",
       files: ["registry/default/example/image-cursortrail-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hover-expand-demo": {
+      name: "hover-expand-demo",
+      type: "components:example",
+      registryDependencies: ["hover-expand"],
+      component: React.lazy(() => import("@/registry/default/example/hover-expand-demo")),
+      source: "",
+      files: ["registry/default/example/hover-expand-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

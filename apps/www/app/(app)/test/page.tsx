@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-import MouseTrailDemo from './hover-expand-demo'
+import MouseTrailDemo from './text-effect-flipper-demo'
 
 const page = () => {
   return (

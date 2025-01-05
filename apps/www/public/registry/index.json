@@ -98,5 +98,15 @@
       "ui/image-cursortrail.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "hover-expand",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/hover-expand.tsx"
+    ],
+    "type": "components:ui"
   }
 ]
