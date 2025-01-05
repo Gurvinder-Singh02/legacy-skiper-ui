@@ -8,6 +8,12 @@ export const examples: Registry = [
     files: ["example/skiper-card-demo.tsx"],
   },
   {
+    name: "skiper-marquee-demo",
+    type: "components:example",
+    registryDependencies: ["skiper-marquee"],
+    files: ["example/skiper-marquee-demo.tsx"],
+  },
+  {
     name: "animated-number-countdown-demo",
     type: "components:example",
     registryDependencies: ["animated-number-countdown"],

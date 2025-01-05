@@ -1,5 +1,25 @@
 [
   {
+    "name": "skiper-card",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/skiper-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "skiper-marquee",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/skiper-marquee.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "animated-number-countdown",
     "dependencies": [
       "framer-motion"

@@ -4,35 +4,30 @@ import carousel from "@/assets/feature-3.png"
 import textureFull from "@/assets/feature-4.png"
 import buttons from "@/assets/feature-5.png"
 import textureCard from "@/assets/texture-card.png"
-
 import clsx from "clsx"
-import Balancer from "react-wrap-balancer"
+import { SparklesIcon } from "lucide-react"
 
-import { GradientHeading } from "@/registry/default/ui/gradient-heading"
+import { Badge } from "@/components/ui/badge"
+
 import { SkiperCard } from "../ui/skiper-card"
-
 
 export default function SkiperCardDemo() {
   return (
     <section className="relative w-full overflow-hidden " id="features">
       <div className=" p-2">
-        <div className="mb-4 pt-4 md:container">
+        <div className="mb-8 pt-4 md:container">
           <div className=" mx-auto">
-            <div className="mt-1 w-full gap-3 pb-12 pt-8 text-center sm:px-0">
-              <div className="mt-2 px-4 text-6xl font-bold tracking-tight text-white dark:text-neutral-100/90 ">
-                <GradientHeading size="xl">
-                  Tailwind + Framer + React
-                </GradientHeading>
-              </div>
-
-              <p className="mt-2 text-xl font-bold leading-5 text-neutral-700 md:text-3xl md:leading-7 ">
-                <Balancer>Everything you need to ship</Balancer>
-              </p>
+            <div className="flex w-full items-center justify-center">
+              <Badge
+                variant="outline"
+                className="mb-3 rounded-[14px] border border-black/10 bg-white text-base md:left-6"
+              >
+                <SparklesIcon className="  fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
+                Component Preview
+              </Badge>
             </div>
 
-            <div className="relative z-10 grid w-full gap-8 "></div>
-
-            <div className="rounded-[34px] bg-neutral-700 p-2">
+            <div className=" mx-auto max-w-4xl rounded-[34px] bg-neutral-700">
               <div className="relative z-10 grid w-full gap-8 rounded-[28px] bg-neutral-950 p-2">
                 <SkiperCard
                   step1img1Class={clsx(

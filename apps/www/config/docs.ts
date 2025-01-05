@@ -46,6 +46,12 @@ export const docsConfig: DocsConfig = {
               label: "new",
             },
             {
+              title: "Skiper Marquee",
+              href: "/docs/components/skiper-marquee",
+              items: [],
+              label: "new",
+            },
+            {
               title: "Animated Number",
               href: "/docs/components/animated-number",
               items: [],

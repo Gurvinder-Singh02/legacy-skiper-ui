@@ -8,6 +8,12 @@ export const ui: Registry = [
     files: ["ui/skiper-card.tsx"],
   },
   {
+    name: "skiper-marquee",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/skiper-marquee.tsx"],
+  },
+  {
     name: "animated-number-countdown",
     type: "components:ui",
     dependencies: ["framer-motion"],

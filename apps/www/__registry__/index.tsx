@@ -5,6 +5,28 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
+    "skiper-card": {
+      name: "skiper-card",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/skiper-card")),
+      source: "",
+      files: ["registry/default/ui/skiper-card.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "skiper-marquee": {
+      name: "skiper-marquee",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/skiper-marquee")),
+      source: "",
+      files: ["registry/default/ui/skiper-marquee.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "animated-number-countdown": {
       name: "animated-number-countdown",
       type: "components:ui",
@@ -199,6 +221,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/image-ripple")),
       source: "",
       files: ["registry/default/ui/image-ripple.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "skiper-card-demo": {
+      name: "skiper-card-demo",
+      type: "components:example",
+      registryDependencies: ["skiper-card"],
+      component: React.lazy(() => import("@/registry/default/example/skiper-card-demo")),
+      source: "",
+      files: ["registry/default/example/skiper-card-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "skiper-marquee-demo": {
+      name: "skiper-marquee-demo",
+      type: "components:example",
+      registryDependencies: ["skiper-marquee"],
+      component: React.lazy(() => import("@/registry/default/example/skiper-marquee-demo")),
+      source: "",
+      files: ["registry/default/example/skiper-marquee-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

@@ -4,8 +4,13 @@ import { useEffect, useState, type MouseEvent } from "react"
 import Image, { type StaticImageData } from "next/image"
 import cult from "@/assets/cults.png"
 import clsx from "clsx"
-
-import { motion, useMotionTemplate, useMotionValue, type MotionStyle, type MotionValue, } from "motion/react"
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  type MotionStyle,
+  type MotionValue,
+} from "motion/react"
 import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/lib/utils"
@@ -82,11 +87,10 @@ function FeatureCard({
 const steps = [
   { id: "1", name: "" },
   { id: "2", name: "" },
-  { id: '3', name: "" },
+  { id: "3", name: "" },
 ]
 
 export function SkiperCard({
-
   image,
   step1img1Class,
   step1img2Class,
@@ -94,7 +98,6 @@ export function SkiperCard({
   step2img2Class,
   step3imgClass,
   ...props
-
 }: CardProps & {
   step1img1Class?: string
   step1img2Class?: string
@@ -120,10 +123,11 @@ export function SkiperCard({
 
   return (
     <FeatureCard {...props}>
-      <div className={clsx(
-        { "translate-x-0 opacity-0": step < 3 },
-        "absolute left-2/4 top-1/3 flex w-[100%] -translate-x-1/2 -translate-y-[33%] flex-col gap-12 text-center text-2xl font-bold transition-all duration-500 md:w-[60%] "
-      )}
+      <div
+        className={clsx(
+          { "translate-x-0 opacity-0": step < 3 },
+          "absolute left-2/4 top-1/3 flex w-[100%] -translate-x-1/2 -translate-y-[33%] flex-col gap-12 text-center text-2xl font-bold transition-all duration-500 md:w-[60%] "
+        )}
       >
         <Image
           alt={image.alt}
@@ -215,7 +219,7 @@ export function SkiperCard({
           }}
         />
         <div className="absolute left-48 top-5 z-50 size-full cursor-pointer md:left-0">
-          <Steps current={step} onChange={() => { }} steps={steps} />
+          <Steps current={step} onChange={() => {}} steps={steps} />
         </div>
       </>
 
@@ -275,11 +279,11 @@ export function Steps({ steps, current, onChange }) {
                     className={cn(
                       "flex shrink-0 items-center justify-center rounded-full duration-300",
                       isCompleted &&
-                      "bg-brand-400 dark:bg-brand-400 size-4 text-white",
+                        "bg-brand-400 dark:bg-brand-400 size-4 text-white",
                       isCurrent &&
-                      "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
+                        "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
                       isFuture &&
-                      "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
+                        "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
                     )}
                   >
                     {isCompleted ? (

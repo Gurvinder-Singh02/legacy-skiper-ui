@@ -1,5 +1,5 @@
 import React from 'react'
-import SkiperCardDemo from './skiper-card-demo'
+import SkiperCardDemo from './skiper-marqee-demo'
 
 
 
