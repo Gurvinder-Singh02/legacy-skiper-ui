@@ -2,6 +2,12 @@ import { Registry } from "@/registry/schema"
 
 export const examples: Registry = [
   {
+    name: "skiper-card-demo",
+    type: "components:example",
+    registryDependencies: ["skiper-card"],
+    files: ["example/skiper-card-demo.tsx"],
+  },
+  {
     name: "animated-number-countdown-demo",
     type: "components:example",
     registryDependencies: ["animated-number-countdown"],

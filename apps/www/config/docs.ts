@@ -40,6 +40,12 @@ export const docsConfig: DocsConfig = {
           title: "App UI",
           items: [
             {
+              title: "Special Card",
+              href: "/docs/components/skiper-card",
+              items: [],
+              label: "new",
+            },
+            {
               title: "Animated Number",
               href: "/docs/components/animated-number",
               items: [],

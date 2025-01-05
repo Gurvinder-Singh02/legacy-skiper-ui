@@ -1,11 +1,13 @@
 import React from 'react'
+import SkiperCardDemo from './skiper-card-demo'
 
-import CardSwipeDemo from './card-swipe-demo'
+
+
 
 const page = () => {
     return (
         <div className='mt-40' >
-            <CardSwipeDemo />
+            <SkiperCardDemo/>
         </div>
     )
 }

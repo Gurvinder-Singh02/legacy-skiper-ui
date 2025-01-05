@@ -2,6 +2,12 @@ import { Registry } from "@/registry/schema"
 
 export const ui: Registry = [
   {
+    name: "skiper-card",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/skiper-card.tsx"],
+  },
+  {
     name: "animated-number-countdown",
     type: "components:ui",
     dependencies: ["framer-motion"],

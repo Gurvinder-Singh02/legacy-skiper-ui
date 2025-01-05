@@ -4,17 +4,11 @@ import { useEffect, useState, type MouseEvent } from "react"
 import Image, { type StaticImageData } from "next/image"
 import cult from "@/assets/cults.png"
 import clsx from "clsx"
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  type MotionStyle,
-  type MotionValue,
-} from "motion/react"
+
+import { motion, useMotionTemplate, useMotionValue, type MotionStyle, type MotionValue, } from "motion/react"
 import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/lib/utils"
-import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 type WrapperStyle = MotionStyle & {
   "--x": MotionValue<string>
@@ -91,15 +85,16 @@ const steps = [
   { id: '3', name: "" },
 ]
 
-export function ChallengeCreationCard({
+export function SkiperCard({
+
   image,
   step1img1Class,
   step1img2Class,
   step2img1Class,
   step2img2Class,
   step3imgClass,
-
   ...props
+
 }: CardProps & {
   step1img1Class?: string
   step1img2Class?: string
