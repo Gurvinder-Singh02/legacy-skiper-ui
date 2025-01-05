@@ -104,7 +104,7 @@ function Model() {
   }
 
   useFrame(({ gl, scene: finalScene }) => {
-    const x = mouse.x - device.width / 2
+    const x = mouse.x - device.width / 1.5
     const y = -mouse.y + device.height / 2
     trackMousePos(x, y)
     meshRefs.current.forEach((mesh) => {
@@ -171,24 +171,24 @@ function Model() {
     const geometry = new THREE.PlaneGeometry(1, 1)
     const group = new THREE.Group()
 
-    // const texture1 = useTexture('/picture1.jpeg');
-    // const material1 = new THREE.MeshBasicMaterial({ map: texture1 });
-    // const image1 = new THREE.Mesh(geometry, material1);
-    // image1.position.x = -0.25 * viewport.width;
-    // image1.position.y = 0;
-    // image1.position.z = 1;
-    // image1.scale.x = viewport.width / 5;
-    // image1.scale.y = viewport.width / 4;
-    // group.add(image1);
+    const texture1 = useTexture('/picture9.jpeg');
+    const material1 = new THREE.MeshBasicMaterial({ map: texture1 });
+    const image1 = new THREE.Mesh(geometry, material1);
+    image1.position.x = -0.30 * viewport.width;
+    image1.position.y = 0;
+    image1.position.z = 1;
+    image1.scale.x = 1080/4
+    image1.scale.y = 1920/4
+    group.add(image1);
 
     const texture2 = useTexture("/picture1.jpeg")
     const material2 = new THREE.MeshBasicMaterial({ map: texture2 })
     const image2 = new THREE.Mesh(geometry, material2)
-    image2.position.x = -220
+    image2.position.x = -0.001 * viewport.width
     image2.position.y = 0
     image2.position.z = 1
-    image2.scale.x = 1080/3
-    image2.scale.y = 1920/3
+    image2.scale.x = 1080/4
+    image2.scale.y = 1920/4
     group.add(image2)
 
     // const texture3 = useTexture('/picture3.jpeg');
@@ -253,7 +253,7 @@ function useDimension() {
   })
 
   React.useEffect(() => {
-    // Check if the code is running on the client side
+
     if (typeof window !== "undefined") {
       const resize = () => {
         setDimension({

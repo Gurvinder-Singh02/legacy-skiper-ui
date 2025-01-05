@@ -1,10 +1,11 @@
 import React from 'react'
-import ImageRippleDemo from './image-ripple-demo'
+
+import CardSwipeDemo from './card-swipe-demo'
 
 const page = () => {
     return (
         <div className='mt-40' >
-            <ImageRippleDemo />
+            <CardSwipeDemo />
         </div>
     )
 }
