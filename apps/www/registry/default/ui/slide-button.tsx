@@ -1,52 +1,58 @@
-'use client';
+"use client"
 
+import React, {
+  forwardRef,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+  type JSX,
+} from "react"
 import {
   AnimatePresence,
   motion,
   useMotionValue,
-  useTransform,
   useSpring,
+  useTransform,
   type PanInfo,
-} from 'framer-motion';
+} from "framer-motion"
+import { Check, Loader2, SendHorizontal, X } from "lucide-react"
 
-import { Check, Loader2, SendHorizontal, X } from 'lucide-react';
-import React, { useState, useRef, useCallback, useMemo, type JSX, forwardRef } from 'react';
+import { cn } from "@/lib/utils"
+import { Button, ButtonProps } from "@/components/ui/button"
 
-import { cn } from '@/lib/utils';
-import { Button, ButtonProps } from '@/components/ui/button';
-
-const DRAG_CONSTRAINTS = { left: 0, right: 155 };
-const DRAG_THRESHOLD = 0.9;
+const DRAG_CONSTRAINTS = { left: 0, right: 155 }
+const DRAG_THRESHOLD = 0.9
 
 const BUTTON_STATES = {
-  initial: { width: '12rem' },
-  completed: { width: '8rem' },
-};
+  initial: { width: "12rem" },
+  completed: { width: "8rem" },
+}
 
 const ANIMATION_CONFIG = {
   spring: {
-    type: 'spring',
+    type: "spring",
     stiffness: 400,
     damping: 40,
     mass: 0.8,
   },
-};
+}
 
 type StatusIconProps = {
-  status: string;
+  status: string
 }
 
 const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
-  const iconMap: Record<StatusIconProps['status'], JSX.Element> = useMemo(
+  const iconMap: Record<StatusIconProps["status"], JSX.Element> = useMemo(
     () => ({
       loading: <Loader2 className="animate-spin" size={20} />,
       success: <Check size={20} />,
       error: <X size={20} />,
     }),
-    [],
-  );
+    []
+  )
 
-  if (!iconMap[status]) return null;
+  if (!iconMap[status]) return null
 
   return (
     <motion.div
@@ -57,67 +63,67 @@ const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
     >
       {iconMap[status]}
     </motion.div>
-  );
-};
+  )
+}
 
-const useButtonStatus = (resolveTo: 'success' | 'error') => {
+const useButtonStatus = (resolveTo: "success" | "error") => {
   const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle');
+    "idle" | "loading" | "success" | "error"
+  >("idle")
 
   const handleSubmit = useCallback(() => {
-    setStatus('loading');
+    setStatus("loading")
     setTimeout(() => {
-      setStatus(resolveTo);
-    }, 2000);
-  }, [resolveTo]);
+      setStatus(resolveTo)
+    }, 2000)
+  }, [resolveTo])
 
-  return { status, handleSubmit };
-};
+  return { status, handleSubmit }
+}
 
 const SlideButton = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
-    const [isDragging, setIsDragging] = useState(false);
-    const [completed, setCompleted] = useState(false);
-    const dragHandleRef = useRef<HTMLDivElement | null>(null);
-    const { status, handleSubmit } = useButtonStatus('success');
+    const [isDragging, setIsDragging] = useState(false)
+    const [completed, setCompleted] = useState(false)
+    const dragHandleRef = useRef<HTMLDivElement | null>(null)
+    const { status, handleSubmit } = useButtonStatus("success")
 
-    const dragX = useMotionValue(0);
-    const springX = useSpring(dragX, ANIMATION_CONFIG.spring);
+    const dragX = useMotionValue(0)
+    const springX = useSpring(dragX, ANIMATION_CONFIG.spring)
     const dragProgress = useTransform(
       springX,
       [0, DRAG_CONSTRAINTS.right],
-      [0, 1],
-    );
+      [0, 1]
+    )
 
     const handleDragStart = useCallback(() => {
-      if (completed) return;
-      setIsDragging(true);
-    }, [completed]);
+      if (completed) return
+      setIsDragging(true)
+    }, [completed])
 
     const handleDragEnd = () => {
-      if (completed) return;
-      setIsDragging(false);
+      if (completed) return
+      setIsDragging(false)
 
-      const progress = dragProgress.get();
+      const progress = dragProgress.get()
       if (progress >= DRAG_THRESHOLD) {
-        setCompleted(true);
-        handleSubmit();
+        setCompleted(true)
+        handleSubmit()
       } else {
-        dragX.set(0);
+        dragX.set(0)
       }
-    };
+    }
 
     const handleDrag = (
       _event: MouseEvent | TouchEvent | PointerEvent,
-      info: PanInfo,
+      info: PanInfo
     ) => {
-      if (completed) return;
-      const newX = Math.max(0, Math.min(info.offset.x, DRAG_CONSTRAINTS.right));
-      dragX.set(newX);
-    };
+      if (completed) return
+      const newX = Math.max(0, Math.min(info.offset.x, DRAG_CONSTRAINTS.right))
+      dragX.set(newX)
+    }
 
-    const adjustedWidth = useTransform(springX, (x) => x + 10);
+    const adjustedWidth = useTransform(springX, (x) => x + 10)
 
     return (
       <motion.div
@@ -149,12 +155,12 @@ const SlideButton = forwardRef<HTMLButtonElement, ButtonProps>(
             >
               <Button
                 ref={ref}
-                disabled={status === 'loading'}
+                disabled={status === "loading"}
                 {...props}
                 size="icon"
                 className={cn(
-                  'shadow-button rounded-full drop-shadow-xl',
-                  isDragging && 'scale-105 transition-transform',
+                  "shadow-button rounded-full drop-shadow-xl",
+                  isDragging && "scale-105 transition-transform",
                   className
                 )}
               >
@@ -174,10 +180,10 @@ const SlideButton = forwardRef<HTMLButtonElement, ButtonProps>(
             >
               <Button
                 ref={ref}
-                disabled={status === 'loading'}
+                disabled={status === "loading"}
                 {...props}
                 className={cn(
-                  'size-full rounded-full transition-all duration-300',
+                  "size-full rounded-full transition-all duration-300",
                   className
                 )}
               >
@@ -189,10 +195,10 @@ const SlideButton = forwardRef<HTMLButtonElement, ButtonProps>(
           )}
         </AnimatePresence>
       </motion.div>
-    );
+    )
   }
-);
+)
 
-SlideButton.displayName = 'SlideButton';
+SlideButton.displayName = "SlideButton"
 
-export default SlideButton;
+export default SlideButton
