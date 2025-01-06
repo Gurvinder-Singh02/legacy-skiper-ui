@@ -48,8 +48,9 @@ export default function HoverExpand({
         {images.slice(0, maxThumbnails).map((imageUrl, i) => (
           <div
             key={`image-container-${i}`}
-            className={`group relative h-52 overflow-hidden rounded-2xl transition-all duration-300 ${selectedIndex === i ? "w-64" : "w-4 sm:w-5 md:w-8 xl:w-12"
-              }`}
+            className={`group relative h-52 overflow-hidden rounded-2xl transition-all duration-300 ${
+              selectedIndex === i ? "w-64" : "w-4 sm:w-5 md:w-8 xl:w-12"
+            }`}
             onMouseEnter={() => setSelectedIndex(i)}
             onMouseLeave={() => setSelectedIndex(i)}
             onClick={() => {

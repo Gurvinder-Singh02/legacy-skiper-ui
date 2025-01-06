@@ -221,15 +221,14 @@ export const Index: Record<string, any> = {
       name: "${item.name}",
       type: "${item.type}",
       registryDependencies: ${JSON.stringify(item.registryDependencies)},
-      component: React.lazy(() => import("@/registry/${style.name}/${type}/${
-        item.name
-      }")),
+      component: React.lazy(() => import("@/registry/${style.name}/${type}/${item.name
+        }")),
       source: "${sourceFilename}",
       files: [${resolveFiles.map((file) => `"${file}"`)}],
       category: "${item.category}",
       subcategory: "${item.subcategory}",
       chunks: [${chunks.map(
-        (chunk) => `{
+          (chunk) => `{
         name: "${chunk.name}",
         description: "${chunk.description}",
         component: ${chunk.component}
@@ -238,7 +237,7 @@ export const Index: Record<string, any> = {
           className: "${chunk.container.className}"
         }
       }`
-      )}]
+        )}]
     },`
     }
 
@@ -268,16 +267,11 @@ export const Index: Record<string, any> = {
 }
 
 // ----------------------------------------------------------------------------
-// Build registry/styles/[style]/[name].json.
+// Build registry/[name].json.
 // ----------------------------------------------------------------------------
 async function buildStyles(registry: Registry) {
   for (const style of styles) {
-    const targetPath = path.join(REGISTRY_PATH, "styles", style.name)
-
-    // Create directory if it doesn't exist.
-    if (!existsSync(targetPath)) {
-      await fs.mkdir(targetPath, { recursive: true })
-    }
+    const targetPath = REGISTRY_PATH
 
     for (const item of registry) {
       if (item.type !== "components:ui") {
@@ -469,8 +463,8 @@ async function buildThemes() {
           const [resolvedBase, scale] = resolvedColor.split("-")
           const color = scale
             ? colorsData[resolvedBase].find(
-                (item) => item.scale === parseInt(scale)
-              )
+              (item) => item.scale === parseInt(scale)
+            )
             : colorsData[resolvedBase]
           if (color) {
             base["cssVars"][mode][key] = color.hslChannel
@@ -597,8 +591,8 @@ async function buildThemes() {
             const [resolvedBase, scale] = resolvedColor.split("-")
             const color = scale
               ? colorsData[resolvedBase].find(
-                  (item) => item.scale === parseInt(scale)
-                )
+                (item) => item.scale === parseInt(scale)
+              )
               : colorsData[resolvedBase]
             if (color) {
               payload["cssVars"][mode][key] = color.hslChannel
