@@ -8,7 +8,7 @@ export const Index: Record<string, any> = {
     "skiper-card": {
       name: "skiper-card",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["button"],
       component: React.lazy(() => import("@/registry/default/ui/skiper-card")),
       source: "",
       files: ["registry/default/ui/skiper-card.tsx"],

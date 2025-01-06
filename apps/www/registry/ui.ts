@@ -3,6 +3,7 @@ import { Registry } from "@/registry/schema"
 export const ui: Registry = [
   {
     name: "skiper-card",
+    registryDependencies: ["button"],
     type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/skiper-card.tsx"],

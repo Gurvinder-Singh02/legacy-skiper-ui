@@ -285,15 +285,18 @@ async function buildStyles(registry: Registry) {
         )
 
         return {
-          name: basename(file),
-          content,
           type : "registry:ui",
-          target :""
+          content,
+          path :`ui/${basename(file)}`,
+          target :`components/ui/${basename(file)}`
         }
       })
 
       const payload = {
-        ...item,
+        name : item.name,
+        type : item.type,
+        registryDependencies : item.registryDependencies,
+        dependencies : item.dependencies,
         files,
       }
 
