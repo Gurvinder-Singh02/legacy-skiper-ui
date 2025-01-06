@@ -7,7 +7,7 @@ export const Index: Record<string, any> = {
   "default": {
     "skiper-card": {
       name: "skiper-card",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/skiper-card")),
       source: "",
@@ -18,7 +18,7 @@ export const Index: Record<string, any> = {
     },
     "skiper-marquee": {
       name: "skiper-marquee",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/skiper-marquee")),
       source: "",
@@ -29,7 +29,7 @@ export const Index: Record<string, any> = {
     },
     "animated-number-countdown": {
       name: "animated-number-countdown",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/animated-number-countdown")),
       source: "",
@@ -40,7 +40,7 @@ export const Index: Record<string, any> = {
     },
     "animated-number-counter": {
       name: "animated-number-counter",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/animated-number-counter")),
       source: "",
@@ -51,7 +51,7 @@ export const Index: Record<string, any> = {
     },
     "animated-number-random": {
       name: "animated-number-random",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/animated-number-random")),
       source: "",
@@ -62,7 +62,7 @@ export const Index: Record<string, any> = {
     },
     "card-carousel": {
       name: "card-carousel",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/card-carousel")),
       source: "",
@@ -73,7 +73,7 @@ export const Index: Record<string, any> = {
     },
     "card-swipe": {
       name: "card-swipe",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/card-swipe")),
       source: "",
@@ -84,7 +84,7 @@ export const Index: Record<string, any> = {
     },
     "stacked-dialog": {
       name: "stacked-dialog",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/stacked-dialog")),
       source: "",
@@ -95,7 +95,7 @@ export const Index: Record<string, any> = {
     },
     "minimal-card": {
       name: "minimal-card",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/minimal-card")),
       source: "",
@@ -106,7 +106,7 @@ export const Index: Record<string, any> = {
     },
     "blur-vignette": {
       name: "blur-vignette",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/blur-vignette")),
       source: "",
@@ -117,7 +117,7 @@ export const Index: Record<string, any> = {
     },
     "masked-div": {
       name: "masked-div",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/masked-div")),
       source: "",
@@ -128,7 +128,7 @@ export const Index: Record<string, any> = {
     },
     "expandable": {
       name: "expandable",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/expandable")),
       source: "",
@@ -139,7 +139,7 @@ export const Index: Record<string, any> = {
     },
     "image-cursortrail": {
       name: "image-cursortrail",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/image-cursortrail")),
       source: "",
@@ -150,7 +150,7 @@ export const Index: Record<string, any> = {
     },
     "hover-expand": {
       name: "hover-expand",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/hover-expand")),
       source: "",
@@ -161,7 +161,7 @@ export const Index: Record<string, any> = {
     },
     "text-effect-flipper": {
       name: "text-effect-flipper",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/text-effect-flipper")),
       source: "",
@@ -172,7 +172,7 @@ export const Index: Record<string, any> = {
     },
     "slide-button": {
       name: "slide-button",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/slide-button")),
       source: "",
@@ -183,7 +183,7 @@ export const Index: Record<string, any> = {
     },
     "share-button": {
       name: "share-button",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/share-button")),
       source: "",
@@ -194,7 +194,7 @@ export const Index: Record<string, any> = {
     },
     "badge-button": {
       name: "badge-button",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/badge-button")),
       source: "",
@@ -205,7 +205,7 @@ export const Index: Record<string, any> = {
     },
     "text-scroll": {
       name: "text-scroll",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/text-scroll")),
       source: "",
@@ -216,7 +216,7 @@ export const Index: Record<string, any> = {
     },
     "image-ripple": {
       name: "image-ripple",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/image-ripple")),
       source: "",
@@ -227,7 +227,7 @@ export const Index: Record<string, any> = {
     },
     "expanded-tabs": {
       name: "expanded-tabs",
-      type: "components:ui",
+      type: "registry:ui",
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/expanded-tabs")),
       source: "",

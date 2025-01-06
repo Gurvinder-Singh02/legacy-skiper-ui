@@ -274,7 +274,7 @@ async function buildStyles(registry: Registry) {
     const targetPath = REGISTRY_PATH
 
     for (const item of registry) {
-      if (item.type !== "components:ui") {
+      if (item.type !== "registry:ui") {
         continue
       }
 
@@ -287,6 +287,8 @@ async function buildStyles(registry: Registry) {
         return {
           name: basename(file),
           content,
+          type : "registry:ui",
+          target :""
         }
       })
 

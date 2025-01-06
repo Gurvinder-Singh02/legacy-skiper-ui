@@ -6,8 +6,10 @@
   "files": [
     {
       "name": "badge-button.tsx",
-      "content": "import React from \"react\"\nimport { SparklesIcon } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\n\nconst BadgeButton = () => {\n  return (\n    <Badge\n      variant=\"outline\"\n      className=\"mb-3 cursor-pointer rounded-[14px] border border-black/10 bg-white text-base md:left-6\"\n    >\n      <SparklesIcon className=\" mr-2  fill-[#EEBDE0] stroke-1 text-neutral-800\" />{\" \"}\n      Component Preview\n    </Badge>\n  )\n}\n\nexport default BadgeButton\n"
+      "content": "import React from \"react\"\nimport { SparklesIcon } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\n\nconst BadgeButton = () => {\n  return (\n    <Badge\n      variant=\"outline\"\n      className=\"mb-3 cursor-pointer rounded-[14px] border border-black/10 bg-white text-base md:left-6\"\n    >\n      <SparklesIcon className=\" mr-2  fill-[#EEBDE0] stroke-1 text-neutral-800\" />{\" \"}\n      Component Preview\n    </Badge>\n  )\n}\n\nexport default BadgeButton\n",
+      "type": "registry:ui",
+      "target": ""
     }
   ],
-  "type": "components:ui"
+  "type": "registry:ui"
 }
