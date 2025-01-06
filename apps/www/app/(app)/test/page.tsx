@@ -1,13 +1,10 @@
 import React from 'react'
-import SkiperCardDemo from './skiper-marqee-demo'
-
-
-
+import DefaultDemo  from './expanded-tabs-demo'
 
 const page = () => {
     return (
         <div className='mt-40' >
-            <SkiperCardDemo/>
+            <DefaultDemo/>
         </div>
     )
 }

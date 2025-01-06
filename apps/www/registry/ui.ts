@@ -121,4 +121,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/image-ripple.tsx"],
   },
+  {
+    name: "expanded-tabs",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/expanded-tabs.tsx"],
+  },
 ]
