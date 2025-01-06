@@ -96,7 +96,6 @@ const tiles = [
       <div className="pointer-events-none absolute left-1/2 top-1/2 size-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r from-orange-600 via-rose-600 to-violet-600 opacity-70 "></div>
     ),
   },
-  
 ]
 
 function shuffleArray(array: any[]) {

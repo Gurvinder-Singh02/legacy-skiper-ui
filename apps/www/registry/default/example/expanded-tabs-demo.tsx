@@ -1,9 +1,18 @@
 "use client"
 
-import { Bell, Home, HelpCircle, Settings, Shield, Mail, User, FileText, Lock } from "lucide-react";
-import { ExpandedTabs } from "../ui/expanded-tabs";
+import {
+  Bell,
+  FileText,
+  HelpCircle,
+  Home,
+  Lock,
+  Mail,
+  Settings,
+  Shield,
+  User,
+} from "lucide-react"
 
-
+import { ExpandedTabs } from "../ui/expanded-tabs"
 
 export default function DefaultDemo() {
   const tabs = [
@@ -13,13 +22,13 @@ export default function DefaultDemo() {
     { title: "Settings", icon: Settings },
     { title: "Support", icon: HelpCircle },
     { title: "Security", icon: Shield },
-  ];
+  ]
 
   return (
     <div className="flex items-center justify-center">
       <ExpandedTabs tabs={tabs} />
     </div>
-  );
+  )
 }
 
 function CustomColorDemo() {
@@ -29,7 +38,7 @@ function CustomColorDemo() {
     { type: "separator" as const },
     { title: "Documents", icon: FileText },
     { title: "Privacy", icon: Lock },
-  ];
+  ]
 
   return (
     <div className="flex flex-col gap-4">
@@ -39,5 +48,5 @@ function CustomColorDemo() {
         className="border-blue-200 dark:border-blue-800"
       />
     </div>
-  );
+  )
 }

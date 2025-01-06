@@ -198,5 +198,15 @@
       "ui/image-ripple.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "expanded-tabs",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/expanded-tabs.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

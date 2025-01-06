@@ -1,30 +1,31 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useOnClickOutside } from "usehooks-ts";
-import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
+import * as React from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { LucideIcon } from "lucide-react"
+import { useOnClickOutside } from "usehooks-ts"
+
+import { cn } from "@/lib/utils"
 
 interface Tab {
-  title: string;
-  icon: LucideIcon;
-  type?: never;
+  title: string
+  icon: LucideIcon
+  type?: never
 }
 
 interface Separator {
-  type: "separator";
-  title?: never;
-  icon?: never;
+  type: "separator"
+  title?: never
+  icon?: never
 }
 
-type TabItem = Tab | Separator;
+type TabItem = Tab | Separator
 
 interface ExpandedTabsProps {
-  tabs: TabItem[];
-  className?: string;
-  activeColor?: string;
-  onChange?: (index: number | null) => void;
+  tabs: TabItem[]
+  className?: string
+  activeColor?: string
+  onChange?: (index: number | null) => void
 }
 
 const buttonVariants = {
@@ -38,15 +39,15 @@ const buttonVariants = {
     paddingLeft: isSelected ? "1rem" : ".5rem",
     paddingRight: isSelected ? "1rem" : ".5rem",
   }),
-};
+}
 
 const spanVariants = {
   initial: { width: 0, opacity: 0 },
   animate: { width: "auto", opacity: 1 },
   exit: { width: 0, opacity: 0 },
-};
+}
 
-const transition = { delay: 0.1, type: "spring", bounce: 0, duration: 0.6 };
+const transition = { delay: 0.1, type: "spring", bounce: 0, duration: 0.6 }
 
 export function ExpandedTabs({
   tabs,
@@ -54,22 +55,22 @@ export function ExpandedTabs({
   activeColor = "text-primary",
   onChange,
 }: ExpandedTabsProps) {
-  const [selected, setSelected] = React.useState<number | null>(null);
-  const outsideClickRef = React.useRef(null);
+  const [selected, setSelected] = React.useState<number | null>(null)
+  const outsideClickRef = React.useRef(null)
 
   useOnClickOutside(outsideClickRef, () => {
-    setSelected(null);
-    onChange?.(null);
-  });
+    setSelected(null)
+    onChange?.(null)
+  })
 
   const handleSelect = (index: number) => {
-    setSelected(index);
-    onChange?.(index);
-  };
+    setSelected(index)
+    onChange?.(index)
+  }
 
   const Separator = () => (
     <div className=" h-[24px] w-[1.2px] bg-border" aria-hidden="true" />
-  );
+  )
 
   return (
     <div
@@ -81,10 +82,10 @@ export function ExpandedTabs({
     >
       {tabs.map((tab, index) => {
         if (tab.type === "separator") {
-          return <Separator key={`separator-${index}`} />;
+          return <Separator key={`separator-${index}`} />
         }
 
-        const Icon = tab.icon;
+        const Icon = tab.icon
         return (
           <motion.button
             key={tab.title}
@@ -117,8 +118,8 @@ export function ExpandedTabs({
               )}
             </AnimatePresence>
           </motion.button>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

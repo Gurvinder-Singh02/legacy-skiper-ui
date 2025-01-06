@@ -225,6 +225,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "expanded-tabs": {
+      name: "expanded-tabs",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/expanded-tabs")),
+      source: "",
+      files: ["registry/default/ui/expanded-tabs.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "skiper-card-demo": {
       name: "skiper-card-demo",
       type: "components:example",
@@ -419,6 +430,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/image-ripple-demo")),
       source: "",
       files: ["registry/default/example/image-ripple-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "expanded-tabs-demo": {
+      name: "expanded-tabs-demo",
+      type: "components:example",
+      registryDependencies: ["expanded-tabs"],
+      component: React.lazy(() => import("@/registry/default/example/expanded-tabs-demo")),
+      source: "",
+      files: ["registry/default/example/expanded-tabs-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
