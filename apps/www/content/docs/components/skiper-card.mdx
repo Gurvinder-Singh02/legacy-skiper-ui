@@ -1,6 +1,6 @@
 ---
 title: Skiper Card
-description: A Cursor That Follow Images
+description: A Special Card Component that help you stand out
 component: true
 links:
 ---
@@ -11,14 +11,14 @@ links:
   description="All variations"
 />
 
-## Installation
-
-Install the required dependencies.
+<br/>
+# Installation
 
 <Tabs defaultValue="manual">
 
 <TabsList>
   <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="auto">Shadcn</TabsTrigger>
 </TabsList>
 
 <TabsContent value="manual">
@@ -52,6 +52,25 @@ export function cn(...inputs: ClassValue[]) {
 <ComponentSource name="skiper-card" />
 
 <Step>Update the import paths to match your project setup.</Step>
+
+
+</Steps>
+
+</TabsContent>
+
+<TabsContent value="auto">
+
+<Steps>
+
+<Step>
+
+Install the required dependencies.
+
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/skiper-card.json"
+```
+
+</Step>
 
 
 </Steps>

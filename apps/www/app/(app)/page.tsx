@@ -46,7 +46,8 @@ export default function IndexPage() {
           <FadeIn>
             <p className=" leading-2 flex max-w-2xl flex-wrap items-center justify-center gap-1 text-center  text-base  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
               Bringing minimalism to the future <br />
-              complete modern look components for you daily needs
+              Reusable components for unstoppable developers
+
             </p>
           </FadeIn>
           <FadeIn>
