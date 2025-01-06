@@ -110,9 +110,9 @@ export const examples: Registry = [
     files: ["example/image-ripple-demo.tsx"],
   },
   {
-    name: "image-ripple-demo",
+    name: "expanded-tabs-demo",
     type: "components:example",
-    registryDependencies: ["image-ripple"],
-    files: ["example/image-ripple-demo.tsx"],
+    registryDependencies: ["expanded-tabs"],
+    files: ["example/expanded-tabs-demo.tsx"],
   },
 ]
