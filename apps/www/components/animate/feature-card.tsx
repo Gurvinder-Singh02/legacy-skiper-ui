@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type MouseEvent } from "react"
 import Image, { type StaticImageData } from "next/image"
-import cult from "@/assets/cults.png"
+import cult from "@/assets/skiper.png"
 import clsx from "clsx"
 import {
   motion,
