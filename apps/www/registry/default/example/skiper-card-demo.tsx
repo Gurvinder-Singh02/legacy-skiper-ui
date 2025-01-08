@@ -1,22 +1,23 @@
 // import cards as static images for optimization
-import shiftCard from "@/../public/assets/feature-1.png"
-import family from "@/../public/assets/feature-2.png"
-import carousel from "@/../public/assets/feature-3.png"
-import textureFull from "@/../public/assets/feature-4.png"
-import buttons from "@/../public/assets/feature-5.png"
-import textureCard from "@/../public/assets/texture-card.png"
+
 import { SparklesIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 
+import shiftCard from "../../../public/assets/feature-1.png"
+import family from "../../../public/assets/feature-2.png"
+import carousel from "../../../public/assets/feature-3.png"
+import textureFull from "../../../public/assets/feature-4.png"
+import buttons from "../../../public/assets/feature-5.png"
+import textureCard from "../../../public/assets/texture-card.png"
 import { SkiperCard } from "../ui/skiper-card"
 
 export function SkiperCardDemo() {
   return (
     <section className="relative my-14 w-full overflow-hidden " id="features">
       <div className=" p-2">
-        <div className="mb-8 pt-4 md:container">
+        <div className="mb-8 mx-auto pt-4 md:container">
           <div className=" mx-auto">
             <div className="flex w-full items-center justify-center">
               <Badge
@@ -61,7 +62,7 @@ export function SkiperCardDemo() {
                   )}
                   description="Make your app 🤌"
                   bgClass="lg:bg-gradient-to-tr"
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  //  eslint-disable-next-line @typescript-eslint/ban-ts-comment
                   //   @ts-ignore
                   image={{
                     step1light1: family,

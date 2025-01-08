@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState, type MouseEvent } from "react"
-import Demo from "@/../public/assets/demo.png"
 import Image, { type StaticImageData } from "next/image"
 import {
   motion,
@@ -13,6 +12,8 @@ import {
 import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/lib/utils"
+
+import Demo from "../../../public/assets/demo.png"
 
 type WrapperStyle = MotionStyle & {
   "--x": MotionValue<string>
