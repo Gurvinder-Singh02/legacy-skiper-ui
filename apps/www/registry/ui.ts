@@ -3,9 +3,9 @@ import { Registry } from "@/registry/schema"
 export const ui: Registry = [
   {
     name: "skiper-card",
-    registryDependencies: ["button"],
+    registryDependencies: ["badge"],
     type: "registry:ui",
-    dependencies: ["motion"],
+    dependencies: ["motion", "react-wrap-balancer"],
     files: ["ui/skiper-card.tsx"],
   },
   {

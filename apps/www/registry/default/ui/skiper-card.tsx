@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useState, type MouseEvent } from "react"
+import Demo from "@/../public/assets/demo.png"
 import Image, { type StaticImageData } from "next/image"
-
 import {
   motion,
   useMotionTemplate,
@@ -10,7 +10,6 @@ import {
   type MotionStyle,
   type MotionValue,
 } from "motion/react"
-
 import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/lib/utils"
@@ -132,7 +131,7 @@ export function SkiperCard({
         <Image
           alt={image.alt}
           className="pointer-events-none top-1/2 w-[90%] overflow-hidden rounded-2xl border border-neutral-100/10 transition-all duration-500 dark:border-zinc-700 md:left-[35px] md:top-[30%] md:w-full"
-          src="https://res.cloudinary.com/di6xkdtqb/image/upload/v1736327775/Portfolio/eqpmyom7igqente5jrdi.png"
+          src={Demo}
           width={800}
           height={300}
           style={{
@@ -219,7 +218,7 @@ export function SkiperCard({
           }}
         />
         <div className="absolute left-48 top-5 z-50 size-full cursor-pointer md:left-0">
-          <Steps current={step} onChange={() => { }} steps={steps} />
+          <Steps current={step} onChange={() => {}} steps={steps} />
         </div>
       </>
 
@@ -245,21 +244,24 @@ function IconCheck({ className, ...props }: React.ComponentProps<"svg">) {
   )
 }
 
-//   @ts-ignore
-export function Steps({ steps, current, onChange }) {
+interface StepsProps {
+  steps: { id: string; name: string }[]
+  current: number
+  onChange: (stepIdx: number) => void
+}
+
+export function Steps({ steps, current, onChange }: StepsProps) {
   return (
     <nav aria-label="Progress" className="flex justify-center px-4 ">
       <ol
         className="flex w-full flex-wrap items-start justify-start gap-2  sm:justify-center md:w-10/12 md:divide-y-0"
         role="list"
       >
-        {/* @ts-ignore */}
         {steps.map((step, stepIdx) => {
           const isCompleted = current > stepIdx
           const isCurrent = current === stepIdx
           const isFuture = !isCompleted && !isCurrent
           return (
-            // z-50 makes it sit above navbar.tsx for pointer-events to work since the <nav> container is -mt-[56px]
             <li
               className={cn(
                 "relative z-50 rounded-full px-3 py-1  transition-all duration-300 ease-in-out md:flex",
@@ -279,11 +281,11 @@ export function Steps({ steps, current, onChange }) {
                     className={cn(
                       "flex shrink-0 items-center justify-center rounded-full duration-300",
                       isCompleted &&
-                      "bg-brand-400 dark:bg-brand-400 size-4 text-white",
+                        "bg-brand-400 dark:bg-brand-400 size-4 text-white",
                       isCurrent &&
-                      "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
+                        "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
                       isFuture &&
-                      "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
+                        "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
                     )}
                   >
                     {isCompleted ? (

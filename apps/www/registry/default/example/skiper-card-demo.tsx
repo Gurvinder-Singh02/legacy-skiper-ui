@@ -1,17 +1,18 @@
-// import cards for static image
-import shiftCard from "@/assets/feature-1.png"
-import family from "@/assets/feature-2.png"
-import carousel from "@/assets/feature-3.png"
-import textureFull from "@/assets/feature-4.png"
-import buttons from "@/assets/feature-5.png"
-import textureCard from "@/assets/texture-card.png"
-
+// import cards as static images for optimization
+import shiftCard from "@/../public/assets/feature-1.png"
+import family from "@/../public/assets/feature-2.png"
+import carousel from "@/../public/assets/feature-3.png"
+import textureFull from "@/../public/assets/feature-4.png"
+import buttons from "@/../public/assets/feature-5.png"
+import textureCard from "@/../public/assets/texture-card.png"
 import { SparklesIcon } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { SkiperCard } from "../ui/skiper-card"
-import { cn } from "@/lib/utils"
 
-export default function SkiperCardDemo() {
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
+
+import { SkiperCard } from "../ui/skiper-card"
+
+export function SkiperCardDemo() {
   return (
     <section className="relative my-14 w-full overflow-hidden " id="features">
       <div className=" p-2">
@@ -60,6 +61,7 @@ export default function SkiperCardDemo() {
                   )}
                   description="Make your app 🤌"
                   bgClass="lg:bg-gradient-to-tr"
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                   //   @ts-ignore
                   image={{
                     step1light1: family,
