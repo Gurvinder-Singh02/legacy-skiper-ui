@@ -5,6 +5,7 @@ import textureFull from "@/assets/feature-4.png"
 import buttons from "@/assets/feature-5.png"
 import textureCard from "@/assets/texture-card.png"
 import clsx from "clsx"
+
 import { SparklesIcon } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"

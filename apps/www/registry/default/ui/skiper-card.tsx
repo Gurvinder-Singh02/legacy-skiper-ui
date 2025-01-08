@@ -2,8 +2,7 @@
 
 import { useEffect, useState, type MouseEvent } from "react"
 import Image, { type StaticImageData } from "next/image"
-import cult from "@/assets/cults.png"
-import clsx from "clsx"
+
 import {
   motion,
   useMotionTemplate,
@@ -11,6 +10,7 @@ import {
   type MotionStyle,
   type MotionValue,
 } from "motion/react"
+
 import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/lib/utils"
@@ -62,7 +62,7 @@ function FeatureCard({
       }
     >
       <div
-        className={clsx(
+        className={cn(
           "group relative w-full overflow-hidden rounded-3xl border border-black/10  bg-gradient-to-b from-neutral-900/90 to-stone-800 transition duration-300 dark:from-neutral-950/90 dark:to-neutral-800/90",
           "md:hover:border-transparent",
           bgClass
@@ -124,15 +124,15 @@ export function SkiperCard({
   return (
     <FeatureCard {...props}>
       <div
-        className={clsx(
+        className={cn(
           { "translate-x-0 opacity-0": step < 3 },
-          "absolute left-2/4 top-1/3 flex w-[100%] -translate-x-1/2 -translate-y-[33%] flex-col gap-12 text-center text-2xl font-bold transition-all duration-500 md:w-[60%] "
+          "absolute left-2/4 top-1/3 flex w-full -translate-x-1/2 -translate-y-[33%] flex-col gap-12 text-center text-2xl font-bold transition-all duration-500 md:w-3/5 "
         )}
       >
         <Image
           alt={image.alt}
           className="pointer-events-none top-1/2 w-[90%] overflow-hidden rounded-2xl border border-neutral-100/10 transition-all duration-500 dark:border-zinc-700 md:left-[35px] md:top-[30%] md:w-full"
-          src={cult}
+          src="https://res.cloudinary.com/di6xkdtqb/image/upload/v1736327775/Portfolio/eqpmyom7igqente5jrdi.png"
           width={800}
           height={300}
           style={{
@@ -147,7 +147,7 @@ export function SkiperCard({
         {/* step 1 */}
         <Image
           alt={image.alt}
-          className={clsx(step1img1Class, {
+          className={cn(step1img1Class, {
             "-translate-x-36 opacity-0 rounded-2xl": step > 0,
           })}
           src={image.step1light1}
@@ -159,7 +159,7 @@ export function SkiperCard({
         />
         <Image
           alt={image.alt}
-          className={clsx(step1img2Class, {
+          className={cn(step1img2Class, {
             "-translate-x-24 opacity-0 rounded-2xl": step > 0,
           })}
           src={image.step1light2}
@@ -173,7 +173,7 @@ export function SkiperCard({
         {/* step 2 */}
         <Image
           alt={image.alt}
-          className={clsx(
+          className={cn(
             step2img1Class,
             "rounded-2xl",
             { "translate-x-36 opacity-0": step < 1 },
@@ -188,7 +188,7 @@ export function SkiperCard({
         />
         <Image
           alt={image.alt}
-          className={clsx(
+          className={cn(
             step2img2Class,
             "rounded-2xl ",
             { "translate-x-24 opacity-0": step < 1 },
@@ -204,7 +204,7 @@ export function SkiperCard({
         {/* step 3 */}
         <Image
           alt={image.alt}
-          className={clsx(
+          className={cn(
             step3imgClass,
             "rounded-2xl",
             { "translate-x-36 opacity-0": step < 2 },
@@ -219,7 +219,7 @@ export function SkiperCard({
           }}
         />
         <div className="absolute left-48 top-5 z-50 size-full cursor-pointer md:left-0">
-          <Steps current={step} onChange={() => {}} steps={steps} />
+          <Steps current={step} onChange={() => { }} steps={steps} />
         </div>
       </>
 
@@ -279,11 +279,11 @@ export function Steps({ steps, current, onChange }) {
                     className={cn(
                       "flex shrink-0 items-center justify-center rounded-full duration-300",
                       isCompleted &&
-                        "bg-brand-400 dark:bg-brand-400 size-4 text-white",
+                      "bg-brand-400 dark:bg-brand-400 size-4 text-white",
                       isCurrent &&
-                        "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
+                      "bg-brand-300/80 size-4 p-2 text-neutral-400 dark:bg-neutral-500/50",
                       isFuture &&
-                        "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
+                      "bg-brand-300/10 size-4 p-2 dark:bg-neutral-500/20"
                     )}
                   >
                     {isCompleted ? (
@@ -300,7 +300,7 @@ export function Steps({ steps, current, onChange }) {
                     )}
                   </span>
                   <span
-                    className={clsx(
+                    className={cn(
                       "text-sm font-medium duration-300",
                       isCompleted && "text-brand-400 dark:text-brand-500",
                       isFuture && "text-neutral-500"

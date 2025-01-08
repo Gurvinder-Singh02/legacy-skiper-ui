@@ -5,7 +5,7 @@ export const ui: Registry = [
     name: "skiper-card",
     registryDependencies: ["button"],
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion"],
     files: ["ui/skiper-card.tsx"],
   },
   {
