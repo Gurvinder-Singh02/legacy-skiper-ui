@@ -68,7 +68,7 @@ function FeatureCard({
           bgClass
         )}
       >
-        <div className="m-10 min-h-[450px] w-full">
+        <div className="m-10 min-h-[550px] w-full">
           <div className="flex w-4/6 flex-col gap-3">
             <h2 className="text-xl font-bold tracking-tight text-white md:text-2xl">
               {title}
