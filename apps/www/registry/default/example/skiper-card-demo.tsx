@@ -1,19 +1,18 @@
-// import cards as static images for optimization
-
+// update the image locations @ is src as default to update to root change the tsconfig.ts paths
+import shiftCard from "@/assets/feature-1.png"
+import family from "@/assets/feature-2.png"
+import carousel from "@/assets/feature-3.png"
+import textureFull from "@/assets/feature-4.png"
+import skiper from "@/assets/skiper.png"
+import textureCard from "@/assets/texture-card.png"
 import { SparklesIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 
-import shiftCard from "../../../public/assets/feature-1.png"
-import family from "../../../public/assets/feature-2.png"
-import carousel from "../../../public/assets/feature-3.png"
-import textureFull from "../../../public/assets/feature-4.png"
-import buttons from "../../../public/assets/feature-5.png"
-import textureCard from "../../../public/assets/texture-card.png"
 import { SkiperCard } from "../ui/skiper-card"
 
-export function SkiperCardDemo() {
+export default function SkiperCardDemo() {
   return (
     <section className="relative my-14 w-full overflow-hidden " id="features">
       <div className=" p-2">
@@ -70,7 +69,7 @@ export function SkiperCardDemo() {
                     step2light1: carousel,
                     step2light2: textureFull,
                     step3light: textureCard,
-                    step4light: buttons,
+                    step4light: skiper,
                     alt: "Something",
                   }}
                   title="Components that pop"

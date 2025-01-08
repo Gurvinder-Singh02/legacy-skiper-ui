@@ -13,7 +13,6 @@ import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/lib/utils"
 
-import Demo from "../../../public/assets/demo.png"
 
 type WrapperStyle = MotionStyle & {
   "--x": MotionValue<string>
@@ -132,7 +131,7 @@ export function SkiperCard({
         <Image
           alt={image.alt}
           className="pointer-events-none top-1/2 w-[90%] overflow-hidden rounded-2xl border border-neutral-100/10 transition-all duration-500 dark:border-zinc-700 md:left-[35px] md:top-[30%] md:w-full"
-          src={Demo}
+          src={image.step4light}
           width={800}
           height={300}
           style={{
