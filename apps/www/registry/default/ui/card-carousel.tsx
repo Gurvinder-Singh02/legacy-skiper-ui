@@ -8,7 +8,7 @@ import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-import Link from "next/link"
+
 import { SparklesIcon } from "lucide-react"
 import {
   Autoplay,
@@ -18,7 +18,6 @@ import {
 } from "swiper/modules"
 
 import { Badge } from "@/components/ui/badge"
-import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 interface CarouselProps {
   images: { src: string; alt: string }[]
@@ -75,13 +74,10 @@ export const CardCarousel: React.FC<CarouselProps> = ({
           <div className="flex flex-col justify-center pb-2 pl-4 pt-14 md:items-center">
             <div className="flex gap-2">
               <div>
-                <GradientHeading>Card Carousel</GradientHeading>
-                <Link
-                  href="/docs/components/popover-form"
-                  className="flex items-center gap-1"
-                >
-                  Seamless Images carousel animation.
-                </Link>
+                <h3 className="text-4xl font-bold tracking-tight">
+                  Card Carousel
+                </h3>
+                <p>Seamless Images carousel animation.</p>
               </div>
             </div>
           </div>

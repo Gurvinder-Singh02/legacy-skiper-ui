@@ -63,7 +63,7 @@ export const Index: Record<string, any> = {
     "card-carousel": {
       name: "card-carousel",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["badge"],
       component: React.lazy(() => import("@/registry/default/ui/card-carousel")),
       source: "",
       files: ["registry/default/ui/card-carousel.tsx"],
@@ -74,7 +74,7 @@ export const Index: Record<string, any> = {
     "card-swipe": {
       name: "card-swipe",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["badge"],
       component: React.lazy(() => import("@/registry/default/ui/card-swipe")),
       source: "",
       files: ["registry/default/ui/card-swipe.tsx"],

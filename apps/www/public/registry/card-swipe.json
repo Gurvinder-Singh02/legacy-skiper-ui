@@ -1,8 +1,12 @@
 {
   "name": "card-swipe",
   "type": "registry:ui",
+  "registryDependencies": [
+    "badge"
+  ],
   "dependencies": [
-    "framer-motion "
+    "framer-motion ",
+    "swiper"
   ],
   "files": [
     {

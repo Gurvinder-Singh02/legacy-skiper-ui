@@ -34,14 +34,16 @@ export const ui: Registry = [
   },
   {
     name: "card-carousel",
+    registryDependencies: ["badge"],
     type: "registry:ui",
-    dependencies: ["framer-motion "],
+    dependencies: ["framer-motion", "@number-flow/react", "swiper"],
     files: ["ui/card-carousel.tsx"],
   },
   {
     name: "card-swipe",
+    registryDependencies: ["badge"],
     type: "registry:ui",
-    dependencies: ["framer-motion "],
+    dependencies: ["framer-motion ", "swiper"],
     files: ["ui/card-swipe.tsx"],
   },
   {
