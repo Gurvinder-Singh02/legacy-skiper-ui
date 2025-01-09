@@ -2,7 +2,8 @@
   "name": "animated-number-counter",
   "type": "registry:ui",
   "dependencies": [
-    "framer-motion"
+    "framer-motion",
+    "@number-flow/react"
   ],
   "files": [
     {

@@ -17,19 +17,19 @@ export const ui: Registry = [
   {
     name: "animated-number-countdown",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["framer-motion", "@number-flow/react"],
     files: ["ui/animated-number-countdown.tsx"],
   },
   {
     name: "animated-number-counter",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["framer-motion", "@number-flow/react"],
     files: ["ui/animated-number-counter.tsx"],
   },
   {
     name: "animated-number-random",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["framer-motion", "@number-flow/react"],
     files: ["ui/animated-number-random.tsx"],
   },
   {
