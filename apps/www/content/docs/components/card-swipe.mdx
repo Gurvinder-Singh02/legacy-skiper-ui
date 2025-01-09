@@ -1,5 +1,5 @@
 ---
-title: Card Swipe
+title: card Swipe
 description: A simple cardAnimation
 component: true
 links:
@@ -11,32 +11,50 @@ links:
   description="All variations"
 />
 
+
+## References
+
+<Citations>
+  <p className="font-medium text-primary">Read Docs to more</p>
+  <CitationList>
+    <CitationItem>
+      <CitationLink
+        href="https://swiperjs.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        swiper.js 
+      </CitationLink>
+    </CitationItem>
+  </CitationList>
+</Citations>
+
+
 ## Installation
 
-```bash
-  npm install swiper
-```
 
-<Tabs defaultValue="manual">
+<Tabs defaultValue="cli">
 
 <TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
 
-<TabsContent value="manual">
+<TabsContent value="cli">
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
-
-<ComponentSource name="card-swipe" />
-
-<Step>Update the import paths to match your project setup.</Step>
+<Step> 
+paste command in terminal 
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/card-swipe.json"
+```
+</Step>
 
 ## Usage
 
 ```tsx
-import { CardCarousel } from "@/components/ui/card-swipe"
+import { CardSwipe } from "@/components/ui/card-swipe"
 ```
 
 ```tsx
@@ -48,13 +66,50 @@ function BasicExample() {
   ]
 
   return (
-    <div className="pt-40">
-      <CardCarousel
-        images={images}
-        autoplayDelay={2000}
-        showPagination={true}
-        showNavigation={true}
-      />
+   <div className="w-full">
+      <CardSwipe images={images} autoplayDelay={2000} slideShadows={false} />
+    </div>
+  )
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step> 
+```bash
+  npm install swiper 
+```
+</Step>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="card-swipe" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+## Usage
+
+```tsx
+import { CardSwipe } from "@/components/ui/card-swipe"
+```
+
+```tsx
+function BasicExample() {
+  const images = [
+    { src: "/card/1.png", alt: "Image 1" },
+    { src: "/card/2.png", alt: "Image 2" },
+    { src: "/card/3.png", alt: "Image 3" },
+  ]
+
+  return (
+   <div className="w-full">
+      <CardSwipe images={images} autoplayDelay={2000} slideShadows={false} />
     </div>
   )
 }

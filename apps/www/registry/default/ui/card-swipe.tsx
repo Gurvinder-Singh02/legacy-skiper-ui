@@ -9,12 +9,11 @@ import { EffectCards } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
-import Link from "next/link"
+
 import { SparklesIcon } from "lucide-react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
 import { Badge } from "@/components/ui/badge"
-import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 interface CarouselProps {
   images: { src: string; alt: string }[]
@@ -64,13 +63,14 @@ export const CardSwipe: React.FC<CarouselProps> = ({
           <div className="flex flex-col justify-center pb-2 pl-4 pt-14 md:items-center">
             <div className="flex gap-2">
               <div>
-                <GradientHeading>Card Swipe</GradientHeading>
-                <Link
-                  href="/docs/components/popover-form"
+                <h3 className="text-4xl opacity-85 font-bold tracking-tight">
+                  Card Swipe
+                </h3>
+                <p
                   className="flex items-center gap-1"
                 >
                   Seamless Images carousel animation.
-                </Link>
+                </p>
               </div>
             </div>
           </div>

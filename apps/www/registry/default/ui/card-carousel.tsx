@@ -74,7 +74,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
           <div className="flex flex-col justify-center pb-2 pl-4 pt-14 md:items-center">
             <div className="flex gap-2">
               <div>
-                <h3 className="text-4xl font-bold tracking-tight">
+                <h3 className="text-4xl opacity-85 font-bold tracking-tight">
                   Card Carousel
                 </h3>
                 <p>Seamless Images carousel animation.</p>
