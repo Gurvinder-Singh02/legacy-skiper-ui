@@ -61,7 +61,17 @@ links:
   npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-random.json"
 ```
 ```bash
+
+  function example(){
+
+  const numbers = [124.23, 41.75, 2125.95]
+  const diffs = [0.0564, -0.114, 0.0029]
+ 
+  const [currentIndex, setCurrentIndex] = useState(0)
+  
+  return (
  <AnimatedNumberRandom value={numbers[currentIndex]} diff={diffs[currentIndex]} />
+  )}
 ```
 </Step>
 
