@@ -60,20 +60,29 @@ links:
 ```bash
   npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-random.json"
 ```
+```bash
+ <AnimatedNumberRandom value={numbers[currentIndex]} diff={diffs[currentIndex]} />
+```
+</Step>
+
+<Step>
+`components/ui/animated-number-countdown.tsx`
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-countdown.json"
+```
+```bash
+<AnimatedNumberCountdown endDate={new Date("2025-12-31")} className="my-4" />
+```
 </Step>
 <Step>
 `components/ui/animated-number-counter.tsx`
 ```bash
   npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-counter.json"
 ```
-</Step>
-<Step>
-`components/ui/animated-number-countdown.tsx`
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-countdown.json"
+<AnimatedNumberCounter />
 ```
 </Step>
-
 </Steps>
 
 </TabsContent>
