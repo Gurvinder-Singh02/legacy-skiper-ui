@@ -1,17 +1,8 @@
 "use client"
 
-import { useEffect, useId, useRef, useState } from "react"
+import { JSX, useEffect, useId, useRef, useState } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
-import {
-  BarChart,
-  Circle,
-  File,
-  Globe,
-  HeartHandshake,
-  Rss,
-  Shield,
-  Snowflake,
-} from "lucide-react"
+import { Snowflake } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -22,7 +13,7 @@ interface MarqueeProps {
   children?: React.ReactNode
   vertical?: boolean
   repeat?: number
-  [key: string]: any
+  [key: string]: unknown
 }
 
 function Marquee({
@@ -98,7 +89,7 @@ const tiles = [
   },
 ]
 
-function shuffleArray(array: any[]) {
+function shuffleArray<T>(array: T[]): T[] {
   let currentIndex = array.length
   let randomIndex
   // While there remain elements to shuffle.

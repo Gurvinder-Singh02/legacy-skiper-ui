@@ -15,11 +15,64 @@ links:
 
 Install the required dependencies.
 
-<Tabs defaultValue="manual">
+<Tabs defaultValue="cli">
 
 <TabsList>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
+  <TabsTrigger value="cli"  >CLI</TabsTrigger>
+  <TabsTrigger value="manual" >Manual</TabsTrigger>
 </TabsList>
+
+<TabsContent value="cli">
+
+<Steps>
+
+<Step>
+
+Use the CLI to add component to your directory
+
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/skiper-marquee.json"
+```
+
+</Step>
+
+
+<Step>
+
+Update tailwind.config.ts
+
+```bash
+/** @type {import('tailwindcss').Config} */
+
+module.exports = {
+
+  theme: {
+    extend: {
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
+    },
+  },
+};
+```
+
+</Step>
+
+
+</Steps>
+
+</TabsContent>
 
 <TabsContent value="manual">
 
@@ -53,8 +106,41 @@ export function cn(...inputs: ClassValue[]) {
 
 <Step>Update the import paths to match your project setup.</Step>
 
+<Step>
+
+Update tailwind.config.ts
+
+```bash
+/** @type {import('tailwindcss').Config} */
+
+module.exports = {
+
+  theme: {
+    extend: {
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
+    },
+  },
+};
+```
+
+</Step>
 
 </Steps>
+
+
 
 </TabsContent>
 
