@@ -10,6 +10,7 @@ links:
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="All variations"
 />
+
 <ComponentPreview
   name="animated-number-countdown-demo"
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
@@ -41,13 +42,41 @@ links:
 
 ## Installation
 
-Install the required dependencies.
 
-<Tabs defaultValue="manual">
+
+<Tabs defaultValue="cli">
 
 <TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
+
+<TabsContent value="cli">
+
+<Steps>
+
+<Step>
+`components/ui/animated-number-random.tsx`
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-random.json"
+```
+</Step>
+<Step>
+`components/ui/animated-number-counter.tsx`
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-counter.json"
+```
+</Step>
+<Step>
+`components/ui/animated-number-countdown.tsx`
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-countdown.json"
+```
+</Step>
+
+</Steps>
+
+</TabsContent>
 
 <TabsContent value="manual">
 
@@ -56,7 +85,7 @@ Install the required dependencies.
 <Step>
 Install the required dependencies.
 ```bash
-  npm i @number-flow/react clsx tailwind-merge
+  npm i @number-flow/react clsx tailwind-merge framer-motion
 ```
 </Step>
 <Step>
