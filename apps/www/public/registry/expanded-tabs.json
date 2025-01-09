@@ -2,7 +2,9 @@
   "name": "expanded-tabs",
   "type": "registry:ui",
   "dependencies": [
-    "framer-motion"
+    "framer-motion",
+    "usehooks-ts",
+    "lucide-react"
   ],
   "files": [
     {

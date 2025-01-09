@@ -125,7 +125,7 @@ export const ui: Registry = [
   {
     name: "expanded-tabs",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["framer-motion", "usehooks-ts", "lucide-react"],
     files: ["ui/expanded-tabs.tsx"],
   },
 ]
