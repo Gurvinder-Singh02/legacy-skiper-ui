@@ -1,6 +1,6 @@
 ---
-title: MinimalCard
-description: A minimal image card
+title: Minimal Card
+description: A Special Card Component that help you stand out
 component: true
 links:
 ---
@@ -11,90 +11,72 @@ links:
   description="All variations"
 />
 
-## Installation
+<br/>
+# Installation
 
-<Tabs defaultValue="manual">
+<Tabs defaultValue="cli">
 
 <TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
 
-<TabsContent value="manual">
+<TabsContent value="cli">
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>
 
-<ComponentSource name="minimal-card" />
+Install the required dependencies.
 
-<Step>Update the import paths to match your project setup.</Step>
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/minimal-card.json"
+```
+
+</Step>
+
 
 </Steps>
 
 </TabsContent>
 
-</Tabs>
+<TabsContent value="manual">
 
-## Usage
+<Steps>
 
-```tsx
-import {
-  MinimalCard,
-  MinimalCardDescription,
-  MinimalCardImage,
-  MinimalCardTitle,
-} from "@/components/ui/minimal-card"
+<Step>
+
+Install the required dependencies.
+
+```bash
+  npm i framer-motion @radix-ui/react-portal
 ```
 
-```tsx
-const cards = [
-  {
-    title: "Sick title",
-    description:
-      "How to design with gestures and motion that feel intuitive and natural.",
-  },
-  {
-    title: "Sick title",
-    description:
-      "How to design with gestures and motion that feel intuitive and natural.",
-  },
-  {
-    title: "Sick title",
-    description:
-      "How to design with gestures and motion that feel intuitive and natural.",
-  },
-  {
-    title: "Sick title",
-    description:
-      "How to design with gestures and motion that feel intuitive and natural.",
-  },
-  {
-    title: "Sick title",
-    description:
-      "How to design with gestures and motion that feel intuitive and natural.",
-  },
-]
+</Step>
 
-export default function MinimalCardDemo() {
-  return (
-    <div className="w-full max-w-4xl">
-      <div className="p-2">
-        <h3 className="text-xl font-semibold">MinimalCard</h3>
-      </div>
-      <div className="min-h-[500px] p-4  flex flex-col justify-center border border-dashed rounded-lg space-y-4">
-        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((card) => (
-            <MinimalCard>
-              <MinimalCardImage src="/basic-img.png" />
-              <MinimalCardTitle>{card.title}</MinimalCardTitle>
-              <MinimalCardDescription>
-                {card.description}
-              </MinimalCardDescription>
-            </MinimalCard>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
+<Step>
+Add util file
+```bash
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
 ```
+</Step>
+
+<Step>Copy the source code to `components/ui/minimal-card.tsx` </Step>
+
+<ComponentSource name="minimal-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+
+</Steps>
+
+</TabsContent>
+
+
+
+</Tabs>
