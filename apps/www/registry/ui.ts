@@ -61,6 +61,7 @@ export const ui: Registry = [
   },
   {
     name: "blur-vignette",
+    registryDependencies: ["switch"],
     type: "registry:ui",
     dependencies: ["framer-motion "],
     files: ["ui/blur-vignette.tsx"],
