@@ -85,7 +85,7 @@ export const Index: Record<string, any> = {
     "stacked-dialog": {
       name: "stacked-dialog",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["avatar"],
       component: React.lazy(() => import("@/registry/default/ui/stacked-dialog")),
       source: "",
       files: ["registry/default/ui/stacked-dialog.tsx"],

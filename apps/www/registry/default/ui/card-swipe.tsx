@@ -9,7 +9,6 @@ import { EffectCards } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
-
 import { SparklesIcon } from "lucide-react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
@@ -66,9 +65,7 @@ export const CardSwipe: React.FC<CarouselProps> = ({
                 <h3 className="text-4xl opacity-85 font-bold tracking-tight">
                   Card Swipe
                 </h3>
-                <p
-                  className="flex items-center gap-1"
-                >
+                <p className="flex items-center gap-1">
                   Seamless Images carousel animation.
                 </p>
               </div>

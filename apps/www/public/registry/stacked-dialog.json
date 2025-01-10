@@ -1,8 +1,12 @@
 {
   "name": "stacked-dialog",
   "type": "registry:ui",
+  "registryDependencies": [
+    "avatar"
+  ],
   "dependencies": [
-    "framer-motion "
+    "framer-motion ",
+    "@radix-ui/react-portal"
   ],
   "files": [
     {

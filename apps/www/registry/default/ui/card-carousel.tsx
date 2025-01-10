@@ -8,7 +8,6 @@ import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-
 import { SparklesIcon } from "lucide-react"
 import {
   Autoplay,
