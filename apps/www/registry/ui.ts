@@ -48,8 +48,9 @@ export const ui: Registry = [
   },
   {
     name: "stacked-dialog",
+    registryDependencies: ["avatar"],
     type: "registry:ui",
-    dependencies: ["framer-motion "],
+    dependencies: ["framer-motion ","@radix-ui/react-portal"],
     files: ["ui/stacked-dialog.tsx"],
   },
   {

@@ -15,12 +15,135 @@ links:
 
 Install the required dependencies.
 
-<Tabs defaultValue="manual">
+<Tabs defaultValue="cli">
 
 <TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
 
+<TabsContent value="cli">
+
+<Steps>
+
+<Step>
+Paste command in terminal 
+```bash
+  npx shadcn@latest add "http://skiper-ui.com/registry/stacked-dialog.json"
+```
+</Step>
+
+
+## Usage
+
+```tsx
+import {
+  DialogStack,
+  DialogStackBody,
+  DialogStackContent,
+  DialogStackFooter,
+  DialogStackHeader,
+  DialogStackNext,
+  DialogStackOverlay,
+  DialogStackPrevious,
+  DialogStackTrigger,
+} from "@/ui/stacked-dialog"
+```
+
+```tsx
+function BasicExample() {
+  const items = [
+    {
+      title: "I'm the first dialog",
+      description: "With a fancy description",
+      content: <p></p>,
+    },
+    {
+      title: "I'm the second dialog",
+      description: "With a fancy description",
+      content: <p></p>,
+    },
+    {
+      title: "I'm the third dialog",
+      description: "With a fancy description",
+      content: <p></p>,
+    },
+    {
+      title: "I'm the fourth dialog",
+      description: "With a fancy description",
+      content: <p></p>,
+    },
+    {
+      title: "I'm the fifth dialog",
+      description: "With a fancy description",
+      content: <p></p>,
+    },
+  ]
+
+  return (
+    <DialogStack>
+      {/* Trigger */}
+      <DialogStackTrigger>
+        Click to open &nbsp;{" "}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="#ffffff"
+            d="M11.589 3a.75.75 0 0 0-1.5 0v1.978a.75.75 0 0 0 1.5 0zM5.983 4.945A.75.75 0 0 0 4.917 6l1.47 1.483A.75.75 0 1 0 7.452 6.43zM16.761 6a.75.75 0 0 0-1.065-1.055l-1.47 1.484a.75.75 0 1 0 1.065 1.055zM11.8 10.096c-1.025-.404-1.994.617-1.61 1.61l3.581 9.25c.41 1.058 1.901 1.059 2.311 0l1.374-3.543l3.508-1.385c1.048-.414 1.048-1.903 0-2.317zm-6.84.067H3a.75.75 0 0 0 0 1.5h1.96a.75.75 0 0 0 0-1.5m2.492 5.234a.75.75 0 0 0-1.065-1.056l-1.47 1.484a.75.75 0 1 0 1.066 1.056z"
+          />
+        </svg>{" "}
+      </DialogStackTrigger>
+
+      {/* Overlay */}
+      <DialogStackOverlay className=" backdrop-blur-[2px] " />
+
+      {/* Body */}
+      <DialogStackBody>
+        {items.map((item, index) => (
+          <DialogStackContent key={index}>
+            <DialogStackHeader className="mt-2 flex flex-row  items-center gap-2">
+              <Avatar>
+                <AvatarImage
+                  src="https://100x-wallet.gxuri.in/avatar.png"
+                  alt="@gxuri"
+                />
+              </Avatar>
+              <div>
+                <h1 className="text-2xl font-semibold leading-none tracking-tight">
+                  {item.title}
+                </h1>
+                <p className=" text-black/50 ">{item.description}</p>
+              </div>
+            </DialogStackHeader>
+
+            {/* content here */}
+            <div className="h-[50px]">{item.content}</div>
+
+            <DialogStackFooter>
+              <DialogStackPrevious className="flex gap-3">
+                {" "}
+                <Icons.arrow className="rotate-180" /> Previous{" "}
+              </DialogStackPrevious>
+              <DialogStackNext className="flex gap-3 ">
+                {" "}
+                Next <Icons.arrow />{" "}
+              </DialogStackNext>
+            </DialogStackFooter>
+          </DialogStackContent>
+        ))}
+      </DialogStackBody>
+    </DialogStack>
+  )
+}
+```
+
+</Steps>
+
+</TabsContent>
 <TabsContent value="manual">
 
 <Steps>
