@@ -104,8 +104,8 @@ function Model() {
   }
 
   useFrame(({ gl, scene: finalScene }) => {
-    const x = mouse.x - device.width / 1.5
-    const y = -mouse.y + device.height / 2
+    const x = mouse.x - device.width / 1.65
+    const y = -mouse.y + device.height / 1.5
     trackMousePos(x, y)
     meshRefs.current.forEach((mesh) => {
       if (mesh && mesh.visible) {

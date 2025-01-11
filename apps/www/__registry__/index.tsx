@@ -162,7 +162,7 @@ export const Index: Record<string, any> = {
     "text-effect-flipper": {
       name: "text-effect-flipper",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["badge"],
       component: React.lazy(() => import("@/registry/default/ui/text-effect-flipper")),
       source: "",
       files: ["registry/default/ui/text-effect-flipper.tsx"],
@@ -173,7 +173,7 @@ export const Index: Record<string, any> = {
     "slide-button": {
       name: "slide-button",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["button"],
       component: React.lazy(() => import("@/registry/default/ui/slide-button")),
       source: "",
       files: ["registry/default/ui/slide-button.tsx"],
@@ -184,7 +184,7 @@ export const Index: Record<string, any> = {
     "share-button": {
       name: "share-button",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["button"],
       component: React.lazy(() => import("@/registry/default/ui/share-button")),
       source: "",
       files: ["registry/default/ui/share-button.tsx"],
@@ -195,7 +195,7 @@ export const Index: Record<string, any> = {
     "badge-button": {
       name: "badge-button",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["badge"],
       component: React.lazy(() => import("@/registry/default/ui/badge-button")),
       source: "",
       files: ["registry/default/ui/badge-button.tsx"],

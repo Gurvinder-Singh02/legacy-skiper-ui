@@ -1,6 +1,9 @@
 {
   "name": "text-effect-flipper",
   "type": "registry:ui",
+  "registryDependencies": [
+    "badge"
+  ],
   "dependencies": [
     "framer-motion"
   ],

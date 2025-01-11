@@ -6,7 +6,6 @@
   ],
   "dependencies": [
     "framer-motion",
-    "@number-flow/react",
     "swiper"
   ],
   "files": [

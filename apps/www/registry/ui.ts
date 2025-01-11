@@ -36,7 +36,7 @@ export const ui: Registry = [
     name: "card-carousel",
     registryDependencies: ["badge"],
     type: "registry:ui",
-    dependencies: ["framer-motion",  "swiper"],
+    dependencies: ["framer-motion", "swiper"],
     files: ["ui/card-carousel.tsx"],
   },
   {
@@ -127,7 +127,7 @@ export const ui: Registry = [
   {
     name: "image-ripple",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["framer-motion", "three", "@types/three", "@react-three/fiber", "@react-three/drei"],
     files: ["ui/image-ripple.tsx"],
   },
   {

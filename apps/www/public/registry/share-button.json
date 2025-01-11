@@ -1,6 +1,9 @@
 {
   "name": "share-button",
   "type": "registry:ui",
+  "registryDependencies": [
+    "button"
+  ],
   "dependencies": [
     "framer-motion"
   ],
