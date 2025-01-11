@@ -105,12 +105,14 @@ export const ui: Registry = [
   },
   {
     name: "share-button",
+    registryDependencies: ["button"],
     type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/share-button.tsx"],
   },
   {
     name: "badge-button",
+    registryDependencies: ["badge"],
     type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/badge-button.tsx"],
