@@ -17,6 +17,7 @@ import { PageActions, PageHeader } from "@/components/page-header"
 import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 import StatisticHighlight from "./components/StatisticHighlight"
+import WrapButton from "@/components/skiper/wrapButton"
 
 export default function IndexPage() {
   return (
@@ -51,7 +52,11 @@ export default function IndexPage() {
             </p>
           </FadeIn>
           <FadeIn>
-            <PageActions>
+
+            <WrapButton className="mt-10" href="/docs/components/card-carousel" >
+              Get started
+            </WrapButton>
+            {/* <PageActions>
               <Link href=" /docs/components/card-carousel">
                 <BorderButton className="group  ">
                   Get Started
@@ -66,7 +71,7 @@ export default function IndexPage() {
                   Open Source
                 </BorderButton>
               </Link>
-            </PageActions>
+            </PageActions> */}
           </FadeIn>
         </PageHeader>
 

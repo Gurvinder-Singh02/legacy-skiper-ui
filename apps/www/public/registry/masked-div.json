@@ -2,7 +2,7 @@
   "name": "masked-div",
   "type": "registry:ui",
   "dependencies": [
-    "framer-motion "
+    "framer-motion"
   ],
   "files": [
     {

@@ -2,7 +2,7 @@
   "name": "minimal-card",
   "type": "registry:ui",
   "dependencies": [
-    "framer-motion "
+    "framer-motion"
   ],
   "files": [
     {

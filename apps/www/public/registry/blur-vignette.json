@@ -1,6 +1,9 @@
 {
   "name": "blur-vignette",
   "type": "registry:ui",
+  "registryDependencies": [
+    "switch"
+  ],
   "dependencies": [
     "framer-motion "
   ],

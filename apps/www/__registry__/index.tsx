@@ -107,7 +107,7 @@ export const Index: Record<string, any> = {
     "blur-vignette": {
       name: "blur-vignette",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["switch"],
       component: React.lazy(() => import("@/registry/default/ui/blur-vignette")),
       source: "",
       files: ["registry/default/ui/blur-vignette.tsx"],
