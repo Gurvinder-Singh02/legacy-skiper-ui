@@ -92,6 +92,7 @@ export const ui: Registry = [
   },
   {
     name: "text-effect-flipper",
+    registryDependencies: ["badge"],
     type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/text-effect-flipper.tsx"],

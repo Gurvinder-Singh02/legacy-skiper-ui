@@ -54,7 +54,7 @@ export default function IndexPage() {
           <FadeIn>
 
             <WrapButton className="mt-10" href="/docs/components/card-carousel" >
-              <Globe className="animate-spin" />
+              <Globe className="animate-spin " />
               Get started
             </WrapButton>
 
