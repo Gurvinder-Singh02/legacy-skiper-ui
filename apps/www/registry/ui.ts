@@ -127,7 +127,13 @@ export const ui: Registry = [
   {
     name: "image-ripple",
     type: "registry:ui",
-    dependencies: ["framer-motion", "three", "@types/three", "@react-three/fiber", "@react-three/drei"],
+    dependencies: [
+      "framer-motion",
+      "three",
+      "@types/three",
+      "@react-three/fiber",
+      "@react-three/drei",
+    ],
     files: ["ui/image-ripple.tsx"],
   },
   {
