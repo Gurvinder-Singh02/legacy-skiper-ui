@@ -125,37 +125,10 @@ export const Icons = {
   ),
 
   logo: (props: IconProps) => (
-    <svg
-      width="62"
-      height="62"
-      viewBox="0 0 62 62"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <ellipse
-        cx="30.882"
-        cy="30.803"
-        rx="30.3097"
-        ry="30.2769"
-        fill="url(#paint0_radial_36_64)"
-      />
-      <defs>
-        <radialGradient
-          id="paint0_radial_36_64"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(0.572266 0.526062) rotate(44.969) scale(85.6825 85.6824)"
-        >
-          <stop offset="0.352001" stop-color="#090909" />
-          <stop offset="0.591494" stop-color="#2770EA" />
-          <stop offset="0.793825" stop-color="#FF7E97" />
-          <stop offset="0.972489" stop-color="#FF9203" />
-        </radialGradient>
-      </defs>
+    <svg {...props} fill="none" viewBox="0 0 19 18"  xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.2398 8.94487H0.803128V0.508202H9.2398V8.94487ZM9.2398 8.94487H17.6765V17.3815H9.2398V8.94487ZM8.249 13.6585C8.249 15.7147 6.58215 17.3815 4.52599 17.3815C2.46983 17.3815 0.802979 15.7147 0.802979 13.6585C0.802979 11.6024 2.46983 9.93552 4.52599 9.93552C6.58215 9.93552 8.249 11.6024 8.249 13.6585ZM17.6766 4.23122C17.6766 6.28738 16.0097 7.95423 13.9536 7.95423C11.8974 7.95423 10.2305 6.28738 10.2305 4.23122C10.2305 2.17505 11.8974 0.508204 13.9536 0.508204C16.0097 0.508204 17.6766 2.17505 17.6766 4.23122Z" stroke="#7F7F7F" stroke-width="0.78" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
+
   ),
   logo_dark: (props: IconProps) => (
     <svg
