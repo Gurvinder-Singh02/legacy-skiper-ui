@@ -98,6 +98,7 @@ export const ui: Registry = [
   },
   {
     name: "slide-button",
+    registryDependencies: ["button"],
     type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/slide-button.tsx"],

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { IceCream, SparklesIcon } from "lucide-react"
+import { Globe, IceCream, SparklesIcon } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { BorderButton } from "@/components/ui/button"
@@ -54,8 +54,10 @@ export default function IndexPage() {
           <FadeIn>
 
             <WrapButton className="mt-10" href="/docs/components/card-carousel" >
+              <Globe className="animate-spin" />
               Get started
             </WrapButton>
+
           </FadeIn>
         </PageHeader>
 
