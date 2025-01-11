@@ -56,22 +56,6 @@ export default function IndexPage() {
             <WrapButton className="mt-10" href="/docs/components/card-carousel" >
               Get started
             </WrapButton>
-            {/* <PageActions>
-              <Link href=" /docs/components/card-carousel">
-                <BorderButton className="group  ">
-                  Get Started
-                  <span className="transition-all duration-200 ease-in-out group-hover:rotate-90  ">
-                    <Icons.arrow className="mr-2 size-4 " />
-                  </span>
-                </BorderButton>
-              </Link>
-              <Link href=" /docs/components/card-carousel">
-                <BorderButton variant="org">
-                  <Icons.gitHub className="mr-2 size-4" />
-                  Open Source
-                </BorderButton>
-              </Link>
-            </PageActions> */}
           </FadeIn>
         </PageHeader>
 
