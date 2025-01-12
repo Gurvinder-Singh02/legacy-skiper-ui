@@ -30,27 +30,26 @@ export interface PricingTier {
 export const TIERS: PricingTier[] = [
   {
     id: "free",
-    name: "Starter",
+    name: "Existing Components",
     price: {
       monthly: "Free",
       yearly: "Free",
     },
-    description: "Perfect for trying out components",
+    description: "All the components that are freely available",
     features: [
-      "5 basic components",
-      "Basic documentation",
-      "Community support",
-      "MIT License",
-      "React only",
+      "A growing library of awesome components",
+      "React / Next.js / Tailwind CSS code",
+      "MIT Licence. Personal or commercial projects.",
+      "Contact over chat for support",
     ],
     cta: "Current",
   },
   {
     id: "pro",
-    name: "Professional",
+    name: "Custom Components",
     price: {
-      monthly: 19,
-      yearly: 190,
+      monthly: 499,
+      yearly: 5299,
     },
     description: "For professional developers",
     features: [
@@ -65,12 +64,12 @@ export const TIERS: PricingTier[] = [
   },
   {
     id: "business",
-    name: "Business",
+    name: "Custom Pages",
     price: {
-      monthly: 49,
-      yearly: 490,
+      monthly: 799,
+      yearly: 6200,
     },
-    description: "For teams and businesses",
+    description: "Best for small businesses",
     features: [
       "100+ premium components",
       "Advanced customization",
