@@ -148,4 +148,11 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "usehooks-ts", "lucide-react"],
     files: ["ui/expanded-tabs.tsx"],
   },
+  {
+    name: "ai-input",
+    registryDependencies: ["textarea"],
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/ai-input.tsx"],
+  },
 ]

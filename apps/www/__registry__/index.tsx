@@ -247,6 +247,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "ai-input": {
+      name: "ai-input",
+      type: "registry:ui",
+      registryDependencies: ["textarea"],
+      component: React.lazy(() => import("@/registry/default/ui/ai-input")),
+      source: "",
+      files: ["registry/default/ui/ai-input.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "skiper-card-demo": {
       name: "skiper-card-demo",
       type: "components:example",

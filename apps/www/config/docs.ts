@@ -46,6 +46,12 @@ export const docsConfig: DocsConfig = {
               label: "new",
             },
             {
+              title: "Ai Input",
+              href: "/docs/components/ai-input",
+              items: [],
+              label: "new",
+            },
+            {
               title: "Expanded Tabs",
               href: "/docs/components/expanded-tabs",
               items: [],
