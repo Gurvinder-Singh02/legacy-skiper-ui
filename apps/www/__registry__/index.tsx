@@ -203,6 +203,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "wrap-button": {
+      name: "wrap-button",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/wrap-button")),
+      source: "",
+      files: ["registry/default/ui/wrap-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "text-scroll": {
       name: "text-scroll",
       type: "registry:ui",
