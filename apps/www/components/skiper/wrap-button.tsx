@@ -8,7 +8,7 @@ interface WrapButtonProps {
     className?: string;
     children: React.ReactNode;
     href?: string;
-    bgColor: string;
+    bgColor?: string;
 }
 
 const WrapButton: React.FC<WrapButtonProps> = ({ className, children, href, bgColor }) => {
