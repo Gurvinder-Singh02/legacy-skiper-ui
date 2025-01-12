@@ -146,6 +146,12 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
+            {
+              title: "Wrap Button",
+              href: "/docs/components/wrap-button",
+              items: [],
+              label: "new",
+            },
 
           ]
         },

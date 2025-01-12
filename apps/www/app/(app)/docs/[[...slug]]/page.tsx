@@ -155,5 +155,4 @@ export default async function DocPage({ params }: DocPageProps) {
         </div>
       )}
     </main>
-  )
-}
+  )}

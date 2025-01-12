@@ -119,6 +119,12 @@ export const ui: Registry = [
     files: ["ui/badge-button.tsx"],
   },
   {
+    name: "wrap-button",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/wrap-button.tsx"],
+  },
+  {
     name: "text-scroll",
     type: "registry:ui",
     dependencies: ["framer-motion"],

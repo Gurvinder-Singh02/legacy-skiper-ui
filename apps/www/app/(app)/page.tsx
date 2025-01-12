@@ -17,7 +17,7 @@ import { PageActions, PageHeader } from "@/components/page-header"
 import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 import StatisticHighlight from "./components/StatisticHighlight"
-import WrapButton from "@/components/skiper/wrapButton"
+import WrapButton from "@/components/skiper/wrap-button"
 
 export default function IndexPage() {
   return (
