@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Paperclip, Send } from "lucide-react";
+import { Cross, CrossIcon, Globe, Paperclip, Plus, Send } from "lucide-react";
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,7 +14,7 @@ interface UseAutoResizeTextareaProps {
     maxHeight?: number;
 }
 
-export function useAutoResizeTextarea({
+function useAutoResizeTextarea({
     minHeight,
     maxHeight,
 }: UseAutoResizeTextareaProps) {
@@ -30,10 +30,7 @@ export function useAutoResizeTextarea({
                 return;
             }
 
-            // Temporarily shrink to get the right scrollHeight
             textarea.style.height = `${minHeight}px`;
-
-            // Calculate new height
             const newHeight = Math.max(
                 minHeight,
                 Math.min(
@@ -48,14 +45,12 @@ export function useAutoResizeTextarea({
     );
 
     useEffect(() => {
-        // Set initial height
         const textarea = textareaRef.current;
         if (textarea) {
             textarea.style.height = `${minHeight}px`;
         }
     }, [minHeight]);
 
-    // Adjust height on window resize
     useEffect(() => {
         const handleResize = () => adjustHeight();
         window.addEventListener("resize", handleResize);
@@ -68,72 +63,112 @@ export function useAutoResizeTextarea({
 const MIN_HEIGHT = 48;
 const MAX_HEIGHT = 164;
 
-export default function AIInput_04() {
+
+const AnimatedPlaceholder = ({ showSearch }: { showSearch: boolean }) => (
+    <AnimatePresence mode="wait" >
+        <motion.p
+            key={showSearch ? "search" : "ask"}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.1 }}
+            className="pointer-events-none w-[150px] text-sm absolute text-black/70 dark:text-white/70"
+        >
+            {showSearch ? "Search the web..." : "Ask Skiper Ai..."}
+        </motion.p>
+    </AnimatePresence>
+);
+
+export default function AiInput() {
     const [value, setValue] = useState("");
     const { textareaRef, adjustHeight } = useAutoResizeTextarea({
         minHeight: MIN_HEIGHT,
         maxHeight: MAX_HEIGHT,
     });
     const [showSearch, setShowSearch] = useState(true);
+    const [imagePreview, setImagePreview] = useState<string | null>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const [imagePreview, setImagePreview] = useState<string | null>(null)
+
+    const handelClose = (e: any) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (fileInputRef.current) {
+            fileInputRef.current.value = ''; // Reset file input
+        }
+        setImagePreview(null); // Use null instead of empty string
+    };
 
     const handelChange = (e: any) => {
-        const file = e.target.files ? e.target.files[0] : null
-
+        const file = e.target.files ? e.target.files[0] : null;
         if (file) {
-            setImagePreview(URL.createObjectURL(file))
+            setImagePreview(URL.createObjectURL(file));
         }
-    }
+    };
 
     const handleSubmit = () => {
         setValue("");
         adjustHeight(true);
     };
 
+    useEffect(() => {
+        return () => {
+            if (imagePreview) {
+                URL.revokeObjectURL(imagePreview);
+            }
+        };
+    }, [imagePreview]);
     return (
         <div className="w-full py-4">
-
             <div className="relative max-w-xl border rounded-[22px] border-black/5 p-1 w-full mx-auto">
                 <div className="relative rounded-2xl border border-black/5 bg-neutral-800/5 flex flex-col">
                     <div
                         className="overflow-y-auto"
                         style={{ maxHeight: `${MAX_HEIGHT}px` }}
                     >
-                        <Textarea
-                            id="ai-input-04"
-                            value={value}
-                            placeholder={showSearch ? `Search the web...` : `Ask Skiper Ai...`}
-                            className="w-full rounded-2xl rounded-b-none px-4 py-3 bg-black/5 dark:bg-white/5 border-none dark:text-white placeholder:text-black/70 dark:placeholder:text-white/70 resize-none focus-visible:ring-0 leading-[1.2]"
-                            ref={textareaRef}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter" && !e.shiftKey) {
-                                    e.preventDefault();
-                                    handleSubmit();
-                                }
-                            }}
-                            onChange={(e) => {
-                                setValue(e.target.value);
-                                adjustHeight();
-                            }}
-                        />
+                        <div className="relative">
+                            <Textarea
+                                id="ai-input-04"
+                                value={value}
+                                placeholder=""
+                                className="w-full rounded-2xl rounded-b-none px-4 py-3 bg-black/5 dark:bg-white/5 border-none dark:text-white resize-none focus-visible:ring-0 leading-[1.2]"
+                                ref={textareaRef}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" && !e.shiftKey) {
+                                        e.preventDefault();
+                                        handleSubmit();
+                                    }
+                                }}
+                                onChange={(e) => {
+                                    setValue(e.target.value);
+                                    adjustHeight();
+                                }}
+                            />
+                            {!value && (
+                                <div className="absolute left-4 top-3">
+                                    <AnimatedPlaceholder showSearch={showSearch} />
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     <div className="h-12 bg-black/5 dark:bg-white/5 rounded-b-xl">
                         <div className="absolute left-3 bottom-3 flex items-center gap-2">
                             <label className={cn("cursor-pointer relative rounded-full p-2 bg-black/5 dark:bg-white/5",
-                                imagePreview ? "bg-[#ff3f17]/15 border  border-[#ff3f17] text-[#ff3f17]"
+                                imagePreview ? "bg-[#ff3f17]/15 border border-[#ff3f17] text-[#ff3f17]"
                                     : "bg-black/5 dark:bg-white/5 text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white"
                             )}>
-                                <input type="file" onChange={handelChange} className="hidden" />
+                                <input type="file" ref={fileInputRef} onChange={handelChange} className="hidden" />
                                 <Paperclip className={cn("w-4 h-4 text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors",
-                                    imagePreview && " text-[#ff3f17]")} />
-                                {imagePreview &&
-                                    <div className="absolute w-[100px] h-[100px] top-14 -left-4" >
-                                        <Image className="  object-cover rounded-2xl" src={imagePreview || ''} height={500} width={500} alt="additinal image" />
+                                    imagePreview && "text-[#ff3f17]")} />
+                                {imagePreview && (
+                                    <div className="absolute w-[100px] h-[100px] top-14 -left-4">
+                                        <Image className="object-cover rounded-2xl" src={imagePreview || '/picture1.jpeg'} height={500} width={500} alt="additional image" />
+                                        <button onClick={handelClose} className="bg-[#e8e8e8] text-[#464646] absolute -top-1 -left-1 shadow-3xl rounded-full rotate-45">
+                                            <Plus className="w-4 h-4" />
+                                        </button>
                                     </div>
-                                }
-
+                                )}
                             </label>
                             <button
                                 type="button"
@@ -208,13 +243,11 @@ export default function AIInput_04() {
                                 )}
                             >
                                 <Send className="w-4 h-4" />
-
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
