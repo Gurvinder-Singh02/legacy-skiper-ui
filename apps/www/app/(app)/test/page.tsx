@@ -1,15 +1,11 @@
-import WrapButton from '@/components/skiper/wrap-button'
-import { ArrowRight, Globe } from 'lucide-react'
 import React from 'react'
+import AIInput_04 from './ai-input'
 
 
 const page = () => {
     return (
         <div className='mt-40 flex' >
-
-            <WrapButton href="guri" >
-                Get started
-            </WrapButton>
+            <AIInput_04/>
         </div>
     )
 }

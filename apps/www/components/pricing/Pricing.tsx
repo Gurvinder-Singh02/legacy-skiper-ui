@@ -25,7 +25,7 @@ export const Pricing = () => {
         > Need Custom Components ?
           <br className="hidden md:block" />
         </GradientHeading>
-        <p className="text-center text-base  leading-3  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
+        <p className="text-center text-base  leading-2 opacity-60  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
           Need custom components or websites? We've got you covered
           <br />
           From custom components to complete website tailored to your needs. Simple pricing, no hidden fees.
