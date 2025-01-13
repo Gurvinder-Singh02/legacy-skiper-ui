@@ -47,7 +47,6 @@ export function PlugCardGrid() {
           {cards.map((card) => (
             <a
               key={card.title}
-              target="_blank"
               rel="noopener noreferrer"
               href={card.href}
             >

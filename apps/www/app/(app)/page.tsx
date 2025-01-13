@@ -116,7 +116,7 @@ export default function IndexPage() {
               <TemplateGrid />
             </div>
 
-            <section className=" mt-12 w-full">
+            <section className=" my-10 w-full">
               <FadeIn>
                 <StatisticHighlight
                   text="of Next Js Saas Products Looks similar right ? Lets Change the approach"

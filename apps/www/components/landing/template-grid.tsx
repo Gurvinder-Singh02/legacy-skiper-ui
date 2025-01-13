@@ -15,7 +15,7 @@ import { Badge } from "../ui/badge"
 
 export function TemplateGrid() {
   return (
-    // <div className="dark relative flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/10 p-2 shadow-sm md:flex-row md:items-center md:gap-24 md:rounded-[40px] md:p-2">
+
     <div className="dark relative flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:flex-row md:items-center md:gap-24 md:rounded-[18px] md:p-2">
       <Badge
         variant="outline"
@@ -90,7 +90,7 @@ export const TEMPLATES_GRID = [
     downloadUrl: "landing-page.zip",
     liveUrl: "https://gxuri.in",
     gradient: "bg-gradient-to-b from-white/10 to-[#FF9150] via-[#FFD0B7]/30",
-    slug: "gxui",
+    slug: "gxuri",
     description:
       "Modern landing page template featuring Framer Motion animations, custom navigation components, and responsive design optimized for conversions.",
     features: [

@@ -39,15 +39,16 @@ export const docsConfig: DocsConfig = {
         {
           title: "App UI",
           items: [
+           
             {
-              title: "Special Card",
-              href: "/docs/components/skiper-card",
+              title: "AI Input",
+              href: "/docs/components/ai-input",
               items: [],
               label: "new",
             },
             {
-              title: "Ai Input",
-              href: "/docs/components/ai-input",
+              title: "Special Card",
+              href: "/docs/components/skiper-card",
               items: [],
               label: "new",
             },
@@ -93,18 +94,7 @@ export const docsConfig: DocsConfig = {
               items: [],
               label: "new",
             },
-            {
-              title: "Blur Vignette",
-              href: "/docs/components/blur-vignette",
-              items: [],
-              label: "new",
-            },
-            {
-              title: "Maksed Div",
-              href: "/docs/components/masked-div",
-              items: [],
-              label: "new",
-            },
+            
             // {
             //   title: "Expandable",
             //   href: "/docs/components/expandable",
@@ -125,6 +115,18 @@ export const docsConfig: DocsConfig = {
             {
               title: "hover Expand",
               href: "/docs/components/hover-expand",
+              items: [],
+              label: "new",
+            },
+            {
+              title: "Maksed Div",
+              href: "/docs/components/masked-div",
+              items: [],
+              label: "new",
+            },
+            {
+              title: "Blur Vignette",
+              href: "/docs/components/blur-vignette",
               items: [],
               label: "new",
             },

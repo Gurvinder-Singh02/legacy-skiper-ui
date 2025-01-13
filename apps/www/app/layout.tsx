@@ -82,7 +82,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" >
         <head />
         <body
           className={cn(
@@ -90,7 +90,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <AnimatedBackgroundGuides />
+          {/* <AnimatedBackgroundGuides /> */}
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

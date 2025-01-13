@@ -43,8 +43,8 @@ export function Announcement() {
       href="#"
       className="inline-flex items-center rounded-full border bg-muted px-3 py-1 text-sm font-medium"
     >
-      <AnimatedShinyText className="inline-flex items-center justify-center rounded-full px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-        <span>✨ Coming in </span> &nbsp;
+      <AnimatedShinyText className="inline-flex group items-center justify-center rounded-full px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+        <span> 🎉 &nbsp;| Coming in </span> &nbsp;
         <NumberFlow value={timeLeft.days} />
         d&nbsp;
         <NumberFlow value={timeLeft.hours} />
@@ -53,7 +53,7 @@ export function Announcement() {
         m&nbsp;
         <NumberFlow value={timeLeft.seconds} />
         s&nbsp;
-        <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+        <ArrowRightIcon className="ml-1 size-3 group-hover:rotate-180 group-hover:ml-4 transition-all duration-300 ease-in-out group-hover:translate-x-0.5" />
       </AnimatedShinyText>
     </a>
   )
