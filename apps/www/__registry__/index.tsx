@@ -192,6 +192,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "popover-form": {
+      name: "popover-form",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/popover-form")),
+      source: "",
+      files: ["registry/default/ui/popover-form.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "badge-button": {
       name: "badge-button",
       type: "registry:ui",
@@ -353,6 +364,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/minimal-card-demo")),
       source: "",
       files: ["registry/default/example/minimal-card-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "popover-form-demo": {
+      name: "popover-form-demo",
+      type: "components:example",
+      registryDependencies: ["popover-form"],
+      component: React.lazy(() => import("@/registry/default/example/popover-form-demo")),
+      source: "",
+      files: ["registry/default/example/popover-form-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
