@@ -113,7 +113,7 @@ export const ui: Registry = [
   },
   {
     name: "popover-form",
-    type: "components:ui",
+    type: "registry:ui",
     dependencies: ["framer-motion"],
     files: ["ui/popover-form.tsx"],
   },
