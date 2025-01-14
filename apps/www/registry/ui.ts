@@ -112,6 +112,12 @@ export const ui: Registry = [
     files: ["ui/share-button.tsx"],
   },
   {
+    name: "popover-form",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/popover-form.tsx"],
+  },
+  {
     name: "badge-button",
     registryDependencies: ["badge"],
     type: "registry:ui",
