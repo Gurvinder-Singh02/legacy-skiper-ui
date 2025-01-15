@@ -6,10 +6,11 @@ import { ArrowRight, Globe } from 'lucide-react'
 
 import React, { useState } from 'react'
 
-import { motion } from "framer-motion";
+
 
 import { Input } from "@/components/ui/input";
 import { toast } from 'sonner'
+import { motion } from 'framer-motion';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -137,12 +138,10 @@ function SubscriptionForm() {
     };
 
     return (
-        <motion.div
+        <div
             className="mt-6 flex w-[450px] flex-col items-center justify-center gap-3"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible">
-            <motion.div variants={itemVariants} className='w-full' >
+        >
+            <div className='w-full' >
                 <Input
                     className='rounded-full h-12 pl-7 '
                     type="text"
@@ -150,8 +149,8 @@ function SubscriptionForm() {
                     value={name}
                     onChange={handleNameChange}
                 />
-            </motion.div>
-            <motion.div variants={itemVariants} className='w-full' >
+            </div>
+            <div className='w-full' >
                 <Input
                     type="email"
                     className='rounded-full h-12 pl-7 '
@@ -159,8 +158,8 @@ function SubscriptionForm() {
                     value={email}
                     onChange={handleEmailChange}
                 />
-            </motion.div>
-            <motion.div variants={itemVariants}  >
+            </div>
+            <div   >
                 <button onClick={handleSubmit} className='flex mt-4 items-center justify-center '>
                     <div className={cn("group cursor-pointer border group border-[#3B3A3A] bg-[#151515] gap-2  h-[64px] flex items-center p-[11px] rounded-full",)} >
                         <div className={cn('border border-[#3B3A3A] bg-[#ff3f17]  h-[43px] rounded-full flex items-center justify-center text-white',)}>
@@ -171,8 +170,8 @@ function SubscriptionForm() {
                         </div>
                     </div>
                 </button >
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     );
 }
 
@@ -181,26 +180,27 @@ function SubscriptionForm() {
 const page = () => {
 
     return (
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className=' relative h-screen border overflow-hidden  w-screen flex items-center justify-center' >
-            <motion.div variants={itemVariants} className="space-y-4 flex flex-col items-center justify-center">
-                <GradientHeading
-                    size="xll"
-                    weight="bold"
-                    className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] "
-                > Join our Newsletter
+        <div className=' relative h-screen border overflow-hidden  w-screen flex items-center justify-center' >
+
+            <div className=" z-10 space-y-4 flex flex-col items-center justify-center">
+                <GradientHeading size="xll" weight="bold" className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] ">
+                    Join our Newsletter
                 </GradientHeading>
                 <p className="text-center text-base   leading-1 opacity-60  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
-                    Be the First one to know about the latest component from skiper-ui <br />
-                    Don't worry we won't send unnecessary emails to overwhelm your inbox 😊
+                    Be the first to know about the latest components from Skiper-UI! <br />
+                    No spam, no nonsense, just the good stuff sent straight to you. Let's build something amazing together! 😎
                 </p>
 
                 <br /><br />
                 <SubscriptionForm />
+            </div>
+
+            <motion.div variants={containerVariants} className='-bottom-[16rem] -z-8 absolute' initial="hidden" animate="visible" >
+                <motion.h2 variants={itemVariants} className='text-[450px] tracking-tighter text-black/5 ' >
+                    Skiper/ui
+                </motion.h2>
             </motion.div>
-            <h2 className='text-[450px] -z-10 tracking-tighter -bottom-[16rem] absolute opacity-[0.05] ' >
-                Skiper/ui
-            </h2>
-        </motion.div>
+        </div>
     )
 }
 

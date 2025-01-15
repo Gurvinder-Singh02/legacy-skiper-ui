@@ -49,35 +49,17 @@ export function MainNav() {
           Pricing
         </Link>
         <a
-          href="/showcase"
+          href="/newsletter"
           className={cn(
             "font-regular text-base transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/showcase")
+            pathname?.startsWith("/newsletter")
               ? "text-foreground"
               : "text-foreground/60"
           )}
         >
-          Showcase
+          Newsletter
         </a>
-        {/* <Link
-          href="/blocks"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blocks")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Blocks
-        </Link> */}
-        {/* <Link
-          href={siteConfig.links.github}
-          className={cn(
-            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
-          )}
-        >
-          GitHub
-        </Link> */}
+       
       </nav>
     </div>
   )
