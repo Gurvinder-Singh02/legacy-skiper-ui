@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { toast } from 'sonner'
 
-
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -55,13 +54,15 @@ function SubscriptionForm() {
     };
 
     const handleSubmit = async () => {
+
+
         if (!name || !email) {
-            toast.error("Please fill in all fields 😠");
+            toast.error("Please fill in all fields");
             return;
         }
 
         if (!isValidEmail(email)) {
-            toast.error("Please enter a valid email address 😠");
+            toast.error("Please enter a valid email address ");
             return;
         }
 
@@ -159,7 +160,7 @@ function SubscriptionForm() {
                     onChange={handleEmailChange}
                 />
             </motion.div>
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants}  >
                 <button onClick={handleSubmit} className='flex mt-4 items-center justify-center '>
                     <div className={cn("group cursor-pointer border group border-[#3B3A3A] bg-[#151515] gap-2  h-[64px] flex items-center p-[11px] rounded-full",)} >
                         <div className={cn('border border-[#3B3A3A] bg-[#ff3f17]  h-[43px] rounded-full flex items-center justify-center text-white',)}>
