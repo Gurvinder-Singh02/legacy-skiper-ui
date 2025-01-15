@@ -90,7 +90,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          {/* <AnimatedBackgroundGuides /> */}
+          <AnimatedBackgroundGuides />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
