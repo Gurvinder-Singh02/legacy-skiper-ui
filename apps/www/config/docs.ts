@@ -92,6 +92,7 @@ export const docsConfig: DocsConfig = {
               title: "Popover Form",
               href: "/docs/components/popover-form",
               items: [],
+              label: "new",
             },
             {
               title: "Minimal Card",
