@@ -12,6 +12,7 @@ import {
 } from "@/registry/default/ui/minimal-card"
 
 import { Badge } from "../ui/badge"
+import Link from "next/link"
 
 export function TemplateGrid() {
   return (
@@ -27,10 +28,8 @@ export function TemplateGrid() {
       <div className="   flex flex-col justify-center  space-y-4 rounded-[34px]   p-3 pt-12">
         <div className="relative grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
           {TEMPLATES_GRID.map((card) => (
-            <a
+            <Link
               key={card.slug}
-              target="_blank"
-              rel="noopener noreferrer"
               href={card.slug}
             >
               <MinimalCard className=" relative  p-2 no-underline shadow-sm transition-colors  dark:bg-neutral-800/90 dark:hover:bg-neutral-800/80">
@@ -74,7 +73,7 @@ export function TemplateGrid() {
                   {card.description}
                 </MinimalCardDescription>
               </MinimalCard>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -90,7 +89,7 @@ export const TEMPLATES_GRID = [
     downloadUrl: "landing-page.zip",
     liveUrl: "https://gxuri.in",
     gradient: "bg-gradient-to-b from-white/10 to-[#FF9150] via-[#FFD0B7]/30",
-    slug: "gxuri",
+    slug: "LandingPage",
     description:
       "Modern landing page template featuring Framer Motion animations, custom navigation components, and responsive design optimized for conversions.",
     features: [
@@ -114,7 +113,7 @@ export const TEMPLATES_GRID = [
 
   {
     name: "Manifest",
-    slug: "#",
+    slug: "Manifest",
     meta: "fullstack",
     liveUrl: "#",
     downloadUrl: "#",
@@ -149,7 +148,7 @@ export const TEMPLATES_GRID = [
   },
   {
     name: "DEV Portfolio",
-    slug: "#",
+    slug: "Portfolio",
     new: true,
     downloadUrl: "#",
     liveUrl: "#",
