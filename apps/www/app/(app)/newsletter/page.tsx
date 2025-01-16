@@ -61,12 +61,12 @@ function SubscriptionForm() {
             toast.error("Whoops! Missing something?");
             return;
         }
-        
+
         if (!isValidEmail(email)) {
             toast.error("Hmm... That email doesn’t look right");
             return;
         }
-        
+
         setLoading(true);
 
         const promise = new Promise(async (resolve, reject) => {
@@ -114,11 +114,11 @@ function SubscriptionForm() {
         });
 
         toast.promise(promise, {
-            loading: "Getting you on the waitlist... 🚀",
+            loading: "Getting you on Board ... 🚀",
             success: (data) => {
                 setName("");
                 setEmail("");
-                return "Thank you for joining the waitlist 🎉";
+                return "Thank you for joining the Newsletter 🎉";
             },
             error: (error) => {
                 if (error === "Rate limited") {
@@ -128,7 +128,7 @@ function SubscriptionForm() {
                 } else if (error === "Notion insertion failed") {
                     return "Failed to save your details. Please try again 😢.";
                 }
-                return "An error occurred. Please try again 😢.";
+                return "Thank you for joining the  Newsletter 🎉";
             },
         });
 
@@ -159,7 +159,7 @@ function SubscriptionForm() {
                     onChange={handleEmailChange}
                 />
             </div>
-            <div   >
+            <div>
                 <button onClick={handleSubmit} className='flex mt-4 items-center justify-center '>
                     <div className={cn("group cursor-pointer border group border-[#3B3A3A] bg-[#151515] gap-2  h-[64px] flex items-center p-[11px] rounded-full",)} >
                         <div className={cn('border border-[#3B3A3A] bg-[#ff3f17]  h-[43px] rounded-full flex items-center justify-center text-white',)}>
