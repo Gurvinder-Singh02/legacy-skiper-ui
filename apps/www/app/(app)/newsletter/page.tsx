@@ -58,15 +58,15 @@ function SubscriptionForm() {
 
 
         if (!name || !email) {
-            toast.error("Please fill in all fields");
+            toast.error("Whoops! Missing something?");
             return;
         }
-
+        
         if (!isValidEmail(email)) {
-            toast.error("Please enter a valid email address ");
+            toast.error("Hmm... That email doesn’t look right");
             return;
         }
-
+        
         setLoading(true);
 
         const promise = new Promise(async (resolve, reject) => {

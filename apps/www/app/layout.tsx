@@ -107,8 +107,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Analytics />
             <SpeedInsights />
             <NewYorkToaster />
-            <DefaultToaster />
-            <NewYorkSonner />
+            <DefaultToaster   /> 
+            <NewYorkSonner position="top-center" />
           </ThemeProvider>
         </body>
       </html>
