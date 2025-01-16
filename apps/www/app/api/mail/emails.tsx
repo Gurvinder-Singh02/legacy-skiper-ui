@@ -7,6 +7,7 @@ import {
     Text,
     Section,
     Img,
+
 } from "@react-email/components";
 
 import * as React from "react";
@@ -24,11 +25,11 @@ const gradientTextStyle = {
     textAlign: "center" as const,
     letterSpacing: "-0.05em",
     lineHeight: "1"
-    
+
 };
 
 const containerStyle = {
-    padding : "15px",
+    padding: "15px",
     maxWidth: "700px",
     border: "1px solid rgba(0, 0, 0, 0.1)",
     borderRadius: "34px",
@@ -41,13 +42,13 @@ const cardStyle = {
     border: "1px solid rgba(0, 0, 0, 0.05)",
     padding: "8px",
     backgroundColor: "white",
-    maxWidth : "550px",
+    maxWidth: "550px",
     margin: "20px auto",
 };
 
 const innerCardStyle = {
 
-    margin : "auto",
+    margin: "auto",
     fontSize: "16px",
     borderRadius: "20px",
     border: "1px solid rgba(0, 0, 0, 0.05)",
@@ -72,7 +73,8 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
                             Hi, {userFirstname}
                         </Text>
                         <Text style={{ color: "rgba(0, 0, 0, 0.6)", margin: "8px 0", fontSize: "16px" }}>
-                            🎉 Guess what? You just became part of the coolest UI club in town — Skiper UI!
+                            🎉 Guess what? You just became part of the coolest UI club in town —
+                             Skiper UI!
                         </Text>
                     </div>
                 </Section>
@@ -87,14 +89,14 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
                         style={logo}
                     />
 
-                    <a href="http://skiper-ui.com">
-                        <Img
-                            src={`https://skiper-ui.com/static/cta.png`}
-                            width="212"
-                            alt="Skiper/ui"
-                            style={logo}
-                        />
-                    </a>
+
+                    <Img
+                        src={`https://skiper-ui.com/static/cta.png`}
+                        width="212"
+                        alt="Skiper/ui"
+                        style={logo}
+                    />
+
                 </Section>
 
                 <Section style={{ textAlign: "center", margin: "0" }}>
@@ -119,7 +121,7 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
                     src={`https://skiper-ui.com/static/badge.png`}
                     width="120"
                     alt="Skiper/ui"
-                    style={{margin : "auto"}}
+                    style={{ margin: "auto" }}
                 />
                 <Section style={{ textAlign: "center", margin: "0" }}>
                     <Text style={gradientTextStyle}>Thanks For subscribing </Text>

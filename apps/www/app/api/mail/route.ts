@@ -1,7 +1,4 @@
 import { render } from "@react-email/render";
-
-
-
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
@@ -18,7 +15,6 @@ const redis = new Redis({
 
 const ratelimit = new Ratelimit({
   redis,
-  // 2 requests per minute from the same IP address in a sliding window of 1 minute duration which means that the window slides forward every second and the rate limit is reset every minute for each IP address.
   limiter: Ratelimit.slidingWindow(2, "1 m"),
 });
 
@@ -41,18 +37,19 @@ export async function POST(request: NextRequest, response: NextResponse) {
 
   const { email, firstname } = await request.json();
 
+  const newName = funName(firstname)
+
   const { data, error } = await resend.emails.send({
     from: "Skiper-Ui<hello@skiper-ui.com>",
     // from: "Acme <onboarding@resend.dev>",
     to: [email],
-    subject: "Thankyou for wailisting the Next.js + Notion CMS template!",
+    subject: `Thanks ${newName} for Joining Skiper-ui `,
+    // subject: `Thankyou for wailisting the Next.js + Notion CMS template!`,
     replyTo: "gurvindermaksudra@gmail.com",
-    html:  await render(WelcomeTemplate({ userFirstname: firstname })),
+    html:  await render(WelcomeTemplate({ userFirstname: newName })),
   });
 
   console.log("data and error",data,error)
-
-  // const { data, error } = { data: true, error: null }
 
   if (error) {
     return NextResponse.json(error);
@@ -63,4 +60,24 @@ export async function POST(request: NextRequest, response: NextResponse) {
   }
 
   return NextResponse.json({ message: "Email sent successfully" });
+}
+
+function funName(name:string) {
+  const priority = ['i', 'e', 'o', 'a', 'u'];
+  let vowelToRepeat = '';
+  let lastVowelIndex = -1;
+
+  for (let i = name.length - 1; i >= 0; i--) {
+      if (priority.includes(name[i])) {
+          vowelToRepeat = name[i];
+          lastVowelIndex = i;
+          break;
+      }
+  }
+
+  if (vowelToRepeat) {
+      name = name.slice(0, lastVowelIndex) + vowelToRepeat.repeat(4) + name.slice(lastVowelIndex + 1);
+  }
+
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(); // Capitalize the first letter
 }
