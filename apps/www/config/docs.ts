@@ -99,14 +99,7 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/minimal-card",
               items: [],
               label: "new",
-            },
-            
-            // {
-            //   title: "Expandable",
-            //   href: "/docs/components/expandable",
-            //   items: [],
-            //   label: "new",
-            // },
+            }
           ],
         },
         {
