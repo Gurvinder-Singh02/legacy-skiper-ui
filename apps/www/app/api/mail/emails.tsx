@@ -11,11 +11,6 @@ import {
 
 import * as React from "react";
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
-
 interface EmailProps {
   userFirstname: string;
 }
@@ -63,7 +58,7 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
       <Body style={{ margin: "0", padding: "0", fontFamily: "sans-serif", color: "#404040" }}>
           <Section style={{ position: "fixed", inset: "0", zIndex: "-10" , opacity : "0.2" }}>
               <Img
-                  src={`${baseUrl}/static/8px.png`}
+                  src={`https://skiper-ui.com/static/8px.png`}
                   width="100%"
                   alt="Skiper/ui"
                   style={logo}
@@ -91,7 +86,7 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
               <Section style={{ textAlign: "center", margin: "20px 0" }}>
 
                   <Img
-                      src={`${baseUrl}/static/SVG.svg`}
+                      src={`https://skiper-ui.com/static/SVG.svg`}
                       width="125"
                       alt="Skiper/ui"
                       style={logo}
@@ -99,7 +94,7 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
 
                   <a href="http://skiper-ui.com">
                       <Img
-                          src={`${baseUrl}/static/cta.png`}
+                          src={`https://skiper-ui.com/static/cta.png`}
                           width="212"
                           alt="Skiper/ui"
                           style={logo}
@@ -124,7 +119,7 @@ export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps)
                           <br />The Skiper UI Crew ✨
                       </Text>
                       <Img
-                          src={`${baseUrl}/static/badge.png`}
+                          src={`https://skiper-ui.com/static/badge.png`}
                           width="120"
                           alt="Skiper/ui"
                           style={{ position: "absolute", bottom: "-40px", right: "-40px", }}
