@@ -1,123 +1,153 @@
 import {
   Body,
-  Container,
   Head,
-  Hr,
   Html,
-  Img,
   Preview,
+  Container,
   Text,
+  Section,
+  Img,
 } from "@react-email/components";
+
 import * as React from "react";
+
+const baseUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "";
+
 
 interface EmailProps {
   userFirstname: string;
 }
 
-export const NotionWaitlistEmail = ({ userFirstname }: EmailProps) => (
-  <Html>
-    <Head />
-    <Preview>Thanks for Joining the Waitlist, {userFirstname}! 🎉</Preview>
-    <Body style={main}>
-      <Container style={container}>
-        <Img
-          src={`https://nextjs-notion-waitlist.vercel.app/waitlist-logo.png`}
-          width="220"
-          height="100"
-          alt="Notion Waitlist Logo"
-          style={logo}
-        />
-        <Text style={greeting}>Hi {userFirstname},</Text>
-        <Text style={paragraph}>
-          Thanks for joining the waitlist for our Next.js + Notion CMS waitlist
-          template! I'm Lakshay, the developer behind this project. I'm glad to
-          have you on board.
-        </Text>
-        <Text style={paragraph}>
-          I'll keep you posted on the progress and notify you as soon as it's
-          ready for you to use. In the meantime, if you have any questions or
-          feedback, don't hesitate to reach out by replying directly to{" "}
-          <a href="mailto:lakshb.work@gmail.com" style={link}>
-            this email {""}
-          </a>
-          — I'm here to listen!
-        </Text>
-        <Text style={paragraph}>
-          You can also follow me on X/Twitter for updates:{" "}
-          <a href="https://x.com/blakssh" style={link}>
-            @blakssh
-          </a>
-        </Text>
-        <Text style={signOff}>
-          Best regards,
-          <br />
-          Lakshay
-        </Text>
-        <Hr style={hr} />
-        <Text style={footer}>
-          You received this email because you signed up for the Notion waitlist.
-          If you believe this is a mistake, feel free to ignore this email.
-        </Text>
-      </Container>
-    </Body>
-  </Html>
-);
+const gradientTextStyle = {
 
-NotionWaitlistEmail.PreviewProps = {
-  userFirstname: "Tyler",
-} as EmailProps;
-
-export default NotionWaitlistEmail;
-
-const main = {
-  background: "linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)",
-  fontFamily: 'figtree, "Helvetica Neue", Helvetica, Arial, sans-serif',
-  padding: "40px 0",
-  color: "#cccccc",
+  color: "#404040",
+  fontSize: "47px",
+  fontWeight: "bold",
+  margin: "50px 0 20px 0",
+  textAlign: "center" as const,
+  letterSpacing: "-0.05em",
 };
 
-const container = {
-  margin: "0 auto",
-  padding: "24px 32px 48px",
-  backgroundColor: "#1a1a1a",
-  borderRadius: "12px",
-  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-  maxWidth: "600px",
+const containerStyle = {
+  maxWidth: "700px",
+  border: "1px solid rgba(0, 0, 0, 0.1)",
+  borderRadius: "34px",
+  padding: "10px 50px",
+  boxShadow: "0 20px 12px rgba(0, 0, 0, 0.05)",
+  margin: "10px auto",
 };
 
-const logo = {
-  margin: "0 auto",
-  paddingBottom: "20px",
-};
-
-const greeting = {
-  fontSize: "18px",
-  lineHeight: "28px",
-};
-
-const paragraph = {
-  fontSize: "16px",
-  lineHeight: "26px",
-  marginBottom: "20px",
-};
-
-const link = {
-  color: "#F7FF9B",
-  textDecoration: "underline",
-};
-
-const signOff = {
-  fontSize: "16px",
-  lineHeight: "26px",
-  marginTop: "20px",
-};
-
-const hr = {
-  borderColor: "#cccccc",
+const cardStyle = {
+  borderRadius: "28px",
+  border: "1px solid rgba(0, 0, 0, 0.05)",
+  padding: "8px",
+  backgroundColor: "white",
   margin: "20px 0",
 };
 
-const footer = {
-  color: "#8c8c8c",
-  fontSize: "12px",
+const innerCardStyle = {
+  fontSize: "16px",
+  borderRadius: "20px",
+  border: "1px solid rgba(0, 0, 0, 0.05)",
+  padding: "22px",
+  backgroundColor: "rgba(28, 28, 28, 0.02)",
+};
+
+
+export const NotionWaitlistEmail = ({ userFirstname = "Gurvinder" }: EmailProps) => (
+  <Html>
+      <Head />
+      <Preview>Welcome to Skiper-UI {userFirstname}! 🎉</Preview>
+      <Body style={{ margin: "0", padding: "0", fontFamily: "sans-serif", color: "#404040" }}>
+          <Section style={{ position: "fixed", inset: "0", zIndex: "-10" , opacity : "0.2" }}>
+              <Img
+                  src={`${baseUrl}/static/8px.png`}
+                  width="100%"
+                  alt="Skiper/ui"
+                  style={logo}
+              />
+          </Section>
+          <Container style={{ ...containerStyle, position: "relative", zIndex: "99", backgroundColor: "#ffffff" }}  >
+
+
+              <Section style={{ textAlign: "center", marginBottom: "32px" }}>
+                  <Text style={gradientTextStyle}>Welcome to Skiper-UI</Text>
+              </Section>
+
+              <Section style={{ ...cardStyle, position: "relative" }}>
+                  <div style={innerCardStyle}>
+                      <Text style={{ color: "black", fontWeight: 550, margin: "0", letterSpacing: "-0.02em", fontSize: "16px" }}>
+                          Hi, {userFirstname}
+                      </Text>
+                      <Text style={{ color: "rgba(0, 0, 0, 0.6)", margin: "8px 0", fontSize: "16px" }}>
+                          🎉 Guess what? You just became part of the coolest UI club in town — Skiper UI!
+                      </Text>
+                  </div>
+              </Section>
+
+              {/* SVG Logo */}
+              <Section style={{ textAlign: "center", margin: "20px 0" }}>
+
+                  <Img
+                      src={`${baseUrl}/static/SVG.svg`}
+                      width="125"
+                      alt="Skiper/ui"
+                      style={logo}
+                  />
+
+                  <a href="http://skiper-ui.com">
+                      <Img
+                          src={`${baseUrl}/static/cta.png`}
+                          width="212"
+                          alt="Skiper/ui"
+                          style={logo}
+                      />
+                  </a>
+              </Section>
+
+              <Section style={{ textAlign: "center", margin: "0" }}>
+                  <Text style={gradientTextStyle}>Here's the deal:</Text>
+              </Section>
+
+              <Section style={{ ...cardStyle, position: "relative" }}>
+                  <div style={innerCardStyle}>
+                      <Text style={{ color: "rgba(0, 0, 0, 0.6)", lineHeight: "1.6", fontSize: "16px" }}>
+                          🌟 Exclusive updates on our latest components
+                          <br /> 🙅‍♂️ Zero spam, zero fluff — just pure UI goodness
+                          <br /><br /> We're all about keeping it real, transparent, and ridiculously fun. You're
+                          <br /> officially in for an exciting ride.
+                          <br /><br /> Thanks for hopping on board!
+                          <br />Let's build something amazing together.
+                          <br /><br />Cheers,
+                          <br />The Skiper UI Crew ✨
+                      </Text>
+                      <Img
+                          src={`${baseUrl}/static/badge.png`}
+                          width="120"
+                          alt="Skiper/ui"
+                          style={{ position: "absolute", bottom: "-40px", right: "-40px", }}
+                      />
+                  </div>
+              </Section>
+              <Section style={{ textAlign: "center", margin: "0" }}>
+                  <Text style={gradientTextStyle}>Thanks For subscribing </Text>
+                  <Text style={{ color: "rgba(0, 0, 0, 0.4)", margin: "8px 0 20px 0", fontSize: "12px" }}>
+                      Got questions or just want to say hi? Reach out to us anytime at <a style={{ color: "#404040" }} href="http://x.com/guri_who">gxuri</a>
+                  </Text>
+              </Section>
+          </Container>
+      </Body>
+  </Html>
+);
+
+export default NotionWaitlistEmail;
+
+NotionWaitlistEmail.PreviewProps = {
+  userFirstname: "Tyler Durden",
+} as EmailProps;
+
+const logo = {
+  margin: "0 auto",
 };
