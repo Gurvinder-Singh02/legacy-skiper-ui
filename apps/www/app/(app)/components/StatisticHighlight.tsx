@@ -40,14 +40,14 @@ const StatisticHighlight = ({ text, num }: { text: string; num: number }) => {
 
       <div className="mx-auto mt-10 flex flex-col items-center justify-center">
         <h5 className="flex items-center justify-end gap-2 text-center text-lg md:text-2xl lg:text-3xl">
-          Templates are fully designed products
+          Components are fully designed products
           <span className="scale-125">
             <Icons.pLogo />
           </span>
         </h5>
         <h5 className="text-center text-lg md:text-2xl lg:text-3xl ">
           and even have{" "}
-          <span className="font-bold">real daily active users.</span>
+          <span className="font-bold">real daily active uses.</span>
         </h5>
       </div>
       <div className="mt-10 scale-125">
