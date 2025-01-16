@@ -113,41 +113,6 @@ export const TEMPLATES_GRID = [
   },
 
   {
-    name: "Skiper SEO",
-    slug: "#",
-    new: false,
-    downloadUrl: "#",
-    liveUrl: "#",
-    meta: "fullstack",
-    description:
-      "Comprehensive SEO analysis tool with web crawling, performance testing, and AI-powered optimization recommendations for website improvement.",
-    features: [
-      {
-        name: "RSC Web Scraping",
-        description: "Lightning fast web scraping via rsc.",
-        icon: "chat",
-      },
-      {
-        name: "Web Vitals",
-        description: "Google CRUX API adapters for web vitals.",
-        icon: "barChart",
-      },
-      {
-        name: "Structured AI output",
-        description: "Vercel ai sdk with claude, zod, ai object.",
-        icon: "ai",
-      },
-    ],
-    type: "template",
-    stack: ["nextjs", "tailwind", "claudeAI", "web-scrapers"],
-
-    gradient: "bg-gradient-to-b from-white to-[#2770EB] via-[#FF7102]/20",
-    gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmthd283MHdqYTAzNjFzZXptbGg2MGIzY3RudzBsdDdveGsxdG9haCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w1LYqDDIpDaLKj6N5t/giphy.gif",
-    // images: [cultSeoScore, cultSeoVitals, cultSeoOg, cultSeoHome],
-    images: [cultSeoOg],
-  },
-
-  {
     name: "Manifest",
     slug: "#",
     meta: "fullstack",
@@ -181,5 +146,39 @@ export const TEMPLATES_GRID = [
     // images: [manifestBottomLeft, manifestCenter, manifestRight],
     images: [manifestBottomLeft],
     gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVwNXVkdXM3aWM4NXM2a2s2czFhd283NHdrbWFsdm43bGdsMXp4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SM08k77xWhQtQDDluI/giphy.gif",
+  },
+  {
+    name: "DEV Portfolio",
+    slug: "#",
+    new: true,
+    downloadUrl: "#",
+    liveUrl: "#",
+    meta: "fullstack",
+    description:
+      "Comprehensive SEO analysis tool with web crawling, performance testing, and AI-powered optimization recommendations for website improvement.",
+    features: [
+      {
+        name: "RSC Web Scraping",
+        description: "Lightning fast web scraping via rsc.",
+        icon: "chat",
+      },
+      {
+        name: "Web Vitals",
+        description: "Google CRUX API adapters for web vitals.",
+        icon: "barChart",
+      },
+      {
+        name: "Structured AI output",
+        description: "Vercel ai sdk with claude, zod, ai object.",
+        icon: "ai",
+      },
+    ],
+    type: "template",
+    stack: ["nextjs", "tailwind", "claudeAI", "web-scrapers"],
+
+    gradient: "bg-gradient-to-b from-white to-[#2770EB] via-[#FF7102]/20",
+    gif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExanI3bjNzdTliOTF0aW9xMzY3Y21sdnE3Nnowb3l6YW4xeXZtdTE0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L9F8Kt6IYdRvHbcHvl/giphy.gif",
+    // images: [cultSeoScore, cultSeoVitals, cultSeoOg, cultSeoHome],
+    images: [cultSeoOg],
   },
 ]
