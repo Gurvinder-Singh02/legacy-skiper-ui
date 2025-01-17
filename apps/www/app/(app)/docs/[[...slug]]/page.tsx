@@ -18,6 +18,7 @@ import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
 import { SparkleIcon } from "lucide-react"
 
+
 interface DocPageProps {
   params: {
     slug: string[]

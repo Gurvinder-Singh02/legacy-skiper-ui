@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from 'sonner'
 import { motion } from 'framer-motion';
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,6 +36,8 @@ const itemVariants = {
         },
     },
 };
+
+
 
 function SubscriptionForm() {
 
@@ -181,7 +184,7 @@ function SubscriptionForm() {
 const page = () => {
 
     return (
-        <div className=' border relative overflow-hidden h-screen flex flex-col items-center justify-center' >
+        <div className=' relative overflow-hidden h-screen flex flex-col items-center justify-center' >
 
             <div className="  z-10 max-w-2xl md:max-w-4xl space-y-4 flex flex-col items-center justify-center">
                 <GradientHeading size="xll" weight="bold" className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] sm:max-w-4xl ">

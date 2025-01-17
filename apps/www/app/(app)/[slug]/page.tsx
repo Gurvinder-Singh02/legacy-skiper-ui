@@ -1,9 +1,16 @@
 import { TEMPLATES_GRID } from '@/components/landing/template-grid'
 import { GradientHeading } from '@/registry/default/ui/gradient-heading'
+import { Metadata } from 'next'
 
 import Image from 'next/image'
 import React from 'react'
 
+
+export const metadata: Metadata = {
+    title: "Building Blocks.",
+    description:
+        "Beautifully designed. Copy and paste into your apps. Open Source.",
+}
 
 
 const page = ({ params }: any) => {

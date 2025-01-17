@@ -1,18 +1,10 @@
 import { Metadata } from "next"
 
-import { Button } from "@/components/ui/button"
-import { Announcement } from "@/components/announcement"
-import {
-  PageActions,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header"
 
 export const metadata: Metadata = {
-  title: "Building Blocks.",
+  title: "Pricing.",
   description:
-    "Beautifully designed. Copy and paste into your apps. Open Source.",
+    "Need custom components or websites? We've got you covered , Simple pricing, no hidden fees.",
 }
 
 export default function BlocksLayout({
