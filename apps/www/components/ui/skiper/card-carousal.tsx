@@ -121,6 +121,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                     <div className="size-full rounded-3xl">
                       <Image
                         src={image.src}
+                        priority
                         width={500}
                         height={500}
                         className="size-full rounded-xl"
@@ -134,6 +135,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                     <div className="size-full rounded-3xl">
                       <Image
                         src={image.src}
+                        priority
                         width={200}
                         height={200}
                         className="size-full rounded-xl"
