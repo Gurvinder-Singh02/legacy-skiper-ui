@@ -10,7 +10,7 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Components",
-      href: "/docs/components/dynamic-island",
+      href: "/docs/components/ai-input",
     },
     {
       title: "Pricing",
