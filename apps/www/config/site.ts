@@ -12,7 +12,27 @@ export const siteConfig = {
   },
   keywords: [
     "gurvinder singh",
-  ],
+    "skiper - ui",
+    "gxuri",
+    "tailwind css components",
+    "nextjs react js",
+    "modern minimal components",
+    "clean components",
+    "snippets",
+    "aceternity ui",
+    "gxuri latest nextjs components",
+    "responsive UI elements",
+    "accessible design components",
+    "minimalist Tailwind CSS templates",
+    "modern UI frameworks",
+    "nextjs reusable components",
+    "react js dynamic components",
+    "custom Tailwind components",
+    "optimized nextjs libraries",
+    "streamlined react UI kits",
+    "lightweight component libraries",
+    "modular design components"
+  ]
 }
 
 export type SiteConfig = typeof siteConfig
