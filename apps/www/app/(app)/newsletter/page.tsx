@@ -11,6 +11,7 @@ import React, { useState } from 'react'
 import { Input } from "@/components/ui/input";
 import { toast } from 'sonner'
 import { motion } from 'framer-motion';
+import Image from 'next/image'
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -139,7 +140,7 @@ function SubscriptionForm() {
 
     return (
         <div
-            className="mt-6 flex w-[450px] flex-col items-center justify-center gap-3"
+            className="mt-6 flex w-full px-10 md:px-32 flex-col items-center justify-center gap-3"
         >
             <div className='w-full' >
                 <Input
@@ -160,7 +161,7 @@ function SubscriptionForm() {
                 />
             </div>
             <div>
-                <button onClick={handleSubmit} className='flex mt-4 items-center justify-center '>
+                <button onClick={handleSubmit} className='flex mt-4 relative  items-center justify-center '>
                     <div className={cn("group cursor-pointer border group border-[#3B3A3A] bg-[#151515] gap-2  h-[64px] flex items-center p-[11px] rounded-full",)} >
                         <div className={cn('border border-[#3B3A3A] bg-[#ff3f17]  h-[43px] rounded-full flex items-center justify-center text-white',)}>
                             <p className='font-medium tracking-tight mr-3 ml-2 flex items-center gap-2 justify-center ' > <Globe className="animate-spin " />   {loading ? "Loading..." : "Subscribe "} &nbsp;</p>
@@ -180,23 +181,21 @@ function SubscriptionForm() {
 const page = () => {
 
     return (
-        <div className=' relative h-screen border overflow-hidden  w-screen flex items-center justify-center' >
+        <div className=' border relative overflow-hidden h-screen flex flex-col items-center justify-center' >
 
-            <div className=" z-10 space-y-4 flex flex-col items-center justify-center">
-                <GradientHeading size="xll" weight="bold" className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] ">
+            <div className="  z-10 max-w-2xl md:max-w-4xl space-y-4 flex flex-col items-center justify-center">
+                <GradientHeading size="xll" weight="bold" className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] sm:max-w-4xl ">
                     Join our Newsletter
                 </GradientHeading>
-                <p className="text-center text-base   leading-1 opacity-60  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
-                    Be the first to know about the latest components from Skiper-UI! <br />
-                    No spam, no nonsense, just the good stuff sent straight to you. Let's build something amazing together! 😎
+                <p className="text-center px-4 text-base   leading-1 opacity-60  text-foreground md:pt-4 md:text-xl md:font-normal md:leading-6">
+                    Be the first to know about the latest components from Skiper-UI!
                 </p>
-
                 <br /><br />
                 <SubscriptionForm />
             </div>
 
-            <motion.div variants={containerVariants} className='-bottom-[16rem] -z-8 absolute' initial="hidden" animate="visible" >
-                <motion.h2 variants={itemVariants} className='text-[450px] tracking-tighter text-black/5 ' >
+            <motion.div variants={containerVariants} className=' -bottom-[4rem]  sm:-bottom-[17rem] -z-8 absolute' initial="hidden" animate="visible" >
+                <motion.h2 variants={itemVariants} className=' text-[110px] sm:text-[450px] tracking-tighter text-black/5 ' >
                     Skiper/ui
                 </motion.h2>
             </motion.div>

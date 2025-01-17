@@ -76,7 +76,7 @@ function funName(name:string) {
   }
 
   if (vowelToRepeat) {
-      name = name.slice(0, lastVowelIndex) + vowelToRepeat.repeat(4) + name.slice(lastVowelIndex + 1);
+      name = name.slice(0, lastVowelIndex) + vowelToRepeat.repeat(7) + name.slice(lastVowelIndex + 1);
   }
 
   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(); // Capitalize the first letter

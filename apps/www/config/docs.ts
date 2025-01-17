@@ -13,8 +13,12 @@ export const docsConfig: DocsConfig = {
       href: "/docs/components/dynamic-island",
     },
     {
-      title: "Themes",
-      href: "/themes",
+      title: "Pricing",
+      href: "/pricing",
+    },
+    {
+      title: "New Letter",
+      href: "/newsletter",
     },
   ],
   sidebarNav: [

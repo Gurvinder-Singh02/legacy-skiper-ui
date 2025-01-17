@@ -61,7 +61,7 @@ export function MobileNav() {
           onOpenChange={setOpen}
         >
           <Icons.logo_dark className="mr-2 size-4" />
-          <span className="font-bold">{siteConfig.name}</span>
+          <span className="font-semibold">{siteConfig.name}</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">

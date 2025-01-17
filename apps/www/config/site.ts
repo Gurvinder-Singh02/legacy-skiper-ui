@@ -1,15 +1,49 @@
 // #WIP
 export const siteConfig = {
-  // #WIP image
+
   name: "skiper/ui",
-  url: "https://gxuri.in",
-  ogImage: "https://skiper.gxuri.in/og.png",
+  url: "https://skiper-ui.com",
+  ogImage: "https://skiper-ui.com/og.png",
   description:
-    "Components components that you can copy and paste into react apps. Customizable. Open Source. Typed.",
+    "Components crafted for Modern Websites | Bringing minimalism to the future Reusable components for unstoppable developers ",
   links: {
     twitter: "https://x.com/guri_who",
     github: "https://github.com/gurvinder_singh02",
   },
+  keywords: [
+    "gurvinder singh",
+    "guri",
+    "gurvinder singh 02",
+    "portfolio",
+    "guri portfolio",
+    "guri 100x dev",
+    "full stack developer",
+    "designer",
+    "web developer",
+    "web designer",
+    "react developer",
+    "react designer",
+    "next.js developer",
+    "next.js designer",
+    "gurvinder singh portfolio",
+    "gurvinder singh website",
+    "gurvinder singh portfolio website",
+    "gurvinder singh portfolio website 2024",
+    "gurvinder singh portfolio 2024",
+    "gxuri",
+    "gxuri in",
+    "gxuri.in", 
+    "gxuri portfolio",
+    "gxuri portfolio 2024",
+    "gxuri portfolio website",
+    "gxuri portfolio website 2024",
+    "gxuri portfolio 2024 website",
+    "gxuri portfolio 2024 website 2024",
+    "gxuri portfolio 2024 website 2025",
+    "gxuri portfolio 2025",
+    "gxuri portfolio 2025 website",
+    "gxuri portfolio 2025 website 2025",
+  ],
 }
 
 export type SiteConfig = typeof siteConfig
