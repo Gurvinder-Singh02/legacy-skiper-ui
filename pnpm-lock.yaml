@@ -342,6 +342,9 @@ importers:
       resend:
         specifier: ^4.1.1
         version: 4.1.1(react-dom@18.3.1)(react@18.3.1)
+      schema-dts:
+        specifier: ^1.1.2
+        version: 1.1.2(typescript@5.7.2)
       sharp:
         specifier: ^0.31.3
         version: 0.31.3
@@ -10664,6 +10667,14 @@ packages:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /schema-dts@1.1.2(typescript@5.7.2):
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 5.7.2
     dev: false
 
   /section-matter@1.0.0:

@@ -6,13 +6,11 @@ import { ArrowRight, Globe } from 'lucide-react'
 
 import React, { useState } from 'react'
 
-
-
 import { Input } from "@/components/ui/input";
 import { toast } from 'sonner'
 import { motion } from 'framer-motion';
-import Image from 'next/image'
-import { Metadata } from 'next'
+import { generateCompleteLibraryJsonLd, JsonLd } from '@/lib/json-ld'
+
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -39,7 +37,9 @@ const itemVariants = {
 
 
 
+
 function SubscriptionForm() {
+
 
     const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
@@ -183,26 +183,35 @@ function SubscriptionForm() {
 
 const page = () => {
 
+    // const jsonLdData = generateCompleteLibraryJsonLd(
+    //     "Your UI Library",
+    //     "1.0.0",
+    //     "https://skiper-ui.com"
+    // )
+
     return (
-        <div className=' relative overflow-hidden h-screen flex flex-col items-center justify-center' >
+        <>
+            {/* <JsonLd data={jsonLdData} /> */}
+            <div className=' relative overflow-hidden h-screen flex flex-col items-center justify-center' >
 
-            <div className="  z-10 max-w-2xl md:max-w-4xl space-y-4 flex flex-col items-center justify-center">
-                <GradientHeading size="xll" weight="bold" className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] sm:max-w-4xl ">
-                    Join our Newsletter
-                </GradientHeading>
-                <p className="text-center px-4 text-base   leading-1 opacity-60  text-foreground md:pt-4 md:text-xl md:font-normal md:leading-6">
-                    Be the first to know about the latest components from Skiper-UI!
-                </p>
-                <br /><br />
-                <SubscriptionForm />
+                <div className="  z-10 max-w-2xl md:max-w-4xl space-y-4 flex flex-col items-center justify-center">
+                    <GradientHeading size="xll" weight="bold" className="text-center text-xl font-bold  tracking-tighter lg:leading-[0.5rem] sm:max-w-4xl ">
+                        Join our Newsletter
+                    </GradientHeading>
+                    <p className="text-center px-4 text-base   leading-1 opacity-60  text-foreground md:pt-4 md:text-xl md:font-normal md:leading-6">
+                        Be the first to know about the latest components from Skiper-UI!
+                    </p>
+                    <br /><br />
+                    <SubscriptionForm />
+                </div>
+
+                <motion.div variants={containerVariants} className=' -bottom-[4rem]  sm:-bottom-[17rem] -z-8 absolute' initial="hidden" animate="visible" >
+                    <motion.h2 variants={itemVariants} className=' text-[110px] sm:text-[450px] tracking-tighter text-black/5 ' >
+                        Skiper/ui
+                    </motion.h2>
+                </motion.div>
             </div>
-
-            <motion.div variants={containerVariants} className=' -bottom-[4rem]  sm:-bottom-[17rem] -z-8 absolute' initial="hidden" animate="visible" >
-                <motion.h2 variants={itemVariants} className=' text-[110px] sm:text-[450px] tracking-tighter text-black/5 ' >
-                    Skiper/ui
-                </motion.h2>
-            </motion.div>
-        </div>
+        </>
     )
 }
 
