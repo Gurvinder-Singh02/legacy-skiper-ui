@@ -31,23 +31,23 @@ export default function IndexPage() {
             <div className="pt-4 md:pt-0">
               <GradientHeading
                 weight="bold"
-                className="text-center text-xl font-bold leading-tight tracking-tighter md:text-5xl "
+                className="text-center mt-4"
               >
                 Components crafted for
               </GradientHeading>
               <GradientHeading
                 size="xll"
                 weight="bold"
-                className="text-center text-xl font-bold    tracking-tighter lg:leading-[0.5rem] "
+                className="lg:mt-8"
               >
-                <br className="hidden lg:block" /> Modern Websites
+                Modern Websites
               </GradientHeading>
             </div>
           </FadeIn>
           <FadeIn>
-            <p className=" leading-2 flex max-w-2xl flex-wrap items-center justify-center gap-1 text-center  text-base  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
+            <p className=" leading-2 flex max-w-2xl flex-wrap items-center justify-center gap-1 text-center  text-black/60  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
               Bringing minimalism to the future <br />
-              Reusable components for unstoppable developers
+              {/* Reusable components for unstoppable developers */}
 
             </p>
           </FadeIn>
@@ -100,9 +100,9 @@ export default function IndexPage() {
         <FadeIn>
           <CardCarousel
             images={[
-              { src: "/card/1.png", alt: "Image 1" },
-              { src: "/card/2.png", alt: "Image 2" },
-              { src: "/card/3.png", alt: "Image 3" },
+              { src: "/card/1.webp", alt: "Image 1" },
+              { src: "/card/2.webp", alt: "Image 2" },
+              { src: "/card/3.webp", alt: "Image 3" },
             ]}
             autoplayDelay={2000}
             showPagination={true}
