@@ -38,7 +38,6 @@ export default function IndexPage() {
               <GradientHeading
                 size="xll"
                 weight="bold"
-                className="lg:mt-8"
               >
                 Modern Websites
               </GradientHeading>
