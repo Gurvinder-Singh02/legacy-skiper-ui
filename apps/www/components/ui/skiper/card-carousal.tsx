@@ -63,11 +63,11 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   return (
     <section className="w-ace-y-4">
       <style>{css}</style>
-      <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-        <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
+      <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 dark:border-white/20 p-2 shadow-sm md:rounded-t-[44px]">
+        <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 dark:border-white/20 bg-neutral-800/5 dark:bg-white/10 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
           <Badge
             variant="outline"
-            className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"
+            className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
           >
             <SparklesIcon className="fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
             Latest component
@@ -75,7 +75,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
           <div className="flex flex-col justify-center pb-2 pl-4 pt-14 md:items-center">
             <div className="flex gap-2">
               <div>
-                <GradientHeading>Card Carousel</GradientHeading>
+                <h4 className="text-4xl font-bold" >Card Carousel</h4>
                 <Link
                   href="/docs/components/popover-form"
                   className="flex items-center gap-1"

@@ -11,7 +11,7 @@ import { FeaturesSection } from "@/components/landing/feature-section"
 import { PlugCardGrid } from "@/components/landing/plug-grid"
 import { TemplateGrid } from "@/components/landing/template-grid"
 import { Testimonials } from "@/components/landing/testimonials"
-import {  PageHeader } from "@/components/page-header"
+import { PageHeader } from "@/components/page-header"
 import { GradientHeading } from "@/registry/default/ui/gradient-heading"
 
 import StatisticHighlight from "./components/StatisticHighlight"
@@ -58,6 +58,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
+            className="dark:opacity-20"
           />
         </div>
 
@@ -67,6 +68,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
+            className="dark:opacity-20"
           />
         </div>
 
@@ -76,6 +78,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
+            className="dark:opacity-20"
           />
         </div>
 
@@ -85,6 +88,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
+            className="dark:opacity-20"
           />
         </div>
 
