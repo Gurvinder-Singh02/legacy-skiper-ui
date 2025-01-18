@@ -13,6 +13,7 @@ import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 
 import { DistortedGlass } from "./distorted-glass"
+import ThemeToggler from "@/theme/theme-toggler"
 
 export function SiteHeader() {
   let pathname = usePathname()
@@ -75,11 +76,15 @@ export function SiteHeader() {
                   <span className="sr-only">Twitter</span>
                 </div>
               </Link>
-              {pathname?.includes("/docs") ? <ModeToggle /> : null}
+              <div>
+                {/* <ModeToggle /> */}
+                <ThemeToggler/>
+              </div>
+
             </nav>
           </div>
-        </div>
-      </header>
+        </div >
+      </header >
       {/* <div className="animate-slide-up fixed inset-x-1/2 top-0 z-50 md:absolute">
         <div className=" flex w-full flex-col items-center justify-center">
           <DistortedGlass></DistortedGlass>

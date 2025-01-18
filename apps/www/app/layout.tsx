@@ -12,12 +12,13 @@ import {
 } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 
-import { ThemeProvider } from "@/components/providers"
+// import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
+import { ThemeProvider } from "@/theme/theme-provider"
 
 export const metadata: Metadata = {
-  
+
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
@@ -83,26 +84,20 @@ export default function RootLayout({ children }: RootLayoutProps) {
           className={cn(
             "relative min-h-screen bg-background font-sans antialiased",
             fontSans.variable
-          )}
-        >
-          
+          )}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
           >
-            <div vaul-drawer-wrapper="">
-              <div className="relative z-10 flex min-h-screen flex-col ">
-                {children}
-              </div>
+            <div className="relative z-10 flex min-h-screen flex-col ">
+              {children}
             </div>
             <TailwindIndicator />
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
             <Analytics />
             <SpeedInsights />
             <NewYorkToaster />
-            <DefaultToaster   /> 
+            <DefaultToaster />
             <NewYorkSonner position="top-center" />
           </ThemeProvider>
         </body>
