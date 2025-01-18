@@ -1,4 +1,6 @@
+import { AnimatedBackgroundGuides } from "@/components/background-guides"
 import { Metadata } from "next"
+import StarsCanvas from "../components/starBackground"
 
 
 export const metadata: Metadata = {
@@ -14,6 +16,7 @@ export default function BlocksLayout({
 }) {
   return (
     <div className="container relative m-auto w-full ">
+      
       <div className="mt-32"></div>
       {children}
     </div>
