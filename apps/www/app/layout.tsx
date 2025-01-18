@@ -11,7 +11,7 @@ import {
   Toaster as NewYorkToaster,
 } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
-import { AnimatedBackgroundGuides } from "@/components/background-guides"
+
 import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
@@ -85,7 +85,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <AnimatedBackgroundGuides />
+          
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
