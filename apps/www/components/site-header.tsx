@@ -10,7 +10,7 @@ import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
-import { ModeToggle } from "@/components/mode-toggle"
+
 
 import { DistortedGlass } from "./distorted-glass"
 import ThemeToggler from "@/theme/theme-toggler"
@@ -33,7 +33,7 @@ export function SiteHeader() {
           <MobileNav />
           <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
             {!pathname?.includes("/docs") ? (
-              <div className="hidden lg:block lg:w-full">
+              <div className="hidden lg:block  lg:w-full">
                 <DistortedGlass />
               </div>
             ) : null}

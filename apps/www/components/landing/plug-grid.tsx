@@ -37,7 +37,7 @@ export function PlugCardGrid() {
     <div className="relative  w-full space-y-4 p-2">
       <Badge
         variant="outline"
-        className="absolute left-4 top-4 rounded-[14px] border border-black/10 text-base md:left-6"
+        className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
       >
         <StickerIcon className="mr-1  fill-[#A3C0E0] stroke-1 text-neutral-800" />{" "}
         Additional goods
@@ -51,10 +51,10 @@ export function PlugCardGrid() {
               href={card.href}
             >
               <MinimalCard className="bg-transparent">
-                <MinimalCardTitle className="text-base text-neutral-800">
+                <MinimalCardTitle className="text-base text-neutral-800 dark:text-white ">
                   {card.title}
                 </MinimalCardTitle>
-                <MinimalCardDescription className="text-neutral-900">
+                <MinimalCardDescription className="text-neutral-900 dark:text-white/50">
                   {card.description}
                 </MinimalCardDescription>
               </MinimalCard>

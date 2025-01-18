@@ -3,8 +3,8 @@
 export const DistortedGlass = () => {
   return (
     <>
-      <div className="relative hidden h-[50px] w-[360px] overflow-hidden rounded-b-2xl lg:w-[600px]  xl:block xl:w-full">
-        <div className="pointer-events-none absolute bottom-0  z-10 size-full overflow-hidden rounded-b-2xl  border border-[#f5f5f51a]">
+      <div className="relative hidden h-[50px] w-[360px] overflow-hidden lg:w-[600px]  xl:block xl:w-full">
+        <div className="pointer-events-none absolute bottom-0  z-10 size-full overflow-hidden ">
           <div className="glass-effect size-full"></div>
         </div>
         <svg>
@@ -34,7 +34,7 @@ export const DistortedGlass = () => {
           background: repeating-radial-gradient(
             circle at 50%50%,
             rgb(255 255 255 / 0),
-            rgba(255, 255, 255, 0.2) 10px,
+            rgba(0, 0, 0, 0) 10px,
             rgb(255 255 255) 31px
           );
           filter: url(#fractal-noise-glass);

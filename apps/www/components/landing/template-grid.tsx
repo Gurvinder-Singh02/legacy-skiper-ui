@@ -17,15 +17,15 @@ import Link from "next/link"
 export function TemplateGrid() {
   return (
 
-    <div className="dark relative flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:flex-row md:items-center md:gap-24 md:rounded-[18px] md:p-2">
+    <div className="dark relative flex w-full flex-col rounded-[24px] border border-black/5 dark:border-white/20 bg-neutral-800/5 dark:bg-white/10 p-2 shadow-sm md:flex-row md:items-center md:gap-24 md:rounded-[18px] md:p-2">
       <Badge
         variant="outline"
-        className="absolute left-4 top-4 rounded-[14px] border border-black/10 text-base text-neutral-800 md:left-6"
+         className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
       >
-        <IceCream className=" fill-[#D2F583]  stroke-1 text-neutral-800" />{" "}
+        <IceCream className=" fill-[#D2F583]  stroke-1 text-neutral-800  " />{" "}
         Templates
       </Badge>
-      <div className="   flex flex-col justify-center  space-y-4 rounded-[34px]   p-3 pt-12">
+      <div className="   flex flex-col justify-center mt-5  space-y-4 rounded-[34px]   p-3 pt-12">
         <div className="relative grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
           {TEMPLATES_GRID.map((card) => (
             <Link

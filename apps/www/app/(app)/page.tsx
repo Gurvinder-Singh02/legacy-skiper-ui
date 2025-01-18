@@ -40,7 +40,7 @@ export default function IndexPage() {
             </GradientHeading>
           </div>
 
-          <p className=" leading-2 flex max-w-2xl flex-wrap items-center justify-center gap-1 text-center  text-black/60  md:pt-8 md:text-xl md:font-normal md:leading-6">
+          <p className=" leading-2 flex max-w-2xl flex-wrap items-center justify-center gap-1 text-center  text-black/60 dark:text-white/80 md:pt-8 md:text-xl md:font-normal md:leading-6">
             Bringing minimalism to the future <br />
           </p>
 
@@ -58,7 +58,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
-            className="dark:opacity-20"
+            className="dark:opacity-5"
           />
         </div>
 
@@ -68,7 +68,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
-            className="dark:opacity-20"
+            className="dark:opacity-5"
           />
         </div>
 
@@ -78,7 +78,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
-            className="dark:opacity-20"
+            className="dark:opacity-5"
           />
         </div>
 
@@ -88,7 +88,7 @@ export default function IndexPage() {
             alt="Picture of the author"
             width={100}
             height={100}
-            className="dark:opacity-20"
+            className="dark:opacity-5"
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function IndexPage() {
 
 
         <section className="w-ace-y-4 mt-8  ">
-          <div className=" mx-auto   max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm ">
+          <div className=" mx-auto   max-w-4xl rounded-[24px] border dark:border-white/20 border-black/5 p-2 shadow-sm ">
             <TemplateGrid />
           </div>
 
@@ -119,7 +119,7 @@ export default function IndexPage() {
 
           </section>
 
-          <div className=" mx-auto   max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-b-[44px] md:rounded-t-[20px]">
+          <div className=" mx-auto   max-w-4xl rounded-[24px] border border-black/5 dark:border-white/10 p-2 shadow-sm md:rounded-[44px] ">
             <PlugCardGrid />
           </div>
         </section>
@@ -127,10 +127,10 @@ export default function IndexPage() {
 
       <section className=" mt-12 w-full ">
 
-        <div className=" relative mx-auto max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-[44px]">
+        <div className=" relative mx-auto max-w-4xl rounded-[24px] border border-black/5 dark:border-white/20 p-2 shadow-sm md:rounded-[44px]">
           <Badge
             variant="outline"
-            className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"
+            className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
           >
             <IceCream className=" fill-[#A3C0E0]  stroke-1 text-neutral-800" />{" "}
             Component Preview
@@ -141,10 +141,10 @@ export default function IndexPage() {
       </section >
       <section className=" mt-12 w-full ">
 
-        <div className=" relative mx-auto max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-[44px]">
+        <div className=" relative mx-auto max-w-4xl rounded-[24px] border overflow-hidden border-black/5 dark:border-white/20 p-2 shadow-sm md:rounded-[44px]">
           <Badge
             variant="outline"
-            className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"
+            className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
           >
             <SparklesIcon className="  fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
             component Preview
@@ -175,7 +175,7 @@ export default function IndexPage() {
 
       <section className=" mt-12 w-full ">
 
-        <div className=" mx-auto   max-w-4xl rounded-[40px] border border-black/5 p-2 shadow-sm ">
+        <div className=" mx-auto   max-w-4xl rounded-[40px] border border-black/5 dark:border-white/20 p-2 shadow-sm ">
           <div className=" relative mx-auto h-[400px] max-w-4xl overflow-hidden rounded-[38px] border border-black/5 bg-[#ff4017] p-2 shadow-sm ">
             <p className="mt-20 text-center text-white">
               Bringing simplicity to the future

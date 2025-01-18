@@ -206,7 +206,7 @@ const page = () => {
                 </div>
 
                 <motion.div variants={containerVariants} className=' -bottom-[4rem]  sm:-bottom-[17rem] -z-8 absolute' initial="hidden" animate="visible" >
-                    <motion.h2 variants={itemVariants} className=' text-[110px] sm:text-[450px] tracking-tighter text-black/5 ' >
+                    <motion.h2 variants={itemVariants} className=' text-[110px] sm:text-[450px] tracking-tighter text-black/5 dark:text-white/5 ' >
                         Skiper/ui
                     </motion.h2>
                 </motion.div>
