@@ -67,7 +67,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
         <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 dark:border-white/20 bg-neutral-800/5 dark:bg-white/10 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
           <Badge
             variant="outline"
-            className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
+            className="absolute left-4 top-6 rounded-[14px] border border-black/10  dark:border-white/20 dark:bg-white/20 text-base md:left-6"
           >
             <SparklesIcon className="fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
             Latest component

@@ -91,6 +91,27 @@ export default function IndexPage() {
             className="dark:opacity-5"
           />
         </div>
+        
+
+        <div className="absolute -bottom-[50rem] left-0 hidden lg:block">
+          <Image
+            src="/bg/bg_3.svg"
+            alt="Picture of the author"
+            width={100}
+            height={100}
+            className="dark:opacity-5"
+          />
+        </div>
+
+        <div className="absolute -bottom-[70rem] right-0 hidden lg:block">
+          <Image
+            src="/bg/bg_4.svg"
+            alt="Picture of the author"
+            width={100}
+            height={100}
+            className="dark:opacity-5"
+          />
+        </div>
 
 
         <CardCarousel

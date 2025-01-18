@@ -42,6 +42,7 @@ export function SiteHeader() {
               <CommandMenu />
             </div>
             <nav className="flex items-center ">
+
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
@@ -52,11 +53,10 @@ export function SiteHeader() {
                     buttonVariants({
                       variant: "ghost",
                     }),
-                    "w-9 p-0"
+                    "w-9 p-0 h-9 "
                   )}
                 >
                   <Icons.gitHub className="size-4" />
-                  <span className="sr-only">GitHub</span>
                 </div>
               </Link>
               <Link
@@ -69,7 +69,7 @@ export function SiteHeader() {
                     buttonVariants({
                       variant: "ghost",
                     }),
-                    "w-9 px-0"
+                    "w-9 p-0 h-9 "
                   )}
                 >
                   <Icons.twitter className="size-3 fill-current" />
@@ -78,7 +78,7 @@ export function SiteHeader() {
               </Link>
               <div>
                 {/* <ModeToggle /> */}
-                <ThemeToggler/>
+                <ThemeToggler />
               </div>
 
             </nav>
