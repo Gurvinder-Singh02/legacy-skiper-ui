@@ -1,11 +1,11 @@
 import React from 'react'
-import { ToggleThemeAnimationDemo } from './toggle-theme-animation'
+import { ThemeToggleButton } from './theme-toggle-animation'
 
 
 const page = () => {
   return (
-    <div >
-      <ToggleThemeAnimationDemo />
+    <div className='h-screen w-screen flex items-center justify-center ' >
+      <ThemeToggleButton variant='circle-blur' start='bottom-left' />
     </div>
   )
 }
