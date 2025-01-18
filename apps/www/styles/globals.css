@@ -149,7 +149,7 @@
 
 
 /* view transition api */
-.page-transition {
+/* .page-transition {
   opacity: 0;
   transition: opacity 0.7s ease;
 }
@@ -192,4 +192,4 @@
       mask-size: 350vmax;
     }
   }
-}
+} */

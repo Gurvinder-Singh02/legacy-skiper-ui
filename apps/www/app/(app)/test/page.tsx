@@ -1,9 +1,11 @@
 import React from 'react'
+import { ToggleThemeAnimationDemo } from './toggle-theme-animation'
+
 
 const page = () => {
   return (
-    <div>
-
+    <div >
+      <ToggleThemeAnimationDemo />
     </div>
   )
 }

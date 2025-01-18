@@ -4,6 +4,7 @@ import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
+
 export default function ThemeToggler() {
   const { theme, setTheme } = useTheme();
 
@@ -40,4 +41,12 @@ export default function ThemeToggler() {
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
+}
+
+export function ThemeTogglerDemo(){
+  return(
+    <div className=" w-full mt-20 flex items-center justify-center mx-auto" >
+      <ThemeToggler/>
+    </div>
+  )
 }
