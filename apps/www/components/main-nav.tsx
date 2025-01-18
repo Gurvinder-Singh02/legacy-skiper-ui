@@ -20,7 +20,7 @@ export function MainNav() {
         <span className="hidden text-xl font-bold tracking-tight sm:inline-block">
           {siteConfig.name}
         </span>
-        <span className="rounded-full border border-accent bg-[#ff411720] px-2 text-[12px] text-accent ">
+        <span className="rounded-full border border-accent  px-2 text-[12px] text-accent ">
           {" "}
           Beta{" "}
         </span>
