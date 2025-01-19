@@ -2,6 +2,12 @@ import { Registry } from "@/registry/schema"
 
 export const examples: Registry = [
   {
+    name: "theme-toggle-animation-demo",
+    type: "components:example",
+    registryDependencies: ["theme-toggle-button"],
+    files: ["example/theme-toggle-animation-demo.tsx"],
+  },
+  {
     name: "skiper-card-demo",
     type: "components:example",
     registryDependencies: ["skiper-card"],

@@ -5,6 +5,28 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
+    "theme-toggle-button": {
+      name: "theme-toggle-button",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/theme-toggle-button")),
+      source: "",
+      files: ["registry/default/ui/theme-toggle-button.tsx","registry/default/ui/theme-animations.ts"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "theme-animations": {
+      name: "theme-animations",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/theme-animations")),
+      source: "",
+      files: ["registry/default/ui/theme-animations.ts"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "skiper-card": {
       name: "skiper-card",
       type: "registry:ui",
@@ -265,6 +287,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/ai-input")),
       source: "",
       files: ["registry/default/ui/ai-input.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "theme-toggle-animation-demo": {
+      name: "theme-toggle-animation-demo",
+      type: "components:example",
+      registryDependencies: ["theme-toggle-button"],
+      component: React.lazy(() => import("@/registry/default/example/theme-toggle-animation-demo")),
+      source: "",
+      files: ["registry/default/example/theme-toggle-animation-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

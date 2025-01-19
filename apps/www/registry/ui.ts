@@ -2,6 +2,19 @@ import { Registry } from "@/registry/schema"
 
 export const ui: Registry = [
   {
+    name: "theme-toggle-button",
+    // registryDependencies: ["badge"], WIP
+    type: "registry:ui",
+    dependencies: ["next-themes"],
+    files: ["ui/theme-toggle-button.tsx", "ui/theme-animations.ts"],
+  },
+  {
+    name: "theme-animations",
+    type: "registry:ui",
+    dependencies: ["next-themes"],
+    files: ["ui/theme-animations.ts"],
+  },
+  {
     name: "skiper-card",
     registryDependencies: ["badge"],
     type: "registry:ui",

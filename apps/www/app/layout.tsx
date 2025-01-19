@@ -93,7 +93,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
               {children}
             </div>
             <TailwindIndicator />
-            {/* <ThemeSwitcher /> */}
             <Analytics />
             <SpeedInsights />
             <NewYorkToaster />

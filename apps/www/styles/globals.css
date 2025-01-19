@@ -112,7 +112,7 @@
   }
 
   .step:before {
-    @apply absolute w-9 h-9 bg-black dark:bg-white rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-[10px] border-[#fafafa] dark:border-[#161616] text-black dark:text-white;
+    @apply absolute w-9 h-9 bg-[#f4f4f5] dark:bg-[#27272a] rounded-full font-mono  text-center text-base inline-flex items-center justify-center -indent-px border-[3px] font-semibold border-[#fafafa] dark:border-[#161616]  ;
     @apply ml-[-50px] mt-[-4px];
     content: counter(step);
   }

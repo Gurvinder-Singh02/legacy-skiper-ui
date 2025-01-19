@@ -18,16 +18,16 @@ const getPositionCoords = (position: AnimationStart) => {
 
 const generateSVG = (variant: AnimationVariant, start: AnimationStart) => {
   const { cx, cy } = getPositionCoords(start);
-  
+
   if (variant === "circle") {
     return `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="${cx}" cy="${cy}" r="20" fill="white"/></svg>`;
   }
-  
+
   if (variant === "circle-blur") {
     return `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="${cx}" cy="${cy}" r="18" fill="white" filter="url(%23blur)"/></svg>`;
   }
-  
-  return ''; 
+
+  return '';
 };
 
 
@@ -48,38 +48,41 @@ export const createAnimation = (variant: AnimationVariant, start: AnimationStart
     return {
       name: `${variant}-${start}`,
       css: `
-        ::view-transition-group(root) {
-          animation-duration: 0.7s;
-          animation-timing-function: var(--expo-out);
-          transform-origin: ${transformOrigin};
+       ::view-transition-group(root) {
+        animation-duration: 0.7s;
+        animation-timing-function: var(--expo-out);
+      }
+            
+      ::view-transition-new(root) {
+        animation-name: reveal-light;
+      }
+
+      ::view-transition-old(root),
+      .dark::view-transition-old(root) {
+        animation: none;
+        z-index: -1;
+      }
+      .dark::view-transition-new(root) {
+        animation-name: reveal-dark;
+      }
+
+      @keyframes reveal-dark {
+        from {
+          clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
         }
-        ::view-transition-new(root) {
-          animation-name: reveal-${start}-light;
+        to {
+          clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
         }
-        ::view-transition-old(root),
-        .dark::view-transition-old(root) {
-          animation: none;
-          z-index: -1;
+      }
+
+      @keyframes reveal-light {
+        from {
+          clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
         }
-        .dark::view-transition-new(root) {
-          animation-name: reveal-${start}-dark;
+        to {
+          clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
         }
-        @keyframes reveal-${start}-dark {
-          from {
-            clip-path: polygon(var(--start-point));
-          }
-          to {
-            clip-path: polygon(var(--end-point));
-          }
-        }
-        @keyframes reveal-${start}-light {
-          from {
-            clip-path: polygon(var(--end-point));
-          }
-          to {
-            clip-path: polygon(var(--start-point));
-          }
-        }
+      }
       `
     };
   }
