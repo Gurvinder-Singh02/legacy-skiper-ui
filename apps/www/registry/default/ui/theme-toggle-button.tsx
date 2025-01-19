@@ -16,23 +16,20 @@ interface ThemeToggleAnimationProps {
   variant?: AnimationVariant
   start?: AnimationStart
   showLabel?: boolean
-  url ?: string
+  url?: string
 }
 
 export default function ThemeToggleButton({
   variant = "circle-blur",
   start = "top-left",
   showLabel = false,
-  url = ''
+  url = "",
 }: ThemeToggleAnimationProps) {
-
   const { theme, setTheme } = useTheme()
 
   const styleId = "theme-transition-styles"
 
-
   const updateStyles = React.useCallback((css: string, name: string) => {
-
     if (typeof window === "undefined") return
 
     let styleElement = document.getElementById(styleId) as HTMLStyleElement
@@ -52,9 +49,8 @@ export default function ThemeToggleButton({
   }, [])
 
   const toggleTheme = React.useCallback(() => {
+    const animation = createAnimation(variant, start, url)
 
-    const animation = createAnimation(variant, start , url)
-    
     updateStyles(animation.css, animation.name)
 
     if (typeof window === "undefined") return
@@ -73,7 +69,6 @@ export default function ThemeToggleButton({
     document.startViewTransition(switchTheme)
   }, [theme, setTheme])
 
-
   return (
     <Button
       onClick={toggleTheme}
@@ -83,11 +78,18 @@ export default function ThemeToggleButton({
     >
       <SunIcon className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <MoonIcon className="absolute size-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      {showLabel && <>
-        <span className="hidden group-hover:block border rounded-full px-2 absolute -top-10"> variant = {variant}</span>
-        <span className="hidden group-hover:block border rounded-full px-2 absolute -bottom-10"> start = {start}</span>
-      </>
-      }
+      {showLabel && (
+        <>
+          <span className="hidden group-hover:block border rounded-full px-2 absolute -top-10">
+            {" "}
+            variant = {variant}
+          </span>
+          <span className="hidden group-hover:block border rounded-full px-2 absolute -bottom-10">
+            {" "}
+            start = {start}
+          </span>
+        </>
+      )}
     </Button>
   )
 }

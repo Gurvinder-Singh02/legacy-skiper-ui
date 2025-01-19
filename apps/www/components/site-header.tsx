@@ -14,6 +14,7 @@ import { MobileNav } from "@/components/mobile-nav"
 
 import { DistortedGlass } from "./distorted-glass"
 import ThemeToggler from "@/theme/theme-toggler"
+import ThemeToggleButton from "@/registry/default/ui/theme-toggle-button"
 
 export function SiteHeader() {
   let pathname = usePathname()
@@ -77,8 +78,7 @@ export function SiteHeader() {
                 </div>
               </Link>
               <div>
-                {/* <ModeToggle /> */}
-                <ThemeToggler />
+                <ThemeToggleButton  />
               </div>
 
             </nav>
