@@ -16,12 +16,14 @@ interface ThemeToggleAnimationProps {
   variant?: AnimationVariant
   start?: AnimationStart
   showLabel?: boolean
+  url ?: string
 }
 
 export default function ThemeToggleButton({
   variant = "circle-blur",
   start = "top-left",
-  showLabel = false
+  showLabel = false,
+  url = ''
 }: ThemeToggleAnimationProps) {
 
   const { theme, setTheme } = useTheme()
@@ -51,7 +53,8 @@ export default function ThemeToggleButton({
 
   const toggleTheme = React.useCallback(() => {
 
-    const animation = createAnimation(variant, start)
+    const animation = createAnimation(variant, start , url)
+    
     updateStyles(animation.css, animation.name)
 
     if (typeof window === "undefined") return

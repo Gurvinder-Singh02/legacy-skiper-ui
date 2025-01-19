@@ -47,7 +47,7 @@ const getTransformOrigin = (start: AnimationStart) => {
   }
 };
 
-export const createAnimation = (variant: AnimationVariant, start: AnimationStart): Animation => {
+export const createAnimation = (variant: AnimationVariant, start: AnimationStart, url?: string): Animation => {
 
   const svg = generateSVG(variant, start);
   const transformOrigin = getTransformOrigin(start);
@@ -145,7 +145,7 @@ export const createAnimation = (variant: AnimationVariant, start: AnimationStart
 }
 
 ::view-transition-new(root) {
-  mask: url('https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif') center / 0 no-repeat;
+  mask: url('${url}') center / 0 no-repeat;
   animation: scale 3s;
 }
 
