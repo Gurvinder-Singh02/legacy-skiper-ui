@@ -82,8 +82,13 @@ function NavItem({ item, pathname }: NavItemProps) {
         rel={item.external ? "noreferrer" : ""}
       >
         {item.title}
-        {item.label && (
+        {item.label == "new" && (
           <span className="ml-2 scale-90 rounded-full border border-[#ff3f17] bg-[#ff3e1724]  px-1.5 py-0.5 text-xs leading-none text-[#ff3f17] no-underline group-hover:no-underline">
+            {item.label}
+          </span>
+        )}
+        {item.label == "pro" && (
+          <span className="ml-2 scale-90 rounded-full border border-sky-500 bg-sky-300/5  px-1.5 py-0.5 text-xs leading-none text-sky-500 no-underline group-hover:no-underline">
             {item.label}
           </span>
         )}

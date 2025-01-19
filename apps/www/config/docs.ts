@@ -1,3 +1,4 @@
+import { title } from "process"
 import { MainNavItem, SidebarNavItem } from "types/nav"
 
 interface DocsConfig {
@@ -41,9 +42,19 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Theme",
+          items: [{
+            title: "Animations",
+            items: [],
+            href: "/docs/components/theme-toggle-animations",
+            label : "pro"
+          }
+          ],
+        },
+        {
           title: "App UI",
           items: [
-           
+
             {
               title: "AI Input",
               href: "/docs/components/ai-input",
