@@ -33,7 +33,7 @@ links:
 
 
 
-<Tabs defaultValue="basic">
+<Tabs defaultValue="cli">
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -50,20 +50,42 @@ links:
 ```bash
   npx shadcn@latest add "http://skiper-ui.com/registry/theme-toggle-button.json"
 ```
+</Step>
+
+<Step>
+`components/ui/toggle-theme-demo.tsx`
+```bash
+import ThemeToggleButton from "../ui/theme-toggle-button"
+```
 ```bash
 
-  function example(){
+  <div className="h-full w-full flex items-center justify-center ">
 
-  const numbers = [124.23, 41.75, 2125.95]
-  const diffs = [0.0564, -0.114, 0.0029]
+    <ThemeToggleButton showLabel />
+    <ThemeToggleButton showLabel variant="circle-blur" start="top-right" />
+    <ThemeToggleButton showLabel variant="circle-blur" start="bottom-left" />
+    <ThemeToggleButton showLabel variant="circle-blur" start="bottom-right" />
+
+    <ThemeToggleButton showLabel variant="circle" start="top-left" />
+    <ThemeToggleButton showLabel variant="circle" start="top-right" />
+    <ThemeToggleButton showLabel variant="circle" start="bottom-left" />
+    <ThemeToggleButton showLabel variant="circle" start="bottom-right" />
+
+    <ThemeToggleButton showLabel variant="circle" start="center" />
+
+  </div>
  
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
-  return (
- <AnimatedNumberRandom value={numbers[currentIndex]} diff={diffs[currentIndex]} />
-  )}
 ```
+
+## Here's the fun part
+you can also add transparent gif's [Find some Cool Gif's here](https://giphy.com/search/dance-stickers/)
+```bash
+<ThemeToggleButton showLabel variant="gif" url="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWI1ZmNvMGZyemhpN3VsdWp4azYzcWUxcXIzNGF0enp0eW1ybjF0ZyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Fa6uUw8jgJHFVS6x1t/giphy.gif" />
+<ThemeToggleButton showLabel variant="gif" url="https://media.giphy.com/media/ArfrRmFCzYXsC6etQX/giphy.gif?cid=ecf05e47kn81xmnuc9vd5g6p5xyjt14zzd3dzwso6iwgpvy3&ep=v1_stickers_search&rid=giphy.gif&ct=s"/>
+```
+
 </Step>
+
 </Steps>
 
 </TabsContent>
@@ -295,24 +317,39 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 <Step>Use toggle button whereever you want </Step>
 
+<Step>
+`components/ui/toggle-theme-demo.tsx`
 ```bash
-import { ThemeToggleButton } from './theme-toggle-animation'
+import ThemeToggleButton from "../ui/theme-toggle-button"
+```
+```bash
+
+  <div className="h-full w-full flex items-center justify-center ">
+
+    <ThemeToggleButton showLabel />
+    <ThemeToggleButton showLabel variant="circle-blur" start="top-right" />
+    <ThemeToggleButton showLabel variant="circle-blur" start="bottom-left" />
+    <ThemeToggleButton showLabel variant="circle-blur" start="bottom-right" />
+
+    <ThemeToggleButton showLabel variant="circle" start="top-left" />
+    <ThemeToggleButton showLabel variant="circle" start="top-right" />
+    <ThemeToggleButton showLabel variant="circle" start="bottom-left" />
+    <ThemeToggleButton showLabel variant="circle" start="bottom-right" />
+
+    <ThemeToggleButton showLabel variant="circle" start="center" />
+
+  </div>
+ 
 ```
 
+## Here's the fun part
+you can also add transparent gif's [Find some Cool Gif's here](https://giphy.com/search/dance-stickers/)
 ```bash
-  # default is variant='circle-blur' start='top-left'
-  <ThemeToggleButton /> 
-  <ThemeToggleButton variant='circle-blur' start='top-right' />
-  <ThemeToggleButton variant='circle-blur' start='bottom-left' />
-  <ThemeToggleButton variant='circle-blur' start='bottom-right' />
-
-  <ThemeToggleButton variant='circle' start='top-left' />
-  <ThemeToggleButton variant='circle' start='top-right' />
-  <ThemeToggleButton variant='circle' start='bottom-left' />
-  <ThemeToggleButton variant='circle' start='bottom-right' />
-  
-  <ThemeToggleButton variant='polygon'  />
+<ThemeToggleButton showLabel variant="gif" url="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWI1ZmNvMGZyemhpN3VsdWp4azYzcWUxcXIzNGF0enp0eW1ybjF0ZyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Fa6uUw8jgJHFVS6x1t/giphy.gif" />
+<ThemeToggleButton showLabel variant="gif" url="https://media.giphy.com/media/ArfrRmFCzYXsC6etQX/giphy.gif?cid=ecf05e47kn81xmnuc9vd5g6p5xyjt14zzd3dzwso6iwgpvy3&ep=v1_stickers_search&rid=giphy.gif&ct=s"/>
 ```
+
+</Step>
 
 </Steps>
 
