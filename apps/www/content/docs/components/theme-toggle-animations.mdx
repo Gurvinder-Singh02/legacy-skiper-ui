@@ -50,6 +50,32 @@ links:
   npx shadcn@latest add "http://skiper-ui.com/registry/theme-toggle-button.json"
 ```
 </Step>
+<Step>
+wrap your rootLayout `layout.tsx`
+```bash
+import { ThemeProvider } from "@/components/theme-provider"
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
+  )
+}
+
+```
+</Step>
 
 <Step>
 `components/ui/toggle-theme-demo.tsx`
