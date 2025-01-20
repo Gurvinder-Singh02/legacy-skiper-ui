@@ -34,9 +34,9 @@ export default function AnimatedNumberCounter() {
     <div
       className={`flex items-center gap-4 rounded-2xl  transition-colors duration-300 ${
         flashColor === "up"
-          ? " bg-green-50 "
+          ? " text-green-500 "
           : flashColor === "down"
-          ? "bg-red-50"
+          ? "text-red-500"
           : ""
       }`}
     >
@@ -51,7 +51,7 @@ export default function AnimatedNumberCounter() {
         />
       </button>
 
-      <NumberFlow value={count} className="text-5xl font-semibold" />
+      <NumberFlow value={count} className="text-5xl w-14 text-center font-semibold" />
 
       <button
         onClick={handleDecrement}
