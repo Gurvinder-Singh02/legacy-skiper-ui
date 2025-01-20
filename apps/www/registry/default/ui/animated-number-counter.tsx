@@ -51,7 +51,10 @@ export default function AnimatedNumberCounter() {
         />
       </button>
 
-      <NumberFlow value={count} className="text-5xl w-14 text-center font-semibold" />
+      <NumberFlow
+        value={count}
+        className="text-5xl w-14 text-center font-semibold"
+      />
 
       <button
         onClick={handleDecrement}

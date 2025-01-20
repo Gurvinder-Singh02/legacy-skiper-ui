@@ -6,7 +6,11 @@ export const ui: Registry = [
     registryDependencies: ["button"],
     type: "registry:ui",
     dependencies: ["next-themes"],
-    files: ["ui/theme-toggle-button.tsx", "ui/theme-animations.ts"],
+    files: [
+      "ui/theme-toggle-button.tsx",
+      "ui/theme-animations.ts",
+      "ui/theme-provider.tsx",
+    ],
   },
   {
     name: "theme-animations",

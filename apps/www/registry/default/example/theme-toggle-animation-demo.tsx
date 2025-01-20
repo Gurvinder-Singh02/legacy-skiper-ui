@@ -5,7 +5,6 @@ import ThemeToggleButton from "../ui/theme-toggle-button"
 const ThemeToggleAnimationsDemo = () => {
   return (
     <div className="h-full w-full flex items-center justify-center ">
-
       <ThemeToggleButton
         showLabel
         variant="gif"
@@ -28,8 +27,6 @@ const ThemeToggleAnimationsDemo = () => {
       <ThemeToggleButton showLabel variant="circle" start="bottom-right" />
 
       <ThemeToggleButton showLabel variant="circle" start="center" />
-
-
     </div>
   )
 }

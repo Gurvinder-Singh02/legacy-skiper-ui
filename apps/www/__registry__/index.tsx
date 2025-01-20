@@ -8,10 +8,10 @@ export const Index: Record<string, any> = {
     "theme-toggle-button": {
       name: "theme-toggle-button",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["button"],
       component: React.lazy(() => import("@/registry/default/ui/theme-toggle-button")),
       source: "",
-      files: ["registry/default/ui/theme-toggle-button.tsx","registry/default/ui/theme-animations.ts"],
+      files: ["registry/default/ui/theme-toggle-button.tsx","registry/default/ui/theme-animations.ts","registry/default/ui/theme-provider.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
