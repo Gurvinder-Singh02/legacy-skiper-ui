@@ -24,7 +24,7 @@ export function SiteHeader() {
         className={cn(
           "sticky top-0 z-50 w-full backdrop-blur-sm sm:backdrop-blur-none ",
           pathname?.includes("/docs")
-            ? "-mb-12 bg-[#FAFAFA]  backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:bg-[#171517] lg:backdrop-blur-xl"
+            ? "-mb-12 bg-[#FAFAFA]  backdrop-blur supports-[backdrop-filter]:bg-background/60  lg:backdrop-blur-xl"
             : "-mb-14"
         )}
       >
