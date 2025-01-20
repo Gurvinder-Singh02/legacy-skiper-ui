@@ -12,9 +12,9 @@ import {
 } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 
-// import { ThemeProvider } from "@/components/providers"
+
 import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeSwitcher } from "@/components/theme-switcher"
+
 import { ThemeProvider } from "@/theme/theme-provider"
 
 export const metadata: Metadata = {
@@ -87,7 +87,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
           >
             <div className="relative z-10 flex min-h-screen flex-col ">
               {children}

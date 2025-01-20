@@ -88,7 +88,7 @@ function NavItem({ item, pathname }: NavItemProps) {
           </span>
         )}
         {item.label == "pro" && (
-          <span className="ml-2 scale-90 rounded-full border border-sky-500 bg-sky-300/5  px-1.5 py-0.5 text-xs leading-none text-sky-500 no-underline group-hover:no-underline">
+          <span className="ml-2 scale-90 rounded-full border border-sky-500 bg-sky-300/5  px-2 py-0.5 text-xs leading-none text-sky-500 no-underline group-hover:no-underline">
             {item.label}
           </span>
         )}
