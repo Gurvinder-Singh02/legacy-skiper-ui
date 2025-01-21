@@ -18,7 +18,7 @@ export const docsConfig: DocsConfig = {
       href: "/pricing",
     },
     {
-      title: "New Letter",
+      title: "NewsLetter",
       href: "/newsletter",
     },
   ],

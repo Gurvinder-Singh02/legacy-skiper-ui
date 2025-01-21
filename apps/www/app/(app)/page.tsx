@@ -40,7 +40,7 @@ export default function IndexPage() {
             </GradientHeading>
           </div>
 
-          <WrapButton className="mt-10" href="/docs/components/card-carousel" >
+          <WrapButton className="mt-10" href="/docs/components/theme-toggle-animations" >
             <Globe className="animate-spin " />
             Get started
           </WrapButton>
