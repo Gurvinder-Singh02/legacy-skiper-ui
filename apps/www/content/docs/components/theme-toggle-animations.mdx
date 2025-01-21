@@ -49,11 +49,12 @@ links:
 ```bash
   npx shadcn@latest add "http://skiper-ui.com/registry/theme-toggle-button.json"
 ```
+This will add 4 files to components/ui
 </Step>
 <Step>
 wrap your rootLayout `layout.tsx`
 ```bash
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/ui/theme-provider"
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -78,28 +79,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 </Step>
 
 <Step>
-`components/ui/toggle-theme-demo.tsx`
+Use the toggle button anywhere 
 ```bash
-import ThemeToggleButton from "../ui/theme-toggle-button"
+import ThemeToggleButton from "@components/ui/theme-toggle-button"
 ```
 ```bash
-
-  <div className="h-full w-full flex items-center justify-center ">
-
-    <ThemeToggleButton showLabel />
-    <ThemeToggleButton showLabel variant="circle-blur" start="top-right" />
-    <ThemeToggleButton showLabel variant="circle-blur" start="bottom-left" />
-    <ThemeToggleButton showLabel variant="circle-blur" start="bottom-right" />
-
-    <ThemeToggleButton showLabel variant="circle" start="top-left" />
-    <ThemeToggleButton showLabel variant="circle" start="top-right" />
-    <ThemeToggleButton showLabel variant="circle" start="bottom-left" />
-    <ThemeToggleButton showLabel variant="circle" start="bottom-right" />
-
-    <ThemeToggleButton showLabel variant="circle" start="center" />
-
-  </div>
- 
+<ThemeToggleButton />
 ```
 
 
@@ -371,6 +356,13 @@ import ThemeToggleButton from "../ui/theme-toggle-button"
 
 </Tabs>
 
+## Props 
+| Prop   | Description                                       | Type           | Default Value |
+|--------|---------------------------------------------------|----------------|---------------|
+| `variant` | Specifies the variant type. E.g., 'circle', 'circle-blur' , 'gif' | `polygon`       | `circle-blur`     |
+| `start`  | Sets the starting point (e.g., top left, center) | `string` | `top-left`       |
+| `url`    | The URL associated with the link only for gif variant.    | `string`       | `""`          |
+| `showLabel`    | only for dev purpose to check the props set    | `boolean`       | `false`          |
 
 ## Here's the fun part
 you can also add transparent gif's [Find some Cool Gif's here](https://giphy.com/search/dance-stickers/)
