@@ -57,6 +57,7 @@ export function SiteHeader() {
                     "w-9 p-0 h-9 "
                   )}
                 >
+                   <span className="sr-only">github</span>
                   <Icons.gitHub className="size-4" />
                 </div>
               </Link>

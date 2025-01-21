@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react"
 import NumberFlow from "@number-flow/react"
 import { ArrowRightIcon } from "lucide-react"
-
 import AnimatedShinyText from "./ui/animated-shiny-text"
 
 export function Announcement() {
@@ -16,7 +15,7 @@ export function Announcement() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const targetDate = new Date("2025-01-30")
+      const targetDate = new Date("2025-01-25")
       const now = new Date()
       const difference = targetDate.getTime() - now.getTime()
 
@@ -44,7 +43,7 @@ export function Announcement() {
       className="inline-flex items-center rounded-full border bg-muted px-3 py-1 text-sm font-medium"
     >
       <AnimatedShinyText className="inline-flex group items-center justify-center rounded-full px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-        <span> 🎉 &nbsp;| Coming in </span> &nbsp;
+        <span> 🎉 &nbsp;| New component in </span> &nbsp;
         <NumberFlow value={timeLeft.days} />
         d&nbsp;
         <NumberFlow value={timeLeft.hours} />

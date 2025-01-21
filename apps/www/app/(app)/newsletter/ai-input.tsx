@@ -164,7 +164,7 @@ export default function AiInput() {
                                 {imagePreview && (
                                     <div className="absolute w-[100px] h-[100px] top-14 -left-4">
                                         <Image className="object-cover rounded-2xl" src={imagePreview || '/picture1.jpeg'} height={500} width={500} alt="additional image" />
-                                        <button onClick={handelClose} className="bg-[#e8e8e8] text-[#464646] absolute -top-1 -left-1 shadow-3xl rounded-full rotate-45">
+                                        <button onClick={handelClose} id="aiinput" name="submit" className="bg-[#e8e8e8] text-[#464646] absolute -top-1 -left-1 shadow-3xl rounded-full rotate-45">
                                             <Plus className="w-4 h-4" />
                                         </button>
                                     </div>

@@ -40,17 +40,17 @@ const StatisticHighlight = ({ text, num }: { text: string; num: number }) => {
 
       <div className="mx-auto mt-10 flex flex-col items-center justify-center">
         <div className="flex items-center justify-end gap-2 text-center text-lg md:text-2xl lg:text-3xl">
-          <h5>
+          <p>
             Components are fully designed products
-          </h5>
+          </p>
           <span className="scale-125">
             <Icons.pLogo />
           </span>
         </div>
-        <h5 className="text-center text-lg md:text-2xl lg:text-3xl ">
+        <p className="text-center text-lg md:text-2xl lg:text-3xl ">
           and even have{" "}
           <span className="font-bold">real daily active uses.</span>
-        </h5>
+        </p>
       </div>
       <div className="mt-10 scale-125">
         <svg

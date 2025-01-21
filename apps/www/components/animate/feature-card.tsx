@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type MouseEvent } from "react"
 import Image, { type StaticImageData } from "next/image"
-import cult from "@/assets/skiper.png"
+import skiper from "@/assets/skiper.png"
 import clsx from "clsx"
 import {
   motion,
@@ -133,7 +133,7 @@ export function ChallengeCreationCard({
         <Image
           alt={image.alt}
           className="pointer-events-none top-1/2 w-[90%] overflow-hidden rounded-2xl border border-neutral-100/10 transition-all duration-500 dark:border-zinc-700 md:left-[35px] md:top-[30%] md:w-full"
-          src={cult}
+          src={skiper}
           width={800}
           height={300}
           style={{

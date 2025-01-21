@@ -1,7 +1,7 @@
 import { IceCream } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import cultSeoOg from "@/components/landing/assets/cult-seo-og.png"
+import skiperSeoOg from "@/components/landing/assets/skiper-seo-og.png"
 import manifestBottomLeft from "@/components/landing/assets/manifest-library.png"
 import runeHero from "@/components/landing/assets/rune-hero.png"
 import {
@@ -17,15 +17,15 @@ import Link from "next/link"
 export function TemplateGrid() {
   return (
 
-    <div className="dark relative flex w-full flex-col rounded-[24px] border border-black/5 dark:border-white/20 bg-neutral-800/5 dark:bg-white/10 p-2 shadow-sm md:flex-row md:items-center md:gap-24 md:rounded-[18px] md:p-2">
+    <div className="relative rounded-[24px] border border-black/5 dark:border-white/20 bg-neutral-800/5 dark:bg-white/10 p-2 shadow-sm ">
       <Badge
         variant="outline"
-         className="absolute left-4 top-6 rounded-[14px] border border-black/10 dark:border-white/20 dark:bg-white/20 text-base md:left-6"
+        className="absolute left-4 top-6 rounded-[14px] border border-black/10  dark:border-white/20 dark:bg-white/20 text-base md:left-6"
       >
-        <IceCream className=" fill-[#D2F583]  stroke-1 text-neutral-800  " />{" "}
+        <IceCream className=" fill-[#D2F583]  stroke-1 text-neutral-800  " />
         Templates
       </Badge>
-      <div className="   flex flex-col justify-center mt-5  space-y-4 rounded-[34px]   p-3 pt-12">
+      <div className=" dark  flex flex-col justify-center mt-5  space-y-4 rounded-[34px]   p-3 pt-12">
         <div className="relative grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
           {TEMPLATES_GRID.map((card) => (
             <Link
@@ -142,7 +142,6 @@ export const TEMPLATES_GRID = [
     ],
     type: "template",
     stack: ["nextjs", "tailwind", "supabase", "openai"],
-    // images: [manifestBottomLeft, manifestCenter, manifestRight],
     images: [manifestBottomLeft],
     gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVwNXVkdXM3aWM4NXM2a2s2czFhd283NHdrbWFsdm43bGdsMXp4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SM08k77xWhQtQDDluI/giphy.gif",
   },
@@ -177,7 +176,6 @@ export const TEMPLATES_GRID = [
 
     gradient: "bg-gradient-to-b from-white to-[#2770EB] via-[#FF7102]/20",
     gif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExanI3bjNzdTliOTF0aW9xMzY3Y21sdnE3Nnowb3l6YW4xeXZtdTE0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L9F8Kt6IYdRvHbcHvl/giphy.gif",
-    // images: [cultSeoScore, cultSeoVitals, cultSeoOg, cultSeoHome],
-    images: [cultSeoOg],
+    images: [skiperSeoOg],
   },
 ]

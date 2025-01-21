@@ -82,7 +82,7 @@ pnpm --filter=www dev
 2. To run the `skiper-ui` package:
 
 ```bash
-pnpm --filter=cult-ui dev
+pnpm --filter=skiper-ui dev
 ```
 
 ## Documentation
