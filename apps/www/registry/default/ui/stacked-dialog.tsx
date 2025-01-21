@@ -238,7 +238,7 @@ export const DialogStackContent = ({
     <div
       onClick={handleClick}
       className={cn(
-        "size-full rounded-[22px] border-2 border-black/5 bg-background p-2 shadow-lg transition-all duration-300 ",
+        "size-full rounded-[22px] border-2 border-black/5 dark:border-white/20 bg-background p-2 shadow-lg transition-all duration-300 ",
         className
       )}
       style={{
@@ -257,7 +257,7 @@ export const DialogStackContent = ({
     >
       <div
         className={cn(
-          "size-full rounded-[14px] border border-black/5 bg-neutral-800/5 p-4 shadow-sm transition-all duration-300",
+          "size-full rounded-[14px] border border-black/5 dark:border-white/20 bg-neutral-800 dark:bg-white/5 p-4 shadow-sm transition-all duration-300",
           context.activeIndex !== index &&
             "pointer-events-none select-none opacity-0"
         )}
