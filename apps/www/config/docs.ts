@@ -133,7 +133,7 @@ export const docsConfig: DocsConfig = {
               label: "new",
             },
             {
-              title: "Maksed Div",
+              title: "Masked Div",
               href: "/docs/components/masked-div",
               items: [],
               label: "new",
