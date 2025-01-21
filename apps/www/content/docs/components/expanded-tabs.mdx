@@ -102,3 +102,22 @@ function BasicExample() {
 </TabsContent>
 
 </Tabs>
+
+## Usage 
+define tabs object
+```bash
+import { Home,Bell,Settings,HelpCircle, Shield, User, } from "lucide-react"
+const tabs = [
+    { title: "Dashboard", icon: Home },
+    { title: "Notifications", icon: Bell },
+    { type: "separator" as const },
+    { title: "Settings", icon: Settings },
+    { title: "Support", icon: HelpCircle },
+    { title: "Security", icon: Shield },
+  ]
+```
+
+Use the component
+```bash
+ <ExpandedTabs tabs={tabs} />
+```
