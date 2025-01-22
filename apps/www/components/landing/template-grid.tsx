@@ -91,7 +91,7 @@ export const TEMPLATES_GRID = [
     gradient: "bg-gradient-to-b from-white/10 to-[#FF9150] via-[#FFD0B7]/30",
     slug: "LandingPage",
     description:
-      "Modern landing page template featuring Framer Motion animations, custom navigation components, and responsive design optimized for conversions.",
+    "Modern landing page template featuring Framer Motion animations, custom navigation components, and responsive design optimized for conversions.",
     features: [
       {
         name: "Animation",
@@ -107,10 +107,10 @@ export const TEMPLATES_GRID = [
     type: "template",
     stack: ["nextjs", "tailwind"],
     images: [runeHero],
-
+    
     gif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTFjaG1wM3o0ZzBlbXA2Z2Ywc243d2ttdGZpZXVpbXdmYjJreHp5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sZ7wUinnbIQYlucMXv/giphy.gif",
   },
-
+  
   {
     name: "Manifest",
     slug: "Manifest",
@@ -146,11 +146,11 @@ export const TEMPLATES_GRID = [
     gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVwNXVkdXM3aWM4NXM2a2s2czFhd283NHdrbWFsdm43bGdsMXp4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SM08k77xWhQtQDDluI/giphy.gif",
   },
   {
-    name: "DEV Portfolio",
+    name: "Dev Portfolio",
     slug: "Portfolio",
     new: true,
-    videoUrl: "",
-    liveUrl: "#",
+    videoUrl: "https://d2glbkh3xawr9t.cloudfront.net/dev.gxiri.mov ",
+    liveUrl: "https://dev.gxuri.in/",
     meta: "fullstack",
     description:
       "Comprehensive SEO analysis tool with web crawling, performance testing, and AI-powered optimization recommendations for website improvement.",

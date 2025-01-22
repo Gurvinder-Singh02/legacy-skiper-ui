@@ -24,16 +24,16 @@ const page = ({ params }: any) => {
 
     return (
         <div className='mt-40 ' >
-            <div className="space-y-4 flex flex-col items-center justify-center">
+            <div className="space-y-4 flex max-w-5xl mx-auto flex-col items-center justify-center">
                 <GradientHeading
                     size="xll"
                     weight="bold"
                     className="text-center text-xl font-bold    tracking-tighter lg:leading-[0.5rem] "
-                > {params.slug}
+                > {data?.name}
                     <br className="hidden md:block" />
                 </GradientHeading>
                 <p className="text-center text-base  leading-2 opacity-60  text-foreground md:pt-8 md:text-xl md:font-normal md:leading-6">
-                    From custom components to complete website tailored to your needs.
+                    {data?.description}
                 </p>
 
                 {data?.videoUrl ? 
