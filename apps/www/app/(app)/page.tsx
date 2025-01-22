@@ -24,7 +24,7 @@ export default function IndexPage() {
       <div className="data:bg-black container relative pt-12 md:pt-8">
         <FadeIn>
           <PageHeader>
-            <Announcement />
+            <a href="https://www.producthunt.com/posts/skiper-ui?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-skiper&#0045;ui" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=806890&theme=light&t=1737565356562" alt="skiper&#0047;ui - Components&#0032;crafted&#0032;for&#0032;modern&#0032;websites | Product Hunt" className="w-[200px] h-[54px] " /></a>
             <div className="pt-4 md:pt-0">
               <GradientHeading
                 weight="bold"
@@ -224,14 +224,15 @@ export default function IndexPage() {
       <section className=" mt-12 w-full ">
 
         <div className=" mx-auto   max-w-4xl rounded-[40px] border border-black/5 dark:border-white/20 p-2 shadow-sm ">
-          <div className=" relative mx-auto h-[400px] max-w-4xl overflow-hidden rounded-[38px] border border-black/5 bg-[#ff4017] p-2 shadow-sm ">
+          <div className=" relative mx-auto  h-[400px] max-w-4xl overflow-hidden rounded-[38px] border border-black/5 bg-[#ff4017] p-2 shadow-sm ">
             <p className="mt-20 text-center text-white">
               Bringing simplicity to the future
             </p>
-            <h1 className=" stroked-text absolute inset-x-0   mt-[190px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[100px] sm:text-[190px] ">
+              <Announcement />
+            <h1 className=" stroked-text absolute inset-x-0   mt-[120px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[30px] sm:text-[190px] ">
               skiper/ui
             </h1>
-            <h1 className="  absolute inset-x-0  mt-[190px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[100px] sm:text-[190px] ">
+            <h1 className="  absolute inset-x-0  mt-[120px] text-center text-[100px] font-semibold text-[#ff4017] sm:mt-[30px] sm:text-[190px] ">
               skiper/ui{" "}
             </h1>
           </div>

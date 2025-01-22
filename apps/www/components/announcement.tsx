@@ -38,23 +38,25 @@ export function Announcement() {
   }, [])
 
   return (
-    <a
-      href="#"
-      className="inline-flex items-center rounded-full border bg-muted px-3 py-1 text-sm font-medium"
-    >
-      <AnimatedShinyText className="inline-flex group items-center justify-center rounded-full px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-        <span> 🎉 &nbsp;| New component in </span> &nbsp;
-        <NumberFlow value={timeLeft.days} />
-        d&nbsp;
-        <NumberFlow value={timeLeft.hours} />
-        h&nbsp;
-        <NumberFlow value={timeLeft.minutes} />
-        m&nbsp;
-        <NumberFlow value={timeLeft.seconds} />
-        s&nbsp;
-        <ArrowRightIcon className="ml-1 size-3 group-hover:rotate-180 group-hover:ml-4 transition-all duration-300 ease-in-out group-hover:translate-x-0.5" />
-      </AnimatedShinyText>
-    </a>
+    <div className="flex justify-center w-full">
+      <a
+        href="#"
+        className="items-center mt-10  rounded-full border  border-white/20  text-sm p-1 font-medium"
+      >
+        <AnimatedShinyText className="inline-flex group text-white items-center border justify-center rounded-full px-4 py-1 transition ease-out ">
+          <span> 🎉 &nbsp;| New component in </span> &nbsp;
+          <NumberFlow value={timeLeft.days} />
+          d&nbsp;
+          <NumberFlow value={timeLeft.hours} />
+          h&nbsp;
+          <NumberFlow value={timeLeft.minutes} />
+          m&nbsp;
+          <NumberFlow value={timeLeft.seconds} />
+          s&nbsp;
+          <ArrowRightIcon className="ml-1 size-3 group-hover:rotate-180 group-hover:ml-4 transition-all duration-300 ease-in-out group-hover:translate-x-0.5" />
+        </AnimatedShinyText>
+      </a>
+    </div>
   )
 }
 
@@ -91,15 +93,17 @@ export function CountDown() {
   }, [])
 
   return (
-    <>
-      <NumberFlow value={timeLeft.days} />
-      d&nbsp;
-      <NumberFlow value={timeLeft.hours} />
-      h&nbsp;
-      <NumberFlow value={timeLeft.minutes} />
-      m&nbsp;
-      <NumberFlow value={timeLeft.seconds} />
-      s&nbsp;
-    </>
+    <div className="flex justify-center w-full">
+      <div className="inline-flex items-center">
+        <NumberFlow value={timeLeft.days} />
+        d&nbsp;
+        <NumberFlow value={timeLeft.hours} />
+        h&nbsp;
+        <NumberFlow value={timeLeft.minutes} />
+        m&nbsp;
+        <NumberFlow value={timeLeft.seconds} />
+        s&nbsp;
+      </div>
+    </div>
   )
 }
