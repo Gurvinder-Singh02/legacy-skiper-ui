@@ -37,7 +37,8 @@ const page = ({ params }: any) => {
                 </p>
 
                 <Image src={data?.gif || ''} height={1080} width={1080} alt='100' className='w-4xl rounded-2xl' />
-                <WrapButton>
+
+                <WrapButton href={data?.liveUrl}  >
                     Show preview
                 </WrapButton>
             </div>
