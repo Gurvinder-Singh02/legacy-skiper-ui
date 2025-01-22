@@ -36,7 +36,14 @@ const page = ({ params }: any) => {
                     From custom components to complete website tailored to your needs.
                 </p>
 
-                <Image src={data?.gif || ''} height={1080} width={1080} alt='100' className='w-4xl rounded-2xl' />
+                {data?.videoUrl ? 
+                    <video height={1080} width={1000} muted autoPlay loop className='rounded-2xl'>
+                        <source src={data.videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video> :
+                    <Image src={data?.gif || ''} height={1080} width={1080} alt='100' className='w-4xl rounded-2xl' /> 
+                }
+
 
                 <WrapButton href={data?.liveUrl}  >
                     Show preview

@@ -86,7 +86,7 @@ export const TEMPLATES_GRID = [
     name: "Landing Page",
     new: false,
     meta: "marketing",
-    downloadUrl: "landing-page.zip",
+    videoUrl: "https://d2glbkh3xawr9t.cloudfront.net/gxuri.mp4",
     liveUrl: "https://gxuri.in",
     gradient: "bg-gradient-to-b from-white/10 to-[#FF9150] via-[#FFD0B7]/30",
     slug: "LandingPage",
@@ -116,7 +116,7 @@ export const TEMPLATES_GRID = [
     slug: "Manifest",
     meta: "fullstack",
     liveUrl: "#",
-    downloadUrl: "#",
+    videoUrl: "",
     gradient: "bg-gradient-to-b from-white/10 to-green-400 via-green-50",
     new: false,
     description:
@@ -149,7 +149,7 @@ export const TEMPLATES_GRID = [
     name: "DEV Portfolio",
     slug: "Portfolio",
     new: true,
-    downloadUrl: "#",
+    videoUrl: "",
     liveUrl: "#",
     meta: "fullstack",
     description:
