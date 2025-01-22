@@ -96,7 +96,7 @@ const StackedDialogDemo = () => {
                   <h1 className="text-2xl font-semibold leading-none tracking-tight">
                     {item.title}
                   </h1>
-                  <p className=" text-black/50 ">{item.description}</p>
+                  <p className=" text-black/50 dark:text-white/50 ">{item.description}</p>
                 </div>
               </DialogStackHeader>
 
