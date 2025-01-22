@@ -1,4 +1,3 @@
-// #WIP
 export const siteConfig = {
 
   name: "skiper/ui",
