@@ -11,7 +11,7 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Components",
-      href: "/docs/components/ai-input",
+      href: "/docs/components/theme-toggle-animations",
     },
     {
       title: "Pricing",

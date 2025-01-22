@@ -27,40 +27,40 @@ export function MainNav() {
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link
-          href="/docs/components/minimal-card"
-          className={cn(
-            "font-regular text-base transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/components")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
+          href="/docs/components/theme-toggle-animations",
+        className={cn(
+          "font-regular text-base transition-colors hover:text-foreground/80",
+          pathname?.startsWith("/docs/components")
+            ? "text-foreground"
+            : "text-foreground/60"
+        )}
         >
-          Components
-        </Link>
-        <Link
-          href="/pricing"
-          className={cn(
-            "font-regular text-base transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/pricing")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Pricing
-        </Link>
-        <a
-          href="/newsletter"
-          className={cn(
-            "font-regular text-base transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/newsletter")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Newsletter
-        </a>
-       
-      </nav>
-    </div>
+        Components
+      </Link>
+      <Link
+        href="/pricing"
+        className={cn(
+          "font-regular text-base transition-colors hover:text-foreground/80",
+          pathname?.startsWith("/pricing")
+            ? "text-foreground"
+            : "text-foreground/60"
+        )}
+      >
+        Pricing
+      </Link>
+      <a
+        href="/newsletter"
+        className={cn(
+          "font-regular text-base transition-colors hover:text-foreground/80",
+          pathname?.startsWith("/newsletter")
+            ? "text-foreground"
+            : "text-foreground/60"
+        )}
+      >
+        Newsletter
+      </a>
+
+    </nav>
+    </div >
   )
 }
