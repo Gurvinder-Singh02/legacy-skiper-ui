@@ -1,4 +1,6 @@
 import { TEMPLATES_GRID } from '@/components/landing/template-grid'
+import WrapButton from '@/components/skiper/wrap-button'
+
 import { GradientHeading } from '@/registry/default/ui/gradient-heading'
 import { Metadata } from 'next'
 
@@ -21,8 +23,8 @@ const page = ({ params }: any) => {
     ))
 
     return (
-        <div className='mt-40 flex items-center justify-center' >
-            <div className="space-y-4">
+        <div className='mt-40 ' >
+            <div className="space-y-4 flex flex-col items-center justify-center">
                 <GradientHeading
                     size="xll"
                     weight="bold"
@@ -35,7 +37,9 @@ const page = ({ params }: any) => {
                 </p>
 
                 <Image src={data?.gif || ''} height={1080} width={1080} alt='100' className='w-4xl rounded-2xl' />
-
+                <WrapButton>
+                    Show preview
+                </WrapButton>
             </div>
         </div>
     )

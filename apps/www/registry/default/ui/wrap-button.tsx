@@ -16,7 +16,7 @@ const WrapButton: React.FC<WrapButtonProps> = ({
   href,
 }) => {
   return (
-    <>
+    <div className="flex items-center justify-center">
       {href ? (
         <Link href={href}>
           <div
@@ -59,7 +59,7 @@ const WrapButton: React.FC<WrapButtonProps> = ({
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

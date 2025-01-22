@@ -13,7 +13,7 @@ interface WrapButtonProps {
 
 const WrapButton: React.FC<WrapButtonProps> = ({ className, children, href, bgColor }) => {
     return (
-        <>
+        <div className='flex items-center justify-center' >
             {href ? <Link href={href}>
                 <div className={cn("group cursor-pointer border group border-[#3B3A3A] bg-[#151515] gap-2  h-[64px] flex items-center p-[11px] rounded-full", className)} >
                     <div className={cn('border border-[#3B3A3A] bg-[#ff3f17]  h-[43px] rounded-full flex items-center justify-center text-white', bgColor)}>
@@ -34,7 +34,7 @@ const WrapButton: React.FC<WrapButtonProps> = ({ className, children, href, bgCo
             </div >
             }
 
-        </>
+        </div>
     )
 }
 
