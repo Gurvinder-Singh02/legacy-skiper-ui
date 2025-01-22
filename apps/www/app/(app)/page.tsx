@@ -24,7 +24,7 @@ export default function IndexPage() {
       <div className="data:bg-black container relative pt-12 md:pt-8">
         <FadeIn>
           <PageHeader>
-            <a href="https://www.producthunt.com/posts/skiper-ui?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-skiper&#0045;ui" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=806890&theme=light&t=1737565356562" alt="skiper&#0047;ui - Components&#0032;crafted&#0032;for&#0032;modern&#0032;websites | Product Hunt" className="w-[200px] h-[54px] " /></a>
+            <a href="https://www.producthunt.com/posts/skiper-ui?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-skiper&#0045;ui" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=806890&theme=light&t=1737565356562" alt="skiper&#0047;ui - Components&#0032;crafted&#0032;for&#0032;modern&#0032;websites | Product Hunt" className="w-[180px] h-[54px] " /></a>
             <div className="pt-4 md:pt-0">
               <GradientHeading
                 weight="bold"
