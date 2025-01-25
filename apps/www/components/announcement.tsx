@@ -15,7 +15,7 @@ export function Announcement() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const targetDate = new Date("2025-01-25")
+      const targetDate = new Date("2025-02-05")
       const now = new Date()
       const difference = targetDate.getTime() - now.getTime()
 
