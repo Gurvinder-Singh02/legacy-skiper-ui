@@ -1,8 +1,11 @@
+import { Sparkle } from 'lucide-react'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className='h-10 w-10 bg-red'>
+      <Sparkle />
+    </div>
   )
 }
 

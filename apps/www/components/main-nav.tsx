@@ -14,7 +14,7 @@ export function MainNav() {
   const pathname = usePathname()
 
   return (
-    <div className=" ml-4  hidden md:flex ">
+    <div className=" ml-4  hidden md:flex  ">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Icons.logo_dark className="size-6" />
         <span className="hidden text-xl font-bold tracking-tight sm:inline-block">
@@ -59,7 +59,6 @@ export function MainNav() {
         >
           Newsletter
         </a>
-
       </nav>
     </div>
   )
