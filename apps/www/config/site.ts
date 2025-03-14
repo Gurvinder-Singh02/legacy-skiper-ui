@@ -70,8 +70,8 @@ export const TIERS: PricingTier[] = [
     id: "pro",
     name: "Custom Components",
     price: {
-      monthly: 499,
-      yearly: 5299,
+      monthly: 899,
+      yearly: 499,
     },
     description: "For professional developers",
     features: [
@@ -88,15 +88,15 @@ export const TIERS: PricingTier[] = [
     id: "business",
     name: "Custom Pages",
     price: {
-      monthly: 799,
-      yearly: 6200,
+      monthly: 1399,
+      yearly: 999,
     },
     description: "Best for small businesses",
     features: [
-      "100+ premium components",
+      "6 custom pages with  ",
       "Advanced customization",
       "Priority support",
-      "Multiple projects license",
+      "Custom Animations",
       "All framework support",
     ],
     cta: "Comming Soon",
