@@ -22,7 +22,6 @@ Install the required dependencies.
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
 
-
 <TabsContent value="cli">
 
 <Steps>
@@ -32,7 +31,7 @@ Install the required dependencies.
 Paste the below command in your terminal
 
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/hover-expand.json"
+  npx shadcn@latest add "http://legacy.skiper-ui.com/registry/hover-expand.json"
 ```
 
 </Step>
@@ -44,6 +43,7 @@ Paste the below command in your terminal
 ```tsx
 import HoverExpand from "@/ui/hover-expand"
 ```
+
 ```tsx
 const images = [
   "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -55,18 +55,17 @@ const images = [
   "https://assets.lummi.ai/assets/Qmb2P6tF2qUaFXnXpnnp2sk9HdVHNYXUv6MtoiSq7jjVhQ?auto=format&w=1500",
   "https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?q=80&w=1200&auto=format",
 ]
-
 ```
 
 ```tsx
 function BasicExample() {
   return (
     <HoverExpand
-          images={images}
-          initialSelectedIndex={0}
-          thumbnailHeight={200}
-          modalImageSize={400}
-          maxThumbnails={11}
+      images={images}
+      initialSelectedIndex={0}
+      thumbnailHeight={200}
+      modalImageSize={400}
+      maxThumbnails={11}
     />
   )
 }
@@ -109,6 +108,7 @@ export function cn(...inputs: ClassValue[]) {
 ```tsx
 import HoverExpand from "@/ui/hover-expand"
 ```
+
 ```tsx
 const images = [
   "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -120,18 +120,17 @@ const images = [
   "https://assets.lummi.ai/assets/Qmb2P6tF2qUaFXnXpnnp2sk9HdVHNYXUv6MtoiSq7jjVhQ?auto=format&w=1500",
   "https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?q=80&w=1200&auto=format",
 ]
-
 ```
 
 ```tsx
 function BasicExample() {
   return (
     <HoverExpand
-          images={images}
-          initialSelectedIndex={0}
-          thumbnailHeight={200}
-          modalImageSize={400}
-          maxThumbnails={11}
+      images={images}
+      initialSelectedIndex={0}
+      thumbnailHeight={200}
+      modalImageSize={400}
+      maxThumbnails={11}
     />
   )
 }

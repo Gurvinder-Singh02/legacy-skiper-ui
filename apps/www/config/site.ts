@@ -1,12 +1,12 @@
 export const siteConfig = {
 
-  name: "skiper/ui",
-  url: "https://skiper-ui.com",
-  ogImage: "https://skiper-ui.com/og.png",
+  name: "legacy.skiper/ui",
+  url: "https://legacy.skiper-ui.com",
+  ogImage: "https://legacy.skiper-ui.com/og.png",
   description:
     "Components crafted for Modern Websites | Bringing minimalism to the future Reusable components for unstoppable developers ",
   links: {
-    twitter: "https://x.com/guri_who",
+    twitter: "https://x.com/skiperUi",
     github: "https://github.com/gurvinder_singh02",
   },
   keywords: [

@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import ThemeToggler from "@/theme/theme-toggler"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -10,16 +11,22 @@ import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
-
+import ThemeToggleButton from "@/registry/default/ui/theme-toggle-button"
 
 import { DistortedGlass } from "./distorted-glass"
-import ThemeToggler from "@/theme/theme-toggler"
-import ThemeToggleButton from "@/registry/default/ui/theme-toggle-button"
 
 export function SiteHeader() {
   let pathname = usePathname()
   return (
     <>
+      <a
+        href="https://skiper-ui.com/"
+        className="bg-gradient-to-b from-blue-500 flex items-center justify-center to-blue-600 px-2 py-2 text-left font-sans text-xs font-medium tracking-tight text-white sm:px-4 sm:py-3 sm:text-base md:text-center"
+      >
+        Introducing{" "}
+        <span className="rounded-sm px-1 py-1 font-bold">Skiper UI v2</span> -
+        <span className="lg:block hidden" >whole new vesion of skiper-ui </span> with amazing new components
+      </a>
       <header
         className={cn(
           "sticky top-0 z-50 w-full backdrop-blur-sm sm:backdrop-blur-none ",
@@ -43,9 +50,8 @@ export function SiteHeader() {
               <CommandMenu />
             </div>
             <nav className="flex items-center ">
-
               <Link
-                href={siteConfig.links.github}
+                href="https://github.com/Gurvinder-Singh02/legacy-skiper-ui"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -57,7 +63,7 @@ export function SiteHeader() {
                     "w-9 p-0 h-9 "
                   )}
                 >
-                   <span className="sr-only">github</span>
+                  <span className="sr-only">github</span>
                   <Icons.gitHub className="size-4" />
                 </div>
               </Link>
@@ -79,13 +85,12 @@ export function SiteHeader() {
                 </div>
               </Link>
               <div>
-                <ThemeToggleButton  />
+                <ThemeToggleButton />
               </div>
-
             </nav>
           </div>
-        </div >
-      </header >
+        </div>
+      </header>
       {/* <div className="animate-slide-up fixed inset-x-1/2 top-0 z-50 md:absolute">
         <div className=" flex w-full flex-col items-center justify-center">
           <DistortedGlass></DistortedGlass>

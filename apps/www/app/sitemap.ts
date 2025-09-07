@@ -1,14 +1,15 @@
-import { docsConfig } from '@/config/docs'
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next"
 
-const DOMAIN = 'https://skiper-ui.com'
+import { docsConfig } from "@/config/docs"
+
+const DOMAIN = "https://legacy.skiper-ui.com"
 
 function getAllUrls() {
   const urls: any[] = []
 
   // Recursively get all sidebar URLs
   function getSidebarUrls(items: any[]) {
-    items.forEach(item => {
+    items.forEach((item) => {
       if (item.href) {
         urls.push(item.href)
       }
@@ -19,14 +20,14 @@ function getAllUrls() {
   }
 
   // Process sidebar navigation
-  docsConfig.sidebarNav.forEach(section => {
+  docsConfig.sidebarNav.forEach((section) => {
     if (section.items) {
       getSidebarUrls(section.items)
     }
   })
 
   // Add main nav URLs
-  docsConfig.mainNav.forEach(item => {
+  docsConfig.mainNav.forEach((item) => {
     urls.push(item.href)
   })
 
@@ -36,10 +37,10 @@ function getAllUrls() {
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls = getAllUrls()
 
-  return urls.map(url => ({
+  return urls.map((url) => ({
     url: `${DOMAIN}${url}`,
     lastModified: new Date(),
-    changeFrequency: 'daily',
+    changeFrequency: "daily",
     priority: 1,
   })) as MetadataRoute.Sitemap
 }

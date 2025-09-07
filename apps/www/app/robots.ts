@@ -1,20 +1,20 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: '*',
+        userAgent: "*",
         allow: [
-          '/',          // Homepage
-          '/docs/',     // Documentation
+          "/", // Homepage
+          "/docs/", // Documentation
         ],
         disallow: [
-          '/private/',  // Private routes
-          '/api/',      // API routes
-        ]
-      }
+          "/private/", // Private routes
+          "/api/", // API routes
+        ],
+      },
     ],
-    sitemap: 'https://skiper-ui.com/sitemap.xml', 
+    sitemap: "https://legacy.skiper-ui.com/sitemap.xml",
   }
 }

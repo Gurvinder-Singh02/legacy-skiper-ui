@@ -14,9 +14,9 @@ export function SiteFooter() {
           >
             gxuri
           </a>
-          . The source code is Comming Soon{" "}
+          . checkout The source code {" "}
           <a
-            href="#"
+            href="https://github.com/Gurvinder-Singh02/legacy-skiper-ui"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

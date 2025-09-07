@@ -11,7 +11,6 @@ links:
   description="All variations"
 />
 
-
 ## References
 
 <Citations>
@@ -35,7 +34,6 @@ This component is inspired by and adapted from the open source [theme-toggle-eff
 
 ## Installation
 
-
 <Tabs defaultValue="cli">
 
 <TabsList>
@@ -51,7 +49,7 @@ This component is inspired by and adapted from the open source [theme-toggle-eff
 <Step>
 `components/ui/theme-toggle-button.tsx`
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/theme-toggle-button.json"
+  npx shadcn@latest add "http://legacy.skiper-ui.com/registry/theme-toggle-button.json"
 ```
 This will add 4 files to components/ui
 </Step>
@@ -66,11 +64,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <head />
         <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-          >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
           </ThemeProvider>
         </body>
@@ -79,18 +73,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
   )
 }
 
-```
+````
 </Step>
 
 <Step>
-Use the toggle button anywhere 
+Use the toggle button anywhere
 ```bash
 import ThemeToggleButton from "@components/ui/theme-toggle-button"
-```
+````
+
 ```bash
 <ThemeToggleButton />
 ```
-
 
 </Step>
 
@@ -108,6 +102,7 @@ Install next-themes :
 ```bash
     pnpm install next-themes
 ```
+
 </Step>
 <Step>
 Create a theme provider  
@@ -124,7 +119,7 @@ export function ThemeProvider({
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }
 
-```
+````
 </Step>
 
 <Step> Wrap your root layout `app/layout.tsx` </Step>
@@ -151,12 +146,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   )
 }
 
-```
+````
 
 <Step> Update `global.css` </Step>
 
 ```css
-
 /* view transition api */
 .page-transition {
   opacity: 0;
@@ -175,17 +169,26 @@ export default function RootLayout({ children }: RootLayoutProps) {
   ::view-transition-group(root) {
     animation-duration: 0.7s;
     animation-timing-function: linear(
-      0 0%, 0.2342 12.49%, 0.4374 24.99%,
-      0.6093 37.49%, 0.6835 43.74%,
-      0.7499 49.99%, 0.8086 56.25%,
-      0.8593 62.5%, 0.9023 68.75%, 0.9375 75%,
-      0.9648 81.25%, 0.9844 87.5%,
-      0.9961 93.75%, 1 100%
+      0 0%,
+      0.2342 12.49%,
+      0.4374 24.99%,
+      0.6093 37.49%,
+      0.6835 43.74%,
+      0.7499 49.99%,
+      0.8086 56.25%,
+      0.8593 62.5%,
+      0.9023 68.75%,
+      0.9375 75%,
+      0.9648 81.25%,
+      0.9844 87.5%,
+      0.9961 93.75%,
+      1 100%
     );
   }
 
   ::view-transition-new(root) {
-    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="0" cy="0" r="18" fill="white" filter="url(%23blur)"/></svg>') top left / 0 no-repeat;
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="0" cy="0" r="18" fill="white" filter="url(%23blur)"/></svg>')
+      top left / 0 no-repeat;
     mask-origin: content-box;
     animation: scale 1s;
     transform-origin: top left;
@@ -204,7 +207,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
     }
   }
 }
-
 ```
 
 <Step>Add toggle button `components/ui/theme-toggle-button.tsx` </Step>
@@ -270,6 +272,7 @@ Install next-themes :
 ```bash
     pnpm install next-themes
 ```
+
 </Step>
 <Step>
 Create a theme provider `theme/theme-provider.tsx`
@@ -286,7 +289,7 @@ export function ThemeProvider({
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }
 
-```
+````
 </Step>
 
 <Step> Wrap your root layout `app/layout.tsx` </Step>
@@ -313,7 +316,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   )
 }
 
-```
+````
 
 <Step> Create `theme/theme-animations.ts`</Step>
 
@@ -350,26 +353,27 @@ import ThemeToggleButton from "../ui/theme-toggle-button"
  
 ```
 
-
 </Step>
 
 </Steps>
 
 </TabsContent>
 
-
 </Tabs>
 
-## Props 
-| Prop   | Description                                       | Type           | Default Value |
-|--------|---------------------------------------------------|----------------|---------------|
-| `variant` | Specifies the variant type. E.g., 'circle', 'circle-blur' , 'gif' | `polygon`       | `circle-blur`     |
-| `start`  | Sets the starting point (e.g., top left, center) | `string` | `top-left`       |
-| `url`    | The URL associated with the link only for gif variant.    | `string`       | `""`          |
-| `showLabel`    | only for dev purpose to check the props set    | `boolean`       | `false`          |
+## Props
+
+| Prop        | Description                                                       | Type      | Default Value |
+| ----------- | ----------------------------------------------------------------- | --------- | ------------- |
+| `variant`   | Specifies the variant type. E.g., 'circle', 'circle-blur' , 'gif' | `polygon` | `circle-blur` |
+| `start`     | Sets the starting point (e.g., top left, center)                  | `string`  | `top-left`    |
+| `url`       | The URL associated with the link only for gif variant.            | `string`  | `""`          |
+| `showLabel` | only for dev purpose to check the props set                       | `boolean` | `false`       |
 
 ## Here's the fun part
+
 you can also add transparent gif's [Find some Cool Gif's here](https://giphy.com/search/dance-stickers/)
+
 ```bash
 <ThemeToggleButton variant="gif" url="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWI1ZmNvMGZyemhpN3VsdWp4azYzcWUxcXIzNGF0enp0eW1ybjF0ZyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Fa6uUw8jgJHFVS6x1t/giphy.gif" />
 <ThemeToggleButton variant="gif" url="https://media.giphy.com/media/ArfrRmFCzYXsC6etQX/giphy.gif?cid=ecf05e47kn81xmnuc9vd5g6p5xyjt14zzd3dzwso6iwgpvy3&ep=v1_stickers_search&rid=giphy.gif&ct=s"/>

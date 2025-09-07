@@ -11,7 +11,6 @@ links:
   description="All variations"
 />
 
-
 ## References
 
 This component is inspired by and adapted from the open source [21stdev](https://21st.dev/) project. We've customized it to fit our design system while maintaining the original aesthetic and functionality.
@@ -23,8 +22,8 @@ Install the required dependencies.
 <Tabs defaultValue="cli">
 
 <TabsList>
-  <TabsTrigger value="cli"  >CLI</TabsTrigger>
-  <TabsTrigger value="manual" >Manual</TabsTrigger>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
 
 <TabsContent value="cli">
@@ -36,11 +35,10 @@ Install the required dependencies.
 Install the required dependencies.
 
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/expanded-tabs.json"
+  npx shadcn@latest add "http://legacy.skiper-ui.com/registry/expanded-tabs.json"
 ```
 
 </Step>
-
 
 </Steps>
 
@@ -79,24 +77,28 @@ export function cn(...inputs: ClassValue[]) {
 ```tsx
 import { ExpandedTabs } from "../ui/expanded-tabs"
 ```
-```tsx
 
+```tsx
 const tabs = [
-    { title: "Dashboard", icon: Home },
-    { title: "Notifications", icon: Bell },
-    { type: "separator" as const },
-    { title: "Settings", icon: Settings },
-    { title: "Support", icon: HelpCircle },
-    { title: "Security", icon: Shield },
-  ]
+  { title: "Dashboard", icon: Home },
+  { title: "Notifications", icon: Bell },
+  { type: "separator" as const },
+  { title: "Settings", icon: Settings },
+  { title: "Support", icon: HelpCircle },
+  { title: "Security", icon: Shield },
+]
 ```
 
 ```tsx
 function BasicExample() {
   return (
-     <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <ExpandedTabs tabs={tabs} />
-      <ExpandedTabs tabs={tabs} activeColor="text-blue-500" className="border-blue-200 dark:border-blue-800" />
+      <ExpandedTabs
+        tabs={tabs}
+        activeColor="text-blue-500"
+        className="border-blue-200 dark:border-blue-800"
+      />
     </div>
   )
 }
@@ -108,8 +110,10 @@ function BasicExample() {
 
 </Tabs>
 
-## Usage 
+## Usage
+
 define tabs object
+
 ```bash
 import { Home,Bell,Settings,HelpCircle, Shield, User, } from "lucide-react"
 const tabs = [
@@ -123,6 +127,7 @@ const tabs = [
 ```
 
 Use the component
+
 ```bash
  <ExpandedTabs tabs={tabs} />
 ```

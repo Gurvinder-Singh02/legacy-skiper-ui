@@ -22,7 +22,6 @@ links:
   description="All variations"
 />
 
-
 ## References
 
 <Citations>
@@ -34,15 +33,13 @@ links:
         target="_blank"
         rel="noopener noreferrer"
       >
-        Number flow 
+        Number flow
       </CitationLink>
     </CitationItem>
   </CitationList>
 </Citations>
 
 ## Installation
-
-
 
 <Tabs defaultValue="cli">
 
@@ -58,18 +55,19 @@ links:
 <Step>
 `components/ui/animated-number-random.tsx`
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-random.json"
+  npx shadcn@latest add "http://legacy.skiper-ui.com/registry/animated-number-random.json"
 ```
 ```bash
 
-  function example(){
+function example(){
 
-  const numbers = [124.23, 41.75, 2125.95]
-  const diffs = [0.0564, -0.114, 0.0029]
- 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
-  return (
+const numbers = [124.23, 41.75, 2125.95]
+const diffs = [0.0564, -0.114, 0.0029]
+
+const [currentIndex, setCurrentIndex] = useState(0)
+
+return (
+
  <AnimatedNumberRandom value={numbers[currentIndex]} diff={diffs[currentIndex]} />
   )}
 ```
@@ -78,7 +76,7 @@ links:
 <Step>
 `components/ui/animated-number-countdown.tsx`
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-countdown.json"
+  npx shadcn@latest add "http://legacy.skiper-ui.com/registry/animated-number-countdown.json"
 ```
 ```bash
 <AnimatedNumberCountdown endDate={new Date("2025-12-31")} className="my-4" />
@@ -87,7 +85,7 @@ links:
 <Step>
 `components/ui/animated-number-counter.tsx`
 ```bash
-  npx shadcn@latest add "http://skiper-ui.com/registry/animated-number-counter.json"
+  npx shadcn@latest add "http://legacy.skiper-ui.com/registry/animated-number-counter.json"
 ```
 ```bash
 <AnimatedNumberCounter />
@@ -123,14 +121,17 @@ export function cn(...inputs: ClassValue[]) {
 
 <ComponentSource name="animated-number-random" />
 
-<Step>Copy the source code to `components/ui/animated-number-countdown.tsx` </Step>
+<Step>
+  Copy the source code to `components/ui/animated-number-countdown.tsx`{" "}
+</Step>
 
 <ComponentSource name="animated-number-countdown" />
 
-<Step>Copy the source code to `components/ui/animated-number-counter.tsx` </Step>
+<Step>
+  Copy the source code to `components/ui/animated-number-counter.tsx`{" "}
+</Step>
 
 <ComponentSource name="animated-number-counter" />
-
 
 </Steps>
 
